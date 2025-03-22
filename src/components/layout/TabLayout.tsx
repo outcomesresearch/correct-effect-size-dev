@@ -27,8 +27,8 @@ type Props = {
     TabConfiguration,
     TabConfiguration
   ];
-  imageLink?: string;
-  citation?: string;
+  imageLink: string;
+  citation: string;
 };
 
 export default function CardLayout({
@@ -81,14 +81,7 @@ export default function CardLayout({
         </Stack>
 
         <Box w={isMobile ? "100%" : "50%"}>
-          <Image
-            src={
-              imageLink ||
-              "https://pocket-syndicated-images.s3.amazonaws.com/67a6a905cf34e365412125.jpg"
-            }
-            w="100%"
-            height="auto"
-          />
+          <Image src={imageLink} w="100%" height="auto" />
           <Text size="xs" c="dimmed" mt={3} fs="italic">
             {citation}
           </Text>
