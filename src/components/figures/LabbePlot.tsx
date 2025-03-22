@@ -6,6 +6,7 @@ const Component = () => {
     <TabLayout
       description="A L’Abbe plot is a graphical method used in meta-analysis to compare the event rates between two groups. It helps in identifying patterns and potential outliers in the data."
       imageLink={`${import.meta.env.BASE_URL}images/labbePlot.png`}
+      citation="Annals of Internal Medicine, 107(2), 224–233"
       tabsConfiguration={[
         {
           key: "characteristics",

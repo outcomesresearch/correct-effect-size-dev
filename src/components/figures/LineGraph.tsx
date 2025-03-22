@@ -10,6 +10,7 @@ export default function LineGraphTabs() {
         show changes in patient vital signs over time or response to different
         treatment regimens."
       imageLink={`${import.meta.env.BASE_URL}images/lineGraph.png`}
+      citation="MMWR 2018;67:53-59."
       tabsConfiguration={[
         {
           key: "characteristics",

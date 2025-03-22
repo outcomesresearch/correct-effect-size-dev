@@ -6,6 +6,7 @@ const Component = () => {
     <TabLayout
       description="A pie chart visually represents parts of a whole, making it easy to interpret proportions within a group."
       imageLink={`${import.meta.env.BASE_URL}images/pieChart.png`}
+      citation="Centers for Disease Control and Prevention, National Center for Health Statistics, Injury in the United States,  2007 Chartbook, Figure 12-1."
       tabsConfiguration={[
         {
           key: "characteristics",

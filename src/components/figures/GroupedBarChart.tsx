@@ -6,6 +6,7 @@ const Component = () => {
     <TabLayout
       description="The grouped bar chart is a visualization that compares multiple categories within groups. It is useful for comparing distributions across two groups."
       imageLink={`${import.meta.env.BASE_URL}images/groupedBarChart.png`}
+      citation="MMWR. 2017;66(No. SS-22):1–12"
       tabsConfiguration={[
         {
           key: "characteristics",

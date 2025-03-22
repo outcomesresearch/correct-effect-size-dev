@@ -6,6 +6,7 @@ const Component = () => {
     <TabLayout
       description="The Galbraith plot, also known as the radial plot, is a tool used in meta-analysis to assess the consistency of study results. It is particularly useful for identifying outliers and sources of heterogeneity."
       imageLink={`${import.meta.env.BASE_URL}images/radialPlot.png`}
+      citation="Journal of the American Statistical Association. 1994; 89(428), 1232–1242"
       tabsConfiguration={[
         {
           key: "characteristics",

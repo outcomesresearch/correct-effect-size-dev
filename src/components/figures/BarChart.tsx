@@ -6,6 +6,7 @@ const Component = () => {
     <TabLayout
       description="The bar chart is a simple and easy-to-read visualization that compares categories, making it ideal for highlighting individual values and comparing distributions within a group."
       imageLink={`${import.meta.env.BASE_URL}images/barChart.png`}
+      citation="Web-based Injury Statistics Query and Reporting System (WISQARS) [online database] Atlanta; National Center for Injury Prevention and Control. [cited 2006 Feb 15]. Available from: https://www.cdc.gov/injury/wisqars/."
       tabsConfiguration={[
         {
           key: "characteristics",
@@ -33,9 +34,8 @@ const Component = () => {
           label: "When to Use",
           content: (
             <Text>
-              Bar charts provide a clear, straightforward way to
-              compare discrete categories or to emphasize individual counts or
-              values.
+              Bar charts provide a clear, straightforward way to compare
+              discrete categories or to emphasize individual counts or values.
             </Text>
           ),
         },

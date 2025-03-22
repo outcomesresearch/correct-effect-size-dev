@@ -6,6 +6,7 @@ export default function ScatterPlotMatrixTabs() {
     <TabLayout
       description="A scatter plot matrix (SPLOM) is an array or grid of scatter plots that shows the pairwise relationships between several continuous variables. Each cell in the matrix represents a scatter plot for a pair of variables, while the diagonal often shows the distribution of each variable (e.g., histograms)."
       imageLink={`${import.meta.env.BASE_URL}images/scatterMatrix.png`}
+      citation="Pak J Med Dent. 2024;13(3): 31-37. Doi: 10.36283/PJMD13-3/005"
       tabsConfiguration={[
         {
           key: "characteristics",

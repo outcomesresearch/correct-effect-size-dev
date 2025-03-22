@@ -10,6 +10,7 @@ export default function StemLeafPlotTabs() {
       Stems are listed vertically in ascending order, and leaves are displayed
       horizontally next to their respective stems."
       imageLink="https://www.softschools.com/math/topics/images/stem_leaf_plant_img_11.jpg"
+      citation="https://www.softschools.com/math/topics/stem_and_leaf_plot/"
       tabsConfiguration={[
         {
           key: "characteristics",

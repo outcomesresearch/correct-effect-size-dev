@@ -6,6 +6,7 @@ const Component = () => {
     <TabLayout
       description="A histogram visualizes the distribution of data by grouping values into bins and displaying their frequency, making it effective for understanding the spread of data within a group."
       imageLink="https://www.cec.health.nsw.gov.au/__data/assets/image/0007/337453/histogram.png"
+      citation="https://www.cec.health.nsw.gov.au/__data/assets/image/0007/337453/histogram.png"
       tabsConfiguration={[
         {
           key: "characteristics",

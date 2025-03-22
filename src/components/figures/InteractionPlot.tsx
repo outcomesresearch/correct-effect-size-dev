@@ -6,6 +6,7 @@ export default function InteractionPlotTabs() {
     <TabLayout
       description="Interaction plots are graphical representations used to visualize the interaction effects between two or more independent variables on a dependent variable. They typically plot mean values of the dependent variable for different combinations of the independent variables, using lines to connect these means."
       imageLink={`${import.meta.env.BASE_URL}images/interactionPlot.png`}
+      citation="Dr Dorina Kallogjeri, Washington University in St Louis - Deparatment of Otolaryngology—Head & Neck Surgery"
       tabsConfiguration={[
         {
           key: "characteristics",

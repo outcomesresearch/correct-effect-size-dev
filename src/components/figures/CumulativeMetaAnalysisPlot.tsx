@@ -6,6 +6,7 @@ const Component = () => {
     <TabLayout
       description="The cumulative meta-analysis plot is a technique that sequentially adds studies to show how the cumulative effect size estimate changes over time. It is useful for assessing the stability and trends of the overall effect size."
       imageLink={`${import.meta.env.BASE_URL}images/cumulativeMetaAnalysis.png`}
+      citation="https://www.metafor-project.org/doku.php/plots:cumulative_forest_plot"
       tabsConfiguration={[
         {
           key: "characteristics",

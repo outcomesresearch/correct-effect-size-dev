@@ -6,6 +6,7 @@ const Component = () => {
     <TabLayout
       description="An icon array uses icons to represent units or proportions, grouped and colored to show categories or outcomes. It provides a simple and intuitive way to visualize part-to-whole relationships."
       imageLink="https://www.cdc.gov/ncird/whats-new/images/identical-population-level-vax-rate.png"
+      citation="National Center for Immunization and Respiratory Diseases, Centers for Disease Control and Prevention. Assessing Measles Outbreak Risk in the United States. April 4, 2024."
       tabsConfiguration={[
         {
           key: "characteristics",

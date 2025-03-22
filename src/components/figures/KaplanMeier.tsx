@@ -6,6 +6,7 @@ const KaplanMeierComponent = () => {
     <TabLayout
       description="A Kaplan-Meier Curve is used to estimate the survival function from lifetime data. It shows the probability of an event (like death or failure) over time and is particularly useful in medical research for comparing survival between two or more groups."
       imageLink={`${import.meta.env.BASE_URL}images/kaplanMeier.png`}
+      citation="Dosage Form Design Parameters. In: Advances in Pharmaceutical Product Development and Research. Vol II. 2018. p. 339-62."
       tabsConfiguration={[
         {
           key: "characteristics",

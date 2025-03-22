@@ -6,6 +6,7 @@ const Component = () => {
     <TabLayout
       description="The funnel plot is used in meta-analysis to detect publication bias by visualizing the relationship between study size and effect size. It helps in identifying asymmetry that may indicate bias."
       imageLink="https://static.cambridge.org/binary/version/id/urn:cambridge.org:id:binary:20190607131712065-0265:S0899823X19001235:S0899823X19001235_fig3g.jpeg?pub-status=live"
+      citation="Infection Control & Hospital Epidemiology. 2019 Jul;40(7):755-60"
       tabsConfiguration={[
         {
           key: "characteristics",

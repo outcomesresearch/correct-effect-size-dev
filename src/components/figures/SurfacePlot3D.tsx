@@ -6,6 +6,7 @@ const Component = () => {
     <TabLayout
       description="A 3D surface plot visualizes relationships between three continuous variables, providing a detailed three-dimensional representation of data."
       imageLink="https://blog.stata.com/wp-content/uploads/2020/09/Margins3d_3.png"
+      citation="https://blog.stata.com/wp-content/uploads/2020/09/Margins3d_3.png"
       tabsConfiguration={[
         {
           key: "characteristics",

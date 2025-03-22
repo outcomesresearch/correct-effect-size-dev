@@ -6,6 +6,7 @@ const Component = () => {
     <TabLayout
       description="A stacked bar graph (or stacked column chart) uses stacked bars to show the composition of categories within a total. It is useful for comparing part-to-whole relationships across multiple categories."
       imageLink="https://archive.cdc.gov/www_cdc_gov/csels/dsepd/ss1978/lesson4/section4_html_files/Figure4.23.jpg"
+      citation="Web-based Injury Statistics Query and Reporting System (WISQARS) [online database] Atlanta; National Center for Injury Prevention and Control. [cited 2006 Feb 15]. Available from: https://www.cdc.gov/injury/wisqars/."
       tabsConfiguration={[
         {
           key: "characteristics",

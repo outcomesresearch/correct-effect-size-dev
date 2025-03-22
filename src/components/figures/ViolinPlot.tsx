@@ -6,6 +6,7 @@ export default function ViolinPlotTabs() {
     <TabLayout
       description="Violin plots visually represent the distribution of data by combining box plots with kernel density plots. They are useful for comparing multiple groups and displaying the shape of the distribution. Violin plots can handle large datasets and show multimodal distributions. However, they may appear complex and require some familiarity to interpret."
       imageLink="https://www.medcalc.org/manual/svgimg/violinplot.svg"
+      citation="https://www.medcalc.org/manual/violinplot.php"
       tabsConfiguration={[
         {
           key: "characteristics",

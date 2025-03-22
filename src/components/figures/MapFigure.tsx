@@ -6,6 +6,7 @@ const Component = () => {
     <TabLayout
       description="A map provides a geographical representation of data, making it effective for visualizing spatial relationships and trends."
       imageLink="https://www.esri.com/about/newsroom/wp-content/uploads/2020/03/WHO_Ebola_19-august-2015-map2-768x768.jpg"
+      citation="https://www.esri.com/about/newsroom/wp-content/uploads/2020/03/WHO_Ebola_19-august-2015-map2-768x768.jpg"
       tabsConfiguration={[
         {
           key: "characteristics",

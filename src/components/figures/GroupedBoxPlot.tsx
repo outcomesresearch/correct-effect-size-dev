@@ -6,6 +6,7 @@ export default function GroupedBoxPlotsTabs() {
     <TabLayout
       description="Grouped box plot, also known as side-by-side box plots, are graphical representations that display the distribution of a continuous variable across different levels of one or more categorical variables. Each group or category has its own box plot, placed side by side for easy comparison."
       imageLink={`${import.meta.env.BASE_URL}images/groupedBoxPlot.png`}
+      citation="Dr Dorina Kallogjeri, Washington University in St Louis - Deparatment of Otolaryngology—Head & Neck Surgery"
       tabsConfiguration={[
         {
           key: "characteristics",

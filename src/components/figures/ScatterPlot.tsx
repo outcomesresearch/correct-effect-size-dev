@@ -11,6 +11,7 @@ export default function ScatterPlotTabs() {
         variables, such as examining the relationship between blood pressure and
         body weight."
       imageLink="https://wwwnc.cdc.gov/eid/images/14-1394-F2.jpg"
+      citation="Emerging Infectious Diseases, 21(6), 1049-1051"
       tabsConfiguration={[
         {
           key: "characteristics",

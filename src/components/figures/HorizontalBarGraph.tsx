@@ -85,7 +85,8 @@ const Component = () => {
           ),
         },
       ]}
-      imageLink="https://archive.cdc.gov/www_cdc_gov/csels/dsepd/ss1978/lesson4/section4_html_files/figure4.20.jpg"
+      imageLink={`${import.meta.env.BASE_URL}images/horizontalBarChart.png`}
+      citation="Am J Epidemiol 2015; 182: 799–807"
     />
   );
 };

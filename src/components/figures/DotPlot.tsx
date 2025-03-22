@@ -9,6 +9,7 @@ export default function DotPlotTabs() {
         highlighting clusters or gaps in the data. Dot plots present data in a
         simple, one-dimensional format with a single variable along an axis."
       imageLink={`${import.meta.env.BASE_URL}images/dotPlot.png`}
+      citation="JAMA 2004;291:2547-2554"
       tabsConfiguration={[
         {
           key: "characteristics",

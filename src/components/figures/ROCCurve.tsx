@@ -6,6 +6,7 @@ const RocCurveComponent = () => {
     <TabLayout
       description="A Receiver Operating Characteristic (ROC) Curve is used to evaluate the performance of a binary classification model by plotting the true positive rate against the false positive rate at various threshold settings."
       imageLink="/optimal-figure/images/rocCurve.png"
+      citation="Journal of Physics: Conference Series 1952 (2021) 042045"
       tabsConfiguration={[
         {
           key: "characteristics",

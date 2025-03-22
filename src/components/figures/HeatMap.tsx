@@ -6,6 +6,7 @@ export default function HeatmapTabs() {
     <TabLayout
       description="A heatmap is a graphical representation of data where individual values contained in a matrix are represented as colors. The intensity of the color often represents the magnitude of the value in the data set, with different colors or shades used to signify various ranges of values. Heatmaps are versatile and powerful tools for visual representation of complex datasets where pattern recognition and comparison are key."
       imageLink={`${import.meta.env.BASE_URL}images/heatMap.png`}
+      citation="Dr Dorina Kallogjeri, Washington University in St Louis - Deparatment of Otolaryngology—Head & Neck Surgery"
       tabsConfiguration={[
         {
           key: "characteristics",
