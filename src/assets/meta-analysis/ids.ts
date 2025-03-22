@@ -7,9 +7,9 @@ export const PURPOSE_ASYMMETRY_CORRECTION = "purpose-asymmetry-correction";
 export const PURPOSE_ROBUSTNESS = "purpose-robustness";
 
 // Recommended figure (statement) nodes
-export const FIG_FOREST = "fig-forest"; // Forest Plot
-export const FIG_FUNNEL = "fig-funnel"; // Funnel Plot
-export const FIG_LABBE = "fig-labbe"; // L'Abbe Plot
-export const FIG_GALBRAITH = "fig-galbraith"; // Galbraith Plot
-export const FIG_TRIM_FILL = "fig-trim-fill"; // Trim-and-Fill Plot
-export const FIG_CUMULATIVE = "fig-cumulative"; // Cumulative Meta-analysis Plot
+export const FIG_FOREST = "forest"; // Forest Plot
+export const FIG_FUNNEL = "funnel"; // Funnel Plot
+export const FIG_LABBE = "labbe"; // L'Abbe Plot
+export const FIG_GALBRAITH = "galbraith"; // Galbraith Plot
+export const FIG_TRIM_FILL = "trim-fill"; // Trim-and-Fill Plot
+export const FIG_CUMULATIVE = "cumulative"; // Cumulative Meta-analysis Plot

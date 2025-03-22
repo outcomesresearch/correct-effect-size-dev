@@ -5,11 +5,11 @@ export const INDEPENDENT_CONT = "independent-cont";
 export const DS_CAT = "ds-cat";
 export const DS_CONT = "ds-cont";
 
-export const FIG_ICON_ARRAY = "fig-icon-array";
-export const FIG_VERTICAL_BAR = "fig-vertical-bar";
-export const FIG_STACKED_BAR = "fig-stacked-bar";
-export const FIG_HORIZONTAL_BAR = "fig-horizontal-bar";
-export const FIG_MOSAIC_PLOT = "fig-mosaic-plot";
+export const FIG_ICON_ARRAY = "icon-array";
+export const FIG_VERTICAL_BAR = "vertical-bar";
+export const FIG_STACKED_BAR = "stacked-bar";
+export const FIG_HORIZONTAL_BAR = "horizontal-bar";
+export const FIG_MOSAIC_PLOT = "mosaic-plot";
 
 export const CHOOSE_SMALL_CAT = "choose-small-category";
 export const CHOOSE_MEDIUM_CAT = "choose-medium-category";
