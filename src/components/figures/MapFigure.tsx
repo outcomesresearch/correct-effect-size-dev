@@ -22,8 +22,8 @@ const Component = () => {
           label: "When to Use",
           content: (
             <Text>
-              Use when you're analyzing or presenting data tied to geographic
-              locations or spatial patterns.
+              Maps are best suited for analyzing or presenting data tied to
+              geographic locations or spatial patterns.
             </Text>
           ),
         },

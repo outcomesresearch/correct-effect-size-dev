@@ -33,9 +33,9 @@ const Component = () => {
           label: "When to Use",
           content: (
             <Text>
-              Use a faceted bar chart when you're working with multiple
-              categorical groupings and want to break down comparisons across
-              each dimension.
+              Faceted bar charts are best suited when working with multiple
+              categorical groupings, to break down comparisons across each
+              dimension.
             </Text>
           ),
         },
