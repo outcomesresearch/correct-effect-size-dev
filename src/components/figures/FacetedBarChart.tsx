@@ -5,7 +5,7 @@ const Component = () => {
   return (
     <TabLayout
       description="A faceted bar chart displays multiple bar charts for different subsets of data, making it effective for comparing distributions across more than two groups."
-      imageLink="https://domo-support.domo.com/servlet/rtaImage?eid=ka05w00000123la&feoid=00N5w00000Ri7BU&refid=0EM5w000005vP2T"
+      imageLink={`${import.meta.env.BASE_URL}images/facetedBarChart.jpg`}
       tabsConfiguration={[
         {
           key: "characteristics",
