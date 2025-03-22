@@ -28,12 +28,14 @@ type Props = {
     TabConfiguration
   ];
   imageLink?: string;
+  citation?: string;
 };
 
 export default function CardLayout({
   description,
   tabsConfiguration,
   imageLink,
+  citation,
 }: Props) {
   const isMobile = useMediaQuery("(max-width: 700px)");
 
@@ -87,6 +89,9 @@ export default function CardLayout({
             w="100%"
             height="auto"
           />
+          <Text size="xs" c="dimmed" mt={3} fs="italic">
+            {citation}
+          </Text>
         </Box>
       </Group>
     </>
