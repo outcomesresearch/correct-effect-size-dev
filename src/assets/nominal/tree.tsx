@@ -5,7 +5,6 @@ import MosaicPlot from "../../components/figures/MosaicPlot";
 import GroupedBarChart from "../../components/figures/GroupedBarChart";
 import FacetedBarChart from "../../components/figures/FacetedBarChart";
 import MapFigure from "../../components/figures/MapFigure";
-import Diagram from "../../components/figures/Diagram";
 import PieChart from "../../components/figures/PieChart";
 import ScatterPlot3D from "../../components/figures/Scatter3D";
 import ContourPlot from "../../components/figures/ContourPlot";
@@ -75,11 +74,6 @@ const tree: Record<string, TreeNode> = {
         answer: "Demonstrate Change in Data Over Space",
         next: ids.FIG_MAP,
         option_description: "Show geographic distribution or movement of data.",
-      },
-      {
-        answer: "Illustrate a Concept or Theory",
-        next: ids.FIG_DIAGRAM,
-        option_description: "Explain abstract concepts using diagrams.",
       },
     ],
   },
@@ -200,13 +194,6 @@ const tree: Record<string, TreeNode> = {
     title: "Map",
     flowChartTitle: "Map",
     component: MapFigure,
-    inputs: [ids.INDEPENDENT_NOMINAL],
-  },
-  [ids.FIG_DIAGRAM]: {
-    type: "statement",
-    title: "Diagram",
-    flowChartTitle: "Diagram",
-    component: Diagram,
     inputs: [ids.INDEPENDENT_NOMINAL],
   },
   [ids.FIG_PIE_CHART]: {

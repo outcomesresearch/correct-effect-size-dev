@@ -21,7 +21,6 @@ export const FIG_LINE_CHART = "line-chart";
 export const FIG_GROUPED_BAR_CHART = "grouped-bar-chart";
 export const FIG_FACETED_BAR_CHART = "faceted-bar-chart";
 export const FIG_MAP = "map";
-export const FIG_DIAGRAM = "diagram";
 export const FIG_PIE_CHART = "pie-chart";
 export const FIG_INTERACTION_PLOT = "interaction-plot";
 export const FIG_3D_SCATTER_PLOT = "3d-scatter-plot";
