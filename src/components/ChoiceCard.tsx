@@ -33,7 +33,12 @@ const ChoiceCard = ({
       <Title c={isSelected ? "green.9" : "gray.9"} order={5} fw={500}>
         {title}
       </Title>
-      <Text c={isSelected ? "green.9" : "gray.9"}>{description}</Text>
+      <Text
+        c={isSelected ? "green.9" : "gray.9"}
+        style={{ whiteSpace: "pre-wrap" }}
+      >
+        {description}
+      </Text>
     </Card>
   );
 };

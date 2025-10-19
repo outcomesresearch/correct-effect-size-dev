@@ -1,6 +1,4 @@
 // src/components/effectSizes/index.jsx
-import React from "react";
-
 export const PearsonCorrelationCoefficientR = () => (
   <div>Pearson Correlation Coefficient (r)</div>
 );
@@ -20,6 +18,30 @@ export const BetaCoefficient = () => <div>Beta Coefficient (β)</div>;
 export const RSquared = () => <div>R Squared (R²)</div>;
 export const AdjustedRSquared = () => <div>Adjusted R Squared (Adj. R²)</div>;
 
+// --- Correlation with continuous ---
+export const PointBiSerialCorrelation = () => (
+  <div>Point Bi-serial correlation</div>
+);
+
+// --- Two groups ---
+export const OddsRatio = () => <div>Odds Ratio (OR)</div>;
+export const RiskRatio = () => <div>Risk Ratio (RR)</div>;
+export const RiskDifference = () => <div>Risk Difference</div>;
+export const PhiCoefficient = () => <div>Phi coefficient (ɸ)</div>;
+
+// --- Three or more groups (overall effects) ---
+export const CramersV = () => <div>Cramer's V</div>;
+export const GoodmanKruskalLambda = () => <div>Goodman–Kruskal λ</div>;
+export const CliffsDelta = () => <div>Cliff's Δ</div>;
+export const KendallsTau = () => <div>Kendall's τ</div>;
+
+// --- Regression ---
+export const PseudoRSquared = () => <div>Pseudo R²</div>;
+export const CStatistic = () => <div>C-Statistic</div>;
+export const PercentCorrectlyClassified = () => (
+  <div>Percent correctly classified</div>
+);
+
 export default {
   PearsonCorrelationCoefficientR,
   SpearmansRho,
@@ -35,4 +57,16 @@ export default {
   BetaCoefficient,
   RSquared,
   AdjustedRSquared,
+  PointBiSerialCorrelation,
+  OddsRatio,
+  RiskRatio,
+  RiskDifference,
+  PhiCoefficient,
+  CramersV,
+  GoodmanKruskalLambda,
+  CliffsDelta,
+  KendallsTau,
+  PseudoRSquared,
+  CStatistic,
+  PercentCorrectlyClassified,
 };

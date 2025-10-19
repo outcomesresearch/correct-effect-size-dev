@@ -1,16 +1,32 @@
-export const INDEPENDENT_TYPE = "independent-type";
-export const INDEPENDENT_CAT = "independent-cat";
-export const INDEPENDENT_CONT = "independent-cont";
+// Entry for this branch
+export const CATEGORICAL = "categorical";
 
-export const DS_CAT = "ds-cat";
-export const DS_CONT = "ds-cont";
+// Single-measure correlation
+export const POINT_BISERIAL = "point-biserial";
 
-export const FIG_ICON_ARRAY = "icon-array";
-export const FIG_VERTICAL_BAR = "vertical-bar";
-export const FIG_STACKED_BAR = "stacked-bar";
-export const FIG_HORIZONTAL_BAR = "horizontal-bar";
-export const FIG_MOSAIC_PLOT = "mosaic-plot";
+// Two-group comparison selection + measures
+export const TWO_GROUPS_EFFECT_SIZES = "two-groups-effect-sizes";
+export const ODDS_RATIO = "odds-ratio";
+export const RISK_RATIO = "risk-ratio";
+export const RISK_DIFFERENCE = "risk-difference";
+export const PHI_COEFFICIENT = "phi-coefficient";
 
-export const CHOOSE_SMALL_CAT = "choose-small-category";
-export const CHOOSE_MEDIUM_CAT = "choose-medium-category";
-export const CHOOSE_LARGE_CAT = "choose-large-category";
+// 3+ groups flow
+export const COMPARISON_OF_THREEMORE_GROUPS =
+  "comparison-of-three-or-more-groups";
+export const PAIRWISE_EFFECT_SIZES = "pairwise-effect-sizes";
+export const OVERALL_EFFECT_SIZES = "overall-effect-sizes";
+export const CRAMERS_V = "cramers-v";
+export const GOODMAN_KRUSKAL_LAMBDA = "goodman-kruskal-lambda";
+export const CLIFFS_DELTA = "cliffs-delta";
+export const KENDALLS_TAU = "kendalls-tau";
+
+// Regression flow
+export const REGRESSION_MODEL = "regression-model";
+export const ADJUSTED_ASSOCIATION_EFFECT_SIZES =
+  "adjusted-association-effect-sizes";
+export const REGRESSION_OVERALL_EFFECT_SIZES =
+  "regression-overall-effect-sizes";
+export const PSEUDO_R2 = "pseudo-r2";
+export const C_STATISTIC = "c-statistic";
+export const PERCENT_CORRECTLY_CLASSIFIED = "percent-correctly-classified";
