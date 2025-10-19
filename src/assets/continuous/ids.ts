@@ -1,48 +1,42 @@
 // Root question
-export const PURPOSE = "purpose";
+export const ROOT = "root";
 
-// Highlighting individual values
-export const HIGHLIGHT_VALUES = "highlight-values";
-export const DOT_PLOT = "dot-plot";
-export const SCATTER_PLOT = "scatter-plot";
+// Correlation with continuous measure
+export const CORRELATION_WITH_CONTINUOUS_MEASURE =
+  "correlation-with-continuous-measure";
+export const PEARSON_R = "pearson-r";
+export const SPEARMAN_RHO = "spearman-rho";
+export const R2 = "r2";
 
-// Showing trends over time
-export const SHOW_TRENDS = "show-trends";
+// Comparison of two groups
+export const COMPARISON_OF_TWO_GROUPS = "comparison-of-two-groups";
+export const MEAN_DIFFERENCE = "mean-difference";
+export const MEDIAN_DIFFERENCE = "median-difference";
+export const COHENS_D = "cohens-d";
+export const GLASS_DELTA = "glass-delta";
+export const HEDGES_G = "hedges-g";
+export const R_NONPARAMETRIC = "r-nonparametric";
 
-// Comparing distribution within a group
-export const COMPARE_WITHIN_GROUP = "compare-within-group";
-export const STEM_LEAF = "stem-leaf";
-export const BOX_PLOT = "box-plot";
+// Comparison of three or more groups
+export const COMPARISON_OF_THREEMORE_GROUPS =
+  "comparison-of-three-or-more-groups";
+export const REPORTING_PAIRWISE_DIFFERENCES = "reporting-pairwise-differences";
+export const REPORTING_OVERALL_EFFECT = "reporting-overall-effect";
+export const ETA_SQUARED = "eta-squared";
+export const OMEGA_SQUARED = "omega-squared";
 
-// Showing relationships between variables
-export const SHOW_RELATIONSHIPS = "show-relationships";
-export const SCATTER_OR_MATRIX = "scatter-or-matrix";
-export const SCATTER_MATRIX = "scatter-matrix";
-export const SCATTER_3D = "scatter-3d";
+// Regression model
+export const REGRESSION_MODEL = "regression-model";
+export const ADJUSTED_ASSOCIATION = "adjusted-association";
+export const OVERALL_MODEL = "overall-model";
+export const BETA_COEFFICIENT = "beta-coefficient";
+export const R2_REGRESSION = "r2-regression";
+export const ADJUSTED_R2 = "adjusted-r2";
 
-// Comparing distribution across two groups
-export const COMPARE_TWO_GROUPS = "compare-two-groups";
-export const GROUPED_BOX_PLOT = "grouped-box-plot";
-
-// Comparing distribution across more than two groups
-export const COMPARE_MORE_THAN_TWO_GROUPS = "compare-more-than-two-groups";
-export const VIOLIN_PLOT = "violin-plot";
-
-// Identifying patterns and outliers
-export const IDENTIFY_PATTERNS = "identify-patterns";
-
-// Demonstrating change in data over space
-export const CHANGE_OVER_SPACE = "change-over-space";
-export const CONTOUR_PLOT = "contour-plot";
-
-// Illustrating a concept or theory
-export const ILLUSTRATE_CONCEPT = "illustrate-concept";
-export const HEAT_MAP = "heat-map";
-
-// Showing interactions between factors
-export const SHOW_INTERACTIONS = "show-interactions";
-export const INTERACTION_PLOT = "interaction-plot";
-
-// Showing individual trajectories over time
-export const INDIVIDUAL_TRAJECTORIES = "individual-trajectories";
-export const SPAGHETTI_PLOT = "spaghetti-plot";
+// New intermediate effect size nodes
+export const CORRELATION_EFFECT_SIZES = "correlation-effect-sizes";
+export const TWO_GROUPS_EFFECT_SIZES = "two-groups-effect-sizes";
+export const PAIRWISE_EFFECT_SIZES = "pairwise-effect-sizes";
+export const OVERALL_EFFECT_SIZES = "overall-effect-sizes";
+export const REGRESSION_OVERALL_EFFECT_SIZES =
+  "regression-overall-effect-sizes";

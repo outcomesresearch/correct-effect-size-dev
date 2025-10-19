@@ -15,7 +15,7 @@ import StackedBarGraph from "../../components/figures/StackedBarGraph";
 import ViolinPlot from "../../components/figures/ViolinPlot";
 import * as ids from "./ids";
 import { TreeNode } from "../types.ts";
-import { DICHOTOMOUS, ROOT } from "../ids.ts";
+import { DICHOTOMOUS, ROOT } from "../ids.tsx";
 
 // Define the refactored tree with option_description for each choice,
 // and with Moderate and Large merged into one option.

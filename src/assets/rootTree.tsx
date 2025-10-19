@@ -16,11 +16,10 @@ const addIds = (tree) => {
 
 let rootTree = {
   [ids.ROOT]: {
-    title: "Outcome Measure",
+    title: ids.OUTCOME_MEASURE_TITLE,
     flowChartTitle:
       "Select the type of outcome variable being analyzed or compared.",
-    component: () =>
-      "Select the type of outcome variable being analyzed or compared.",
+    component: ids.OUTCOME_MEASURE_SELECTION_COMPONENT,
     inputs: [],
     choices: [
       {

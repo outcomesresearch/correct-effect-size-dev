@@ -5,7 +5,7 @@ import HorizontalBarGraph from "../../components/figures/HorizontalBarGraph";
 import MosaicPlot from "../../components/figures/MosaicPlot";
 import * as ids from "./ids";
 import { TreeNode } from "../types.ts";
-import { CATEGORICAL, ROOT } from "../ids.ts";
+import { CATEGORICAL, ROOT } from "../ids.tsx";
 
 const tree: Record<string, TreeNode> = {
   [CATEGORICAL]: {

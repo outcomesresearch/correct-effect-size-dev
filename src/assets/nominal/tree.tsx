@@ -11,7 +11,7 @@ import ContourPlot from "../../components/figures/ContourPlot";
 import Heatmap from "../../components/figures/HeatMap";
 import * as ids from "./ids";
 import { TreeNode } from "../types.ts";
-import { ROOT, NOMINAL } from "../ids.ts";
+import { ROOT, NOMINAL } from "../ids.tsx";
 
 const tree: Record<string, TreeNode> = {
   [NOMINAL]: {

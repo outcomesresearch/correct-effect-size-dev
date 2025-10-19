@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { Stack, Title, Button, Group, Progress, Card } from "@mantine/core";
 import rootTree from "../assets/rootTree";
-import { ROOT } from "../assets/ids";
+import { ROOT } from "../assets/ids.tsx";
 import ChoiceCard from "../components/ChoiceCard";
 import { Link } from "react-router";
 import { useParams } from "react-router";

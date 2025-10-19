@@ -2,6 +2,7 @@
 import rootTree from "./assets/rootTree";
 
 export function findLongestPath(currentNode, steps) {
+  console.log({ currentNode, steps });
   const nodeConfig = { ...steps[currentNode] };
 
   // Base case: if the option has leaf=true there are no more choices

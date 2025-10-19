@@ -1,299 +1,315 @@
-import * as ids from "./ids";
-import DotPlot from "../../components/figures/DotPlot";
-import ScatterPlot from "../../components/figures/ScatterPlot";
-import LineGraph from "../../components/figures/LineGraph";
-import StemLeafPlot from "../../components/figures/StemLeafPlot";
-import ScatterMatrix from "../../components/figures/ScatterMatrix";
-import Scatter3D from "../../components/figures/Scatter3D";
-import GroupedBoxPlot from "../../components/figures/GroupedBoxPlot";
-import ViolinPlot from "../../components/figures/ViolinPlot";
-import ContourPlot from "../../components/figures/ContourPlot";
-import HeatMap from "../../components/figures/HeatMap";
-import InteractionPlot from "../../components/figures/InteractionPlot";
-import SpaghettiPlot from "../../components/figures/SpaghettiPlot";
-import BoxWhiskerPlot from "../../components/figures/BoxWhiskerPlot";
+import {
+  PearsonCorrelationCoefficientR,
+  SpearmansRho,
+  CoefficientOfDeterminationR2,
+  MeanDifference,
+  MedianDifference,
+  CohensD,
+  GlassDelta,
+  HedgesG,
+  RNonParametric,
+  EtaSquared,
+  OmegaSquared,
+  BetaCoefficient,
+  RSquared,
+  AdjustedRSquared,
+} from "../../components";
+
 import { TreeNode } from "../types";
-import { CONTINUOUS, ROOT } from "../ids";
+import * as ids from "./ids";
+import {
+  CONTINUOUS,
+  EFFECT_SIZE_SELECTION_COMPONENT,
+  EFFECT_SIZE_SELECTION_TITLE,
+  FOCUS_OF_ANALYSIS_SELECTION_COMPONENT,
+  FOCUS_OF_ANALYSIS_TITLE,
+  FURTHER_ADJUSTMENTS_COMPONENT,
+  FURTHER_ADJUSTMENTS_TITLE,
+  ROOT,
+} from "../ids";
+import { Text } from "@mantine/core";
 
 const tree: Record<string, TreeNode> = {
   [CONTINUOUS]: {
     type: "question",
-    title: "What is the purpose of the visualization?",
-    component: () => "",
-    choices: [
-      {
-        answer: "Highlight individual values",
-        next: ids.HIGHLIGHT_VALUES,
-        option_description:
-          "Emphasize specific data points to draw attention to particular values or anomalies.",
-      },
-      {
-        answer: "Show Trends Over Time",
-        next: ids.SHOW_TRENDS,
-        option_description:
-          "Visualize how data changes across different time periods to identify patterns or fluctuations.",
-      },
-      {
-        answer: "Compare Distribution Within a Group",
-        next: ids.COMPARE_WITHIN_GROUP,
-        option_description:
-          "Compare the spread of data within a single group or category to understand its variation.",
-      },
-      {
-        answer: "Show Relationship Between Variables",
-        next: ids.SHOW_RELATIONSHIPS,
-        option_description:
-          "Display how two or more variables are related or influence each other.",
-      },
-      {
-        answer: "Compare Distribution Across Two Groups",
-        next: ids.COMPARE_TWO_GROUPS,
-        option_description:
-          "Contrast the data distributions between two different groups to identify differences or similarities.",
-      },
-      {
-        answer: "Compare Distribution Across More Than Two Groups",
-        next: ids.COMPARE_MORE_THAN_TWO_GROUPS,
-        option_description:
-          "Analyze and compare the spread of data across multiple groups to highlight key trends and variations.",
-      },
-      {
-        answer: "Identify Patterns and Outliers",
-        next: ids.IDENTIFY_PATTERNS,
-        option_description:
-          "Detect recurring trends or unusual data points that deviate significantly from the rest.",
-      },
-      {
-        answer: "Demonstrate Change in Data Over Space",
-        next: ids.CHANGE_OVER_SPACE,
-        option_description:
-          "Show how data varies across different spatial locations, highlighting geographic or structural patterns.",
-      },
-      {
-        answer: "Illustrate a Concept or Theory",
-        next: ids.ILLUSTRATE_CONCEPT,
-        option_description:
-          "Visualize abstract concepts or theoretical models to make them more tangible and understandable.",
-      },
-      {
-        answer: "Show Interactions Between Factors",
-        next: ids.SHOW_INTERACTIONS,
-        option_description:
-          "Depict how multiple factors influence each other and interact within a system.",
-      },
-      {
-        answer: "Show Individual Trajectories Over Time",
-        next: ids.INDIVIDUAL_TRAJECTORIES,
-        option_description:
-          "Track and display the progress or path of individual data points or subjects over time.",
-      },
-    ],
+    title: FOCUS_OF_ANALYSIS_TITLE,
+    component: FOCUS_OF_ANALYSIS_SELECTION_COMPONENT,
     inputs: [ROOT],
-  },
-
-  [ids.HIGHLIGHT_VALUES]: {
-    type: "question",
-    title: "What is the dataset size?",
-    component: () => "",
-    inputs: [CONTINUOUS],
     choices: [
       {
-        answer: "≤ 30",
-        next: ids.DOT_PLOT,
-        option_description: "Few data points (small dataset).",
-      },
-      {
-        answer: "> 30",
-        next: ids.SCATTER_PLOT,
-        option_description: "Moderate or large number of data points.",
-      },
-    ],
-  },
-
-  [ids.DOT_PLOT]: {
-    type: "statement",
-    title: "Dot Plot",
-    flowChartTitle: "Dot Plot",
-    component: DotPlot,
-    color: "blue-darken-2",
-    inputs: [ids.HIGHLIGHT_VALUES],
-  },
-
-  [ids.SCATTER_PLOT]: {
-    type: "statement",
-    title: "Scatter Plot",
-    flowChartTitle: "Scatter Plot",
-    component: ScatterPlot,
-    color: "blue-darken-2",
-    inputs: [ids.SCATTER_OR_MATRIX],
-  },
-
-  [ids.SHOW_TRENDS]: {
-    type: "statement",
-    title: "Line Graph",
-    flowChartTitle: "Line Graph",
-    component: LineGraph,
-    color: "blue-darken-2",
-    inputs: [CONTINUOUS],
-  },
-
-  [ids.COMPARE_WITHIN_GROUP]: {
-    type: "question",
-    title: "What is the dataset size?",
-    component: () => "",
-    inputs: [CONTINUOUS],
-    choices: [
-      {
-        answer: "> 30 and ≤ 100",
-        next: ids.STEM_LEAF,
-        option_description: "Small or moderate number of data points.",
-      },
-      {
-        answer: "> 100",
-        next: ids.BOX_PLOT,
-        option_description: "Large number of data points.",
-      },
-    ],
-  },
-
-  [ids.STEM_LEAF]: {
-    type: "statement",
-    title: "Stem-and-Leaf Plot",
-    flowChartTitle: "Stem-and-Leaf Plot",
-    component: StemLeafPlot,
-    color: "blue-darken-2",
-    inputs: [ids.COMPARE_WITHIN_GROUP],
-  },
-
-  [ids.BOX_PLOT]: {
-    type: "statement",
-    title: "Box-and-Whisker Plot",
-    flowChartTitle: "Box-and-Whisker Plot",
-    component: BoxWhiskerPlot,
-    color: "blue-darken-2",
-    inputs: [ids.COMPARE_WITHIN_GROUP],
-  },
-
-  [ids.SHOW_RELATIONSHIPS]: {
-    type: "question",
-    title: "What is the type of independent variable?",
-    component: () => "",
-    inputs: [CONTINUOUS],
-    choices: [
-      {
-        answer: "Continuous",
+        answer: "Correlation with continuous measure",
+        next: ids.CORRELATION_WITH_CONTINUOUS_MEASURE,
         option_description:
-          "Represents numerical values that can take any value within a range.",
-        next: ids.SCATTER_OR_MATRIX,
+          "Correlation is a statistical measure of the strength of the association between two variables.",
       },
       {
-        answer: "Categorical",
+        answer: "Comparison of 2 groups",
+        next: ids.COMPARISON_OF_TWO_GROUPS,
         option_description:
-          "Represents distinct groups or categories without a numerical order.",
-        next: ids.SCATTER_3D,
+          "A comparison is evaluating the relationship between 2 groups.",
+      },
+      {
+        answer: "Comparison of 3 or more groups",
+        next: ids.COMPARISON_OF_THREEMORE_GROUPS,
+        option_description:
+          "A comparison is evaluating the relationship between 3 or more groups.",
+      },
+      {
+        answer: "Regression model",
+        next: ids.REGRESSION_MODEL,
+        option_description:
+          "Regression is used to predict the value of a dependent variable based on one or more independent variables.",
       },
     ],
   },
 
-  [ids.SCATTER_OR_MATRIX]: {
+  // ---------------- CORRELATION ----------------
+  [ids.CORRELATION_WITH_CONTINUOUS_MEASURE]: {
     type: "question",
-    title: "What is the dataset size?",
-    component: () => "",
-    inputs: [ids.SHOW_RELATIONSHIPS],
+    title: EFFECT_SIZE_SELECTION_TITLE,
+    component: EFFECT_SIZE_SELECTION_COMPONENT,
+    color: "teal-darken-2",
+    inputs: [CONTINUOUS],
     choices: [
       {
-        answer: "≤ 100",
-        next: ids.SCATTER_PLOT,
-        option_description: "Small or moderate number of data points.",
+        answer: "Pearson Correlation Coefficient r",
+        next: ids.PEARSON_R,
       },
       {
-        answer: "> 100",
-        next: ids.SCATTER_MATRIX,
-        option_description: "Many data points (large dataset).",
+        answer: "Spearman’s rho (non-parametric)",
+        next: ids.SPEARMAN_RHO,
+      },
+      {
+        answer: "Coefficient of Determination R²",
+        next: ids.R2,
       },
     ],
   },
-
-  [ids.SCATTER_MATRIX]: {
+  [ids.PEARSON_R]: {
     type: "statement",
-    title: "Scatter Plot Matrix",
-    flowChartTitle: "Scatter Plot Matrix",
-    component: ScatterMatrix,
-    color: "blue-darken-2",
-    inputs: [ids.SCATTER_OR_MATRIX],
+    title: "Pearson Correlation Coefficient r",
+    flowChartTitle: "Pearson r",
+    component: PearsonCorrelationCoefficientR,
+    color: "teal-darken-2",
+    inputs: [ids.CORRELATION_WITH_CONTINUOUS_MEASURE],
+  },
+  [ids.SPEARMAN_RHO]: {
+    type: "statement",
+    title: "Spearman’s rho (non-parametric)",
+    flowChartTitle: "Spearman’s rho",
+    component: SpearmansRho,
+    color: "teal-darken-2",
+    inputs: [ids.CORRELATION_WITH_CONTINUOUS_MEASURE],
+  },
+  [ids.R2]: {
+    type: "statement",
+    title: "Coefficient of Determination R²",
+    flowChartTitle: "R²",
+    component: CoefficientOfDeterminationR2,
+    color: "teal-darken-2",
+    inputs: [ids.CORRELATION_WITH_CONTINUOUS_MEASURE],
   },
 
-  [ids.SCATTER_3D]: {
-    type: "statement",
-    title: "3D Scatter Plot",
-    flowChartTitle: "3D Scatter Plot",
-    component: Scatter3D,
-    color: "blue-darken-2",
-    inputs: [ids.SHOW_RELATIONSHIPS],
-  },
-
-  [ids.COMPARE_TWO_GROUPS]: {
-    type: "statement",
-    title: "Grouped Box Plot",
-    flowChartTitle: "Grouped Box Plot",
-    component: GroupedBoxPlot,
-    color: "blue-darken-2",
+  // ---------------- TWO GROUPS ----------------
+  [ids.COMPARISON_OF_TWO_GROUPS]: {
+    type: "question",
+    title: EFFECT_SIZE_SELECTION_TITLE,
+    component: EFFECT_SIZE_SELECTION_COMPONENT,
+    color: "indigo-darken-2",
     inputs: [CONTINUOUS],
+    choices: [
+      { answer: "Mean Difference", next: ids.MEAN_DIFFERENCE },
+      {
+        answer: "Median Difference (non-parametric)",
+        next: ids.MEDIAN_DIFFERENCE,
+      },
+      { answer: "Cohen’s d", next: ids.COHENS_D },
+      { answer: "Glass’s Δ", next: ids.GLASS_DELTA },
+      { answer: "Hedges’ g", next: ids.HEDGES_G },
+      { answer: "r (non-parametric)", next: ids.R_NONPARAMETRIC },
+    ],
+  },
+  [ids.MEAN_DIFFERENCE]: {
+    type: "statement",
+    title: "Mean Difference",
+    flowChartTitle: "Mean Difference",
+    component: MeanDifference,
+    color: "indigo-darken-2",
+    inputs: [ids.COMPARISON_OF_TWO_GROUPS],
+  },
+  [ids.MEDIAN_DIFFERENCE]: {
+    type: "statement",
+    title: "Median Difference (non-parametric)",
+    flowChartTitle: "Median Difference",
+    component: MedianDifference,
+    color: "indigo-darken-2",
+    inputs: [ids.COMPARISON_OF_TWO_GROUPS],
+  },
+  [ids.COHENS_D]: {
+    type: "statement",
+    title: "Cohen’s d",
+    flowChartTitle: "Cohen’s d",
+    component: CohensD,
+    color: "indigo-darken-2",
+    inputs: [ids.COMPARISON_OF_TWO_GROUPS],
+  },
+  [ids.GLASS_DELTA]: {
+    type: "statement",
+    title: "Glass’s Δ",
+    flowChartTitle: "Glass’s Δ",
+    component: GlassDelta,
+    color: "indigo-darken-2",
+    inputs: [ids.COMPARISON_OF_TWO_GROUPS],
+  },
+  [ids.HEDGES_G]: {
+    type: "statement",
+    title: "Hedges’ g",
+    flowChartTitle: "Hedges’ g",
+    component: HedgesG,
+    color: "indigo-darken-2",
+    inputs: [ids.COMPARISON_OF_TWO_GROUPS],
+  },
+  [ids.R_NONPARAMETRIC]: {
+    type: "statement",
+    title: "r (non-parametric)",
+    flowChartTitle: "r (non-parametric)",
+    component: RNonParametric,
+    color: "indigo-darken-2",
+    inputs: [ids.COMPARISON_OF_TWO_GROUPS],
   },
 
-  [ids.COMPARE_MORE_THAN_TWO_GROUPS]: {
-    type: "statement",
-    title: "Violin Plot",
-    flowChartTitle: "Violin Plot",
-    component: ViolinPlot,
-    color: "blue-darken-2",
+  // ---------------- THREE+ GROUPS ----------------
+  [ids.COMPARISON_OF_THREEMORE_GROUPS]: {
+    type: "question",
+    title: FURTHER_ADJUSTMENTS_TITLE,
+    component: FURTHER_ADJUSTMENTS_COMPONENT,
+    color: "orange-darken-2",
     inputs: [CONTINUOUS],
+    choices: [
+      {
+        answer: "Reporting Pairwise Differences",
+        next: ids.REPORTING_PAIRWISE_DIFFERENCES,
+      },
+      {
+        answer: "Reporting Overall Effect",
+        next: ids.REPORTING_OVERALL_EFFECT,
+      },
+    ],
+  },
+  [ids.REPORTING_PAIRWISE_DIFFERENCES]: {
+    type: "question",
+    title: EFFECT_SIZE_SELECTION_TITLE,
+    component: EFFECT_SIZE_SELECTION_COMPONENT,
+    color: "orange-darken-2",
+    inputs: [ids.COMPARISON_OF_THREEMORE_GROUPS],
+    choices: [
+      { answer: "Mean Difference", next: ids.MEAN_DIFFERENCE },
+      {
+        answer: "Median Difference (non-parametric)",
+        next: ids.MEDIAN_DIFFERENCE,
+      },
+      { answer: "Cohen’s d", next: ids.COHENS_D },
+      { answer: "Glass’s Δ", next: ids.GLASS_DELTA },
+      { answer: "Hedges’ g", next: ids.HEDGES_G },
+      { answer: "r (non-parametric)", next: ids.R_NONPARAMETRIC },
+    ],
+  },
+  [ids.REPORTING_OVERALL_EFFECT]: {
+    type: "question",
+    title: EFFECT_SIZE_SELECTION_TITLE,
+    component: EFFECT_SIZE_SELECTION_COMPONENT,
+    color: "orange-darken-2",
+    inputs: [ids.COMPARISON_OF_THREEMORE_GROUPS],
+    choices: [
+      { answer: "Eta Squared (η²)", next: ids.ETA_SQUARED },
+      { answer: "Omega Squared (ω²)", next: ids.OMEGA_SQUARED },
+    ],
+  },
+  [ids.ETA_SQUARED]: {
+    type: "statement",
+    title: "Eta Squared (η²)",
+    flowChartTitle: "η²",
+    component: EtaSquared,
+    color: "orange-darken-2",
+    inputs: [ids.REPORTING_OVERALL_EFFECT],
+  },
+  [ids.OMEGA_SQUARED]: {
+    type: "statement",
+    title: "Omega Squared (ω²)",
+    flowChartTitle: "ω²",
+    component: OmegaSquared,
+    color: "orange-darken-2",
+    inputs: [ids.REPORTING_OVERALL_EFFECT],
   },
 
-  [ids.CHANGE_OVER_SPACE]: {
-    type: "statement",
-    title: "Contour Plot",
-    flowChartTitle: "Contour Plot",
-    component: ContourPlot,
-    color: "blue-darken-2",
+  // ---------------- REGRESSION ----------------
+  [ids.REGRESSION_MODEL]: {
+    type: "question",
+    title: "Regression Model",
+    component: () => (
+      <Text c="dimmed" size="md">
+        Regression models can assess associations with predictors or summarize
+        overall model fit.
+      </Text>
+    ),
+    color: "purple-darken-2",
     inputs: [CONTINUOUS],
+    choices: [
+      {
+        answer: "Adjusted Association with Predictor",
+        next: ids.ADJUSTED_ASSOCIATION,
+      },
+      {
+        answer: "Overall Model",
+        next: ids.OVERALL_MODEL,
+      },
+    ],
   },
-
-  [ids.ILLUSTRATE_CONCEPT]: {
+  [ids.ADJUSTED_ASSOCIATION]: {
     type: "statement",
-    title: "Heat Map",
-    flowChartTitle: "Heat Map",
-    component: HeatMap,
-    color: "blue-darken-2",
-    inputs: [CONTINUOUS],
+    title: "Adjusted Association with Predictor",
+    flowChartTitle: "Adjusted Association",
+    component: BetaCoefficient,
+    color: "purple-darken-2",
+    inputs: [ids.REGRESSION_MODEL],
   },
-
-  [ids.SHOW_INTERACTIONS]: {
-    type: "statement",
-    title: "Interaction Plots",
-    flowChartTitle: "Interaction Plots",
-    component: InteractionPlot,
-    color: "blue-darken-2",
-    inputs: [CONTINUOUS],
+  [ids.OVERALL_MODEL]: {
+    type: "question",
+    title: EFFECT_SIZE_SELECTION_TITLE,
+    component: EFFECT_SIZE_SELECTION_COMPONENT,
+    color: "purple-darken-2",
+    inputs: [ids.REGRESSION_MODEL],
+    choices: [
+      { answer: "R²", next: ids.R2_REGRESSION },
+      { answer: "Adjusted R²", next: ids.ADJUSTED_R2 },
+    ],
   },
-
-  [ids.INDIVIDUAL_TRAJECTORIES]: {
+  [ids.BETA_COEFFICIENT]: {
     type: "statement",
-    title: "Spaghetti Plot",
-    flowChartTitle: "Spaghetti Plot",
-    component: SpaghettiPlot,
-    color: "blue-darken-2",
-    inputs: [CONTINUOUS],
+    title: "Beta Coefficient (standardized / unstandardized)",
+    flowChartTitle: "β Coefficient",
+    component: BetaCoefficient,
+    color: "purple-darken-2",
+    inputs: [ids.ADJUSTED_ASSOCIATION],
   },
-
-  [ids.IDENTIFY_PATTERNS]: {
+  [ids.R2_REGRESSION]: {
     type: "statement",
-    title: "Box and Whisker Plot",
-    flowChartTitle: "Box and Whisker Plot",
-    component: BoxWhiskerPlot,
-    color: "blue-darken-2",
-    inputs: [CONTINUOUS],
+    title: "R²",
+    flowChartTitle: "R²",
+    component: RSquared,
+    color: "purple-darken-2",
+    inputs: [ids.OVERALL_MODEL],
+  },
+  [ids.ADJUSTED_R2]: {
+    type: "statement",
+    title: "Adjusted R²",
+    flowChartTitle: "Adjusted R²",
+    component: AdjustedRSquared,
+    color: "purple-darken-2",
+    inputs: [ids.OVERALL_MODEL],
   },
 };
+
+console.log({ tree });
 
 export default tree;

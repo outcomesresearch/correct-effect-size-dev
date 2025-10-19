@@ -6,7 +6,7 @@ import TrimAndFillPlot from "../../components/figures/TrimAndFillPlot";
 import CumulativeMetaAnalysisPlot from "../../components/figures/CumulativeMetaAnalysisPlot";
 import * as ids from "./ids";
 import { TreeNode } from "../types.ts";
-import { META_ANALYSIS, ROOT } from "../ids.ts";
+import { META_ANALYSIS, ROOT } from "../ids.tsx";
 
 /*
 Meta-analysis Decision Tree Logic (Simplified):
