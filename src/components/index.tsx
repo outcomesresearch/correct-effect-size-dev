@@ -42,6 +42,15 @@ export const PercentCorrectlyClassified = () => (
   <div>Percent correctly classified</div>
 );
 
+export const HazardRatio = () => <div>Hazard Ratio</div>;
+export const SurvivalRateDifference = () => <div>Survival rate difference</div>;
+export const MedianSurvivalTime = () => <div>Median survival time</div>;
+export const RestrictedMeanSurvivalTime = () => (
+  <div>Restricted mean survival time</div>
+);
+
+export const HarrellCIndex = () => <div>Harrell&apos;s C-index</div>;
+
 export default {
   PearsonCorrelationCoefficientR,
   SpearmansRho,
@@ -69,4 +78,9 @@ export default {
   PseudoRSquared,
   CStatistic,
   PercentCorrectlyClassified,
+  HazardRatio,
+  SurvivalRateDifference,
+  MedianSurvivalTime,
+  RestrictedMeanSurvivalTime,
+  HarrellCIndex,
 };

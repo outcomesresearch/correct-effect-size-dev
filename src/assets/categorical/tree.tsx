@@ -25,6 +25,8 @@ import {
   EFFECT_SIZE_SELECTION_COMPONENT,
   EFFECT_SIZE_SELECTION_TITLE,
   ROOT,
+  FURTHER_ADJUSTMENTS_TITLE,
+  FURTHER_ADJUSTMENTS_COMPONENT,
 } from "../ids";
 import { Text } from "@mantine/core";
 
@@ -142,13 +144,8 @@ const tree: Record<string, TreeNode> = {
   // ---------------- COMPARISON OF THREE OR MORE GROUPS ----------------
   [ids.COMPARISON_OF_THREEMORE_GROUPS]: {
     type: "question",
-    title: "Comparison of 3 or more groups",
-    component: () => (
-      <Text c="dimmed" size="md">
-        For 3+ groups, you may report pairwise differences or an overall
-        association.
-      </Text>
-    ),
+    title: FURTHER_ADJUSTMENTS_TITLE,
+    component: FURTHER_ADJUSTMENTS_COMPONENT,
     inputs: [CATEGORICAL],
     choices: [
       {

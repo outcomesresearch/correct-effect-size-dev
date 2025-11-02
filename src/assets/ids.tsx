@@ -1,11 +1,9 @@
 import { Text } from "@mantine/core";
 
 export const ROOT = "assignExposures";
-export const NOMINAL = "nominal";
 export const CONTINUOUS = "continuous";
 export const CATEGORICAL = "categorical";
-export const META_ANALYSIS = "meta_analysis";
-export const DICHOTOMOUS = "dichotomous";
+export const TIME_TO_EVENT = "time_to_event";
 
 export const OUTCOME_MEASURE_TITLE = "Outcome Measure";
 export const OUTCOME_MEASURE_SELECTION_COMPONENT = () => (
