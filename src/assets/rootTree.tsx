@@ -4,8 +4,6 @@ import * as ids from "./ids";
 import continuousStudyTree from "./continuous/tree";
 import categoricalStudyTree from "./categorical/tree";
 import timeToEventStudyTree from "./timeToEvent/tree";
-import nominalStudyTree from "./nominal/tree";
-import metaanalysisStudyRootTree from "./meta-analysis/tree";
 
 const addIds = (tree) => {
   return Object.entries(tree).reduce((acc, [key, value]) => {

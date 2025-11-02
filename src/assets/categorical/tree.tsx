@@ -28,7 +28,6 @@ import {
   FURTHER_ADJUSTMENTS_TITLE,
   FURTHER_ADJUSTMENTS_COMPONENT,
 } from "../ids";
-import { Text } from "@mantine/core";
 
 const tree: Record<string, TreeNode> = {
   // Root question for the categorical branch
@@ -39,7 +38,7 @@ const tree: Record<string, TreeNode> = {
     inputs: [ROOT],
     choices: [
       {
-        answer: "Correlation with continuous measure",
+        answer: "Correlation with continuous measure (categorical)",
         // Only one measure applies (Point biserial) → go directly to its statement
         next: ids.POINT_BISERIAL,
         option_description:
@@ -152,7 +151,10 @@ const tree: Record<string, TreeNode> = {
         answer: "Reporting pairwise differences",
         next: ids.PAIRWISE_EFFECT_SIZES,
       },
-      { answer: "Reporting overall effect", next: ids.OVERALL_EFFECT_SIZES },
+      {
+        answer: "Reporting overall effect",
+        next: ids.OVERALL_EFFECT_SIZES,
+      },
     ],
   },
 
@@ -251,20 +253,18 @@ const tree: Record<string, TreeNode> = {
   // ---------------- REGRESSION MODEL ----------------
   [ids.REGRESSION_MODEL]: {
     type: "question",
-    title: "Regression model",
-    component: () => (
-      <Text c="dimmed" size="md">
-        Report adjusted associations for predictors or overall model
-        fit/quality.
-      </Text>
-    ),
+    title: FURTHER_ADJUSTMENTS_TITLE,
+    component: FURTHER_ADJUSTMENTS_COMPONENT,
     inputs: [CATEGORICAL],
     choices: [
       {
         answer: "Adjusted association with predictor",
         next: ids.ADJUSTED_ASSOCIATION_EFFECT_SIZES,
       },
-      { answer: "Overall model", next: ids.REGRESSION_OVERALL_EFFECT_SIZES },
+      {
+        answer: "Overall model",
+        next: ids.REGRESSION_OVERALL_EFFECT_SIZES,
+      },
     ],
   },
 

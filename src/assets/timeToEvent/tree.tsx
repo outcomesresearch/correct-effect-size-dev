@@ -35,19 +35,19 @@ const tree: Record<string, TreeNode> = {
       },
       {
         answer: "Comparison of 2 groups",
-        next: ids.TWO_GROUPS_TTE_EFFECT_SIZES,
+        next: ids.TWO_GROUPS_EFFECT_SIZES,
         option_description:
           "A comparison is evaluating the relationship between 2 groups.",
       },
       {
         answer: "Comparison of 3 or more groups",
-        next: ids.COMPARISON_OF_THREEMORE_GROUPS_TTE,
+        next: ids.COMPARISON_OF_THREEMORE_GROUPS,
         option_description:
           "A comparison is evaluating the relationship between 3 or more groups.",
       },
       {
         answer: "Regression model",
-        next: ids.REGRESSION_MODEL_TTE,
+        next: ids.REGRESSION_MODEL,
         option_description:
           "Regression is used to predict the value of a dependent variable based on one or more independent variables.",
       },
@@ -65,7 +65,7 @@ const tree: Record<string, TreeNode> = {
   },
 
   // ---------- 2 groups (multiple measures → selection) ----------
-  [ids.TWO_GROUPS_TTE_EFFECT_SIZES]: {
+  [ids.TWO_GROUPS_EFFECT_SIZES]: {
     type: "question",
     title: EFFECT_SIZE_SELECTION_TITLE,
     component: EFFECT_SIZE_SELECTION_COMPONENT,
@@ -88,7 +88,7 @@ const tree: Record<string, TreeNode> = {
     flowChartTitle: "Survival Rate Difference",
     component: SurvivalRateDifference,
     color: "indigo-darken-2",
-    inputs: [ids.TWO_GROUPS_TTE_EFFECT_SIZES],
+    inputs: [ids.TWO_GROUPS_EFFECT_SIZES],
   },
   [ids.MEDIAN_SURVIVAL_TIME]: {
     type: "statement",
@@ -96,7 +96,7 @@ const tree: Record<string, TreeNode> = {
     flowChartTitle: "Median Survival Time",
     component: MedianSurvivalTime,
     color: "indigo-darken-2",
-    inputs: [ids.TWO_GROUPS_TTE_EFFECT_SIZES],
+    inputs: [ids.TWO_GROUPS_EFFECT_SIZES],
   },
   [ids.RESTRICTED_MEAN_SURVIVAL_TIME]: {
     type: "statement",
@@ -104,11 +104,11 @@ const tree: Record<string, TreeNode> = {
     flowChartTitle: "Restricted Mean Survival Time",
     component: RestrictedMeanSurvivalTime,
     color: "indigo-darken-2",
-    inputs: [ids.TWO_GROUPS_TTE_EFFECT_SIZES],
+    inputs: [ids.TWO_GROUPS_EFFECT_SIZES],
   },
 
   // ---------- 3+ groups → pairwise (multiple measures → selection) ----------
-  [ids.COMPARISON_OF_THREEMORE_GROUPS_TTE]: {
+  [ids.COMPARISON_OF_THREEMORE_GROUPS]: {
     type: "question",
     title: FURTHER_ADJUSTMENTS_TITLE,
     component: FURTHER_ADJUSTMENTS_COMPONENT,
@@ -116,16 +116,16 @@ const tree: Record<string, TreeNode> = {
     choices: [
       {
         answer: "Reporting pairwise differences",
-        next: ids.PAIRWISE_TTE_EFFECT_SIZES,
+        next: ids.PAIRWISE_EFFECT_SIZES,
         // No description provided in your source for REPORTING_PAIRWISE_DIFFERENCES
       },
     ],
   },
-  [ids.PAIRWISE_TTE_EFFECT_SIZES]: {
+  [ids.PAIRWISE_EFFECT_SIZES]: {
     type: "question",
     title: EFFECT_SIZE_SELECTION_TITLE,
     component: EFFECT_SIZE_SELECTION_COMPONENT,
-    inputs: [ids.COMPARISON_OF_THREEMORE_GROUPS_TTE],
+    inputs: [ids.COMPARISON_OF_THREEMORE_GROUPS],
     choices: [
       {
         answer: "Survival rate difference",
@@ -140,7 +140,7 @@ const tree: Record<string, TreeNode> = {
   },
 
   // ---------- Regression model ----------
-  [ids.REGRESSION_MODEL_TTE]: {
+  [ids.REGRESSION_MODEL]: {
     type: "question",
     title: FURTHER_ADJUSTMENTS_TITLE,
     component: FURTHER_ADJUSTMENTS_COMPONENT,
@@ -148,33 +148,33 @@ const tree: Record<string, TreeNode> = {
     choices: [
       {
         answer: "Adjusted association with predictor",
-        next: ids.ADJUSTED_ASSOCIATION_TTE,
+        next: ids.ADJUSTED_ASSOCIATION,
         // No description provided in your source for ADJUSTED_ASSOCIATION
       },
       {
         answer: "Overall model",
-        next: ids.OVERALL_MODEL_TTE,
+        next: ids.OVERALL_MODEL,
         // No description provided in your source for OVERALL_MODEL
       },
     ],
   },
   // Adjusted association → HR (single)
-  [ids.ADJUSTED_ASSOCIATION_TTE]: {
+  [ids.ADJUSTED_ASSOCIATION]: {
     type: "statement",
     title: "Adjusted association with predictor",
     flowChartTitle: "Adjusted Association",
     component: HazardRatio,
     color: "purple-darken-2",
-    inputs: [ids.REGRESSION_MODEL_TTE],
+    inputs: [ids.REGRESSION_MODEL],
   },
   // Overall model → Harrell's C-index (single)
-  [ids.OVERALL_MODEL_TTE]: {
+  [ids.OVERALL_MODEL]: {
     type: "statement",
     title: "Overall model",
     flowChartTitle: "Overall Model",
     component: HarrellCIndex,
     color: "purple-darken-2",
-    inputs: [ids.REGRESSION_MODEL_TTE],
+    inputs: [ids.REGRESSION_MODEL],
   },
 };
 

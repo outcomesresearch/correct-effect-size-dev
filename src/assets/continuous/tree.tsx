@@ -27,7 +27,6 @@ import {
   FURTHER_ADJUSTMENTS_TITLE,
   ROOT,
 } from "../ids";
-import { Text } from "@mantine/core";
 
 const tree: Record<string, TreeNode> = {
   [CONTINUOUS]: {
@@ -37,7 +36,7 @@ const tree: Record<string, TreeNode> = {
     inputs: [ROOT],
     choices: [
       {
-        answer: "Correlation with continuous measure",
+        answer: "Correlation with continuous measure (continuous)",
         next: ids.CORRELATION_WITH_CONTINUOUS_MEASURE,
         option_description:
           "Correlation is a statistical measure of the strength of the association between two variables.",
@@ -49,7 +48,7 @@ const tree: Record<string, TreeNode> = {
           "A comparison is evaluating the relationship between 2 groups.",
       },
       {
-        answer: "Comparison of 3 or more groups",
+        answer: "Comparison of 3 or more groups (Continuous)",
         next: ids.COMPARISON_OF_THREEMORE_GROUPS,
         option_description:
           "A comparison is evaluating the relationship between 3 or more groups.",
@@ -113,7 +112,7 @@ const tree: Record<string, TreeNode> = {
   // ---------------- TWO GROUPS ----------------
   [ids.COMPARISON_OF_TWO_GROUPS]: {
     type: "question",
-    title: EFFECT_SIZE_SELECTION_TITLE,
+    title: EFFECT_SIZE_SELECTION_TITLE + "continuous",
     component: EFFECT_SIZE_SELECTION_COMPONENT,
     color: "indigo-darken-2",
     inputs: [CONTINUOUS],
@@ -181,7 +180,7 @@ const tree: Record<string, TreeNode> = {
   // ---------------- THREE+ GROUPS ----------------
   [ids.COMPARISON_OF_THREEMORE_GROUPS]: {
     type: "question",
-    title: FURTHER_ADJUSTMENTS_TITLE,
+    title: FURTHER_ADJUSTMENTS_TITLE + "continuous",
     component: FURTHER_ADJUSTMENTS_COMPONENT,
     color: "orange-darken-2",
     inputs: [CONTINUOUS],
@@ -245,13 +244,8 @@ const tree: Record<string, TreeNode> = {
   // ---------------- REGRESSION ----------------
   [ids.REGRESSION_MODEL]: {
     type: "question",
-    title: "Regression Model",
-    component: () => (
-      <Text c="dimmed" size="md">
-        Regression models can assess associations with predictors or summarize
-        overall model fit.
-      </Text>
-    ),
+    title: FURTHER_ADJUSTMENTS_TITLE + "continuous",
+    component: FURTHER_ADJUSTMENTS_COMPONENT,
     color: "purple-darken-2",
     inputs: [CONTINUOUS],
     choices: [
