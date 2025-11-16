@@ -13,8 +13,8 @@ import { OmegaSquaredExamples, OmegaSquaredExplanation } from "../../components/
 import { BetaCoefficientExamples, BetaCoefficientExplanation } from "../../components/continuous/BetaCoefficient/index";
 import { PartPartialCorrelationsExamples, PartPartialCorrelationsExplanation } from "../../components/continuous/PartPartialCorrelations/index";
 import { LSMeanDifferenceExamples, LSMeanDifferenceExplanation } from "../../components/continuous/LSMeanDifference/index";
-import RSquared from "../../components/continuous/RSquared";
-import AdjustedRSquared from "../../components/continuous/AdjustedRSquared";
+import { RSquaredExamples, RSquaredExplanation } from "../../components/continuous/RSquared/index";
+import { AdjustedRSquaredExamples, AdjustedRSquaredExplanation } from "../../components/continuous/AdjustedRSquared/index";
 
 import { TreeNode } from "../types";
 import * as ids from "./ids";
@@ -389,17 +389,19 @@ const tree: Record<string, TreeNode> = {
     type: "statement",
     title: "R²",
     flowChartTitle: "R²",
-    component: RSquared,
+    component: RSquaredExplanation,
     color: "purple-darken-2",
     inputs: [ids.OVERALL_MODEL],
+    examples: RSquaredExamples,
   },
   [ids.ADJUSTED_R2]: {
     type: "statement",
     title: "Adjusted R²",
     flowChartTitle: "Adjusted R²",
-    component: AdjustedRSquared,
+    component: AdjustedRSquaredExplanation,
     color: "purple-darken-2",
     inputs: [ids.OVERALL_MODEL],
+    examples: AdjustedRSquaredExamples,
   },
 };
 
