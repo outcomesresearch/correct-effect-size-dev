@@ -11,6 +11,13 @@ export const RISK_RATIO = "risk-ratio";
 export const RISK_DIFFERENCE = "risk-difference";
 export const PHI_COEFFICIENT = "phi-coefficient";
 
+export const ODDS_RATIO_3GROUPS = "odds-ratio-3groups";
+export const RISK_RATIO_3GROUPS = "risk-ratio-3groups";
+export const RISK_DIFFERENCE_3GROUPS = "risk-difference-3groups";
+export const PHI_COEFFICIENT_3GROUPS = "phi-coefficient-3groups";
+
+export const ODDS_RATIO_REGRESSION = "odds-ratio-regression";
+
 // 3+ groups flow
 export const COMPARISON_OF_THREEMORE_GROUPS =
   "comparison-of-three-or-more-groups-cat";

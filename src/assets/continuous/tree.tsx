@@ -11,6 +11,8 @@ import {
   EtaSquared,
   OmegaSquared,
   BetaCoefficient,
+  PartPartialCorrelations,
+  LSMeanDifference,
   RSquared,
   AdjustedRSquared,
 } from "../../components";
@@ -260,12 +262,25 @@ const tree: Record<string, TreeNode> = {
     ],
   },
   [ids.ADJUSTED_ASSOCIATION]: {
-    type: "statement",
-    title: "Adjusted Association with Predictor",
-    flowChartTitle: "Adjusted Association",
-    component: BetaCoefficient,
+    type: "question",
+    title: EFFECT_SIZE_SELECTION_TITLE,
+    component: EFFECT_SIZE_SELECTION_COMPONENT,
     color: "purple-darken-2",
     inputs: [ids.REGRESSION_MODEL],
+    choices: [
+      {
+        answer: "Beta coefficient (standardized or unstandardized)",
+        next: ids.BETA_COEFFICIENT,
+      },
+      {
+        answer: "Part and partial correlations",
+        next: ids.PART_PARTIAL_CORRELATIONS,
+      },
+      {
+        answer: "LS Mean Difference",
+        next: ids.LS_MEAN_DIFFERENCE,
+      },
+    ],
   },
   [ids.OVERALL_MODEL]: {
     type: "question",
@@ -283,6 +298,22 @@ const tree: Record<string, TreeNode> = {
     title: "Beta Coefficient (standardized / unstandardized)",
     flowChartTitle: "β Coefficient",
     component: BetaCoefficient,
+    color: "purple-darken-2",
+    inputs: [ids.ADJUSTED_ASSOCIATION],
+  },
+  [ids.PART_PARTIAL_CORRELATIONS]: {
+    type: "statement",
+    title: "Part and partial correlatinos",
+    flowChartTitle: "Part and partial Correlation",
+    component: PartPartialCorrelations,
+    color: "purple-darken-2",
+    inputs: [ids.ADJUSTED_ASSOCIATION],
+  },
+  [ids.LS_MEAN_DIFFERENCE]: {
+    type: "statement",
+    title: "LS Mean Difference",
+    flowChartTitle: "LS Mean Difference",
+    component: LSMeanDifference,
     color: "purple-darken-2",
     inputs: [ids.ADJUSTED_ASSOCIATION],
   },

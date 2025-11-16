@@ -167,25 +167,57 @@ const tree: Record<string, TreeNode> = {
     choices: [
       {
         answer: "Odds Ratio (OR)",
-        next: ids.ODDS_RATIO,
+        next: ids.ODDS_RATIO_3GROUPS,
         option_description: descriptions.ODDS_RATIO_DESCRIPTION,
       },
       {
         answer: "Risk Ratio (RR)",
-        next: ids.RISK_RATIO,
+        next: ids.RISK_RATIO_3GROUPS,
         option_description: descriptions.ODDS_RATIO_DESCRIPTION,
       },
       {
         answer: "Risk Difference",
-        next: ids.RISK_DIFFERENCE,
+        next: ids.RISK_DIFFERENCE_3GROUPS,
         option_description: descriptions.RISK_DIFFERENCE_DESCRIPTION,
       },
       {
         answer: "Phi coefficient (ɸ)",
-        next: ids.PHI_COEFFICIENT,
+        next: ids.PHI_COEFFICIENT_3GROUPS,
         option_description: descriptions.PHI_DESCRIPTION,
       },
     ],
+  },
+  [ids.ODDS_RATIO_3GROUPS]: {
+    type: "statement",
+    title: "Odds Ratio (OR)",
+    flowChartTitle: "Odds Ratio",
+    component: OddsRatio,
+    color: "indigo-darken-2",
+    inputs: [ids.COMPARISON_OF_THREEMORE_GROUPS],
+  },
+  [ids.RISK_RATIO_3GROUPS]: {
+    type: "statement",
+    title: "Risk Ratio (RR)",
+    flowChartTitle: "Risk Ratio",
+    component: RiskRatio,
+    color: "indigo-darken-2",
+    inputs: [ids.COMPARISON_OF_THREEMORE_GROUPS],
+  },
+  [ids.RISK_DIFFERENCE_3GROUPS]: {
+    type: "statement",
+    title: "Risk Difference",
+    flowChartTitle: "Risk Difference",
+    component: RiskDifference,
+    color: "indigo-darken-2",
+    inputs: [ids.COMPARISON_OF_THREEMORE_GROUPS],
+  },
+  [ids.PHI_COEFFICIENT_3GROUPS]: {
+    type: "statement",
+    title: "Phi coefficient (ɸ)",
+    flowChartTitle: "Phi (ɸ)",
+    component: PhiCoefficient,
+    color: "indigo-darken-2",
+    inputs: [ids.COMPARISON_OF_THREEMORE_GROUPS],
   },
 
   // Overall effect for 3+ groups: nominal & ordinal measures (multiple → selection)
@@ -259,7 +291,7 @@ const tree: Record<string, TreeNode> = {
     choices: [
       {
         answer: "Adjusted association with predictor",
-        next: ids.ADJUSTED_ASSOCIATION_EFFECT_SIZES,
+        next: ids.ODDS_RATIO_REGRESSION,
       },
       {
         answer: "Overall model",
@@ -267,26 +299,35 @@ const tree: Record<string, TreeNode> = {
       },
     ],
   },
+  [ids.ODDS_RATIO_REGRESSION]: {
+    type: "statement",
+    title: "Odds Ratio (OR)",
+    flowChartTitle: "Odds Ratio",
+    component: OddsRatio,
+    color: "indigo-darken-2",
+    inputs: [ids.REGRESSION_MODEL],
+  },
 
   // Adjusted association (multiple → selection)
-  [ids.ADJUSTED_ASSOCIATION_EFFECT_SIZES]: {
-    type: "question",
-    title: EFFECT_SIZE_SELECTION_TITLE,
-    component: EFFECT_SIZE_SELECTION_COMPONENT,
-    inputs: [ids.REGRESSION_MODEL],
-    choices: [
-      {
-        answer: "Odds Ratio (OR)",
-        next: ids.ODDS_RATIO,
-        option_description: descriptions.ODDS_RATIO_DESCRIPTION,
-      },
-      {
-        answer: "Risk Ratio (RR)",
-        next: ids.RISK_RATIO,
-        option_description: descriptions.RISK_RATIO_DESCRIPTION,
-      },
-    ],
-  },
+  // // Adjusted association (multiple → selection)
+  // [ids.ADJUSTED_ASSOCIATION_EFFECT_SIZES]: {
+  //   type: "question",
+  //   title: EFFECT_SIZE_SELECTION_TITLE,
+  //   component: EFFECT_SIZE_SELECTION_COMPONENT,
+  //   inputs: [ids.REGRESSION_MODEL],
+  //   choices: [
+  //     {
+  //       answer: "Odds Ratio (OR)",
+  //       next: ids.ODDS_RATIO,
+  //       option_description: descriptions.ODDS_RATIO_DESCRIPTION,
+  //     },
+  //     {
+  //       answer: "Risk Ratio (RR)",
+  //       next: ids.RISK_RATIO,
+  //       option_description: descriptions.RISK_RATIO_DESCRIPTION,
+  //     },
+  //   ],
+  // },
 
   // Overall model (multiple → selection)
   [ids.REGRESSION_OVERALL_EFFECT_SIZES]: {

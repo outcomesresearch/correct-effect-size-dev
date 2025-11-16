@@ -30,6 +30,8 @@ export const REGRESSION_MODEL = "regression-model";
 export const ADJUSTED_ASSOCIATION = "adjusted-association";
 export const OVERALL_MODEL = "overall-model";
 export const BETA_COEFFICIENT = "beta-coefficient";
+export const PART_PARTIAL_CORRELATIONS = "part-partial-correlations";
+export const LS_MEAN_DIFFERENCE = "ls-mean-difference";
 export const R2_REGRESSION = "r2-regression";
 export const ADJUSTED_R2 = "adjusted-r2";
 

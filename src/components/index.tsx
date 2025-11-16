@@ -15,6 +15,10 @@ export const RNonParametric = () => <div>r (Nonparametric)</div>;
 export const EtaSquared = () => <div>Eta Squared (η²)</div>;
 export const OmegaSquared = () => <div>Omega Squared (ω²)</div>;
 export const BetaCoefficient = () => <div>Beta Coefficient (β)</div>;
+export const PartPartialCorrelations = () => (
+  <div>PartPartialCorrelations (β)</div>
+);
+export const LSMeanDifference = () => <div>LS Mean Difference</div>;
 export const RSquared = () => <div>R Squared (R²)</div>;
 export const AdjustedRSquared = () => <div>Adjusted R Squared (Adj. R²)</div>;
 
