@@ -1,11 +1,11 @@
 import { Text, List, Stack } from "@mantine/core";
-import ExplanationTabsLayout from "../layout/TabsLayout";
+import ExplanationTabsLayout from "../../layout/TabsLayout";
 
 export default function RNonParametricTabs() {
   const explanationSections = [
     <Stack gap={4}>
       <Text>
-        The r correlation coefficient is a standardized measure that represents the
+        The <Text span fs="italic">r</Text> correlation coefficient is a standardized measure that represents the
         strength and direction of a linear relationship between two ordinal or
         ranked variables without making assumptions about the distribution of the
         variables. In the context of nonparametric statistics, it refers to
@@ -14,9 +14,9 @@ export default function RNonParametricTabs() {
     </Stack>,
     <Stack gap={6}>
       <Stack gap={0}>
-        <Text fw={500}>Range of r correlation coefficient</Text>
+        <Text fw={500}>Range of <Text span fs="italic">r</Text> correlation coefficient</Text>
         <Text>
-          The r correlation coefficient values range from -1 to +1, with the
+          The <Text span fs="italic">r</Text> correlation coefficient values range from -1 to +1, with the
           following meanings:
         </Text>
       </Stack>
@@ -39,9 +39,9 @@ export default function RNonParametricTabs() {
     </Stack>,
     <Stack gap={6}>
       <Stack gap={0}>
-        <Text fw={500}>Interpreting the magnitude of r</Text>
+        <Text fw={500}>Interpreting the magnitude of <Text span fs="italic">r</Text></Text>
         <Text>
-          The interpretation of the r correlation coefficient as an absolute value
+          The interpretation of the <Text span fs="italic">r</Text> correlation coefficient as an absolute value
           is as follows:
         </Text>
       </Stack>
@@ -74,9 +74,9 @@ export default function RNonParametricTabs() {
       </List>
     </Stack>,
     <Stack gap={0}>
-      <Text fw={500}>When to use r</Text>
+      <Text fw={500}>When to use <Text span fs="italic">r</Text></Text>
       <Text>
-        The r value is particularly useful when dealing with data that do not meet
+        The <Text span fs="italic">r</Text> value is particularly useful when dealing with data that do not meet
         the assumptions of parametric tests, such as data that are not normally
         distributed or that have outliers.
       </Text>

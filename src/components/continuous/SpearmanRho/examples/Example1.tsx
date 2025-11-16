@@ -87,8 +87,8 @@ function Example1() {
               <Text>95% CI = 0.60 to 0.70</Text>
             </Stack>
             <Stack gap={0}>
-              <Text fw={500}>Probability Value (p-value):</Text>
-              <Text>P &lt; 0.0001</Text>
+              <Text fw={500}>Probability Value (<Text span fs="italic">p</Text>-value):</Text>
+              <Text><Text span fs="italic">P</Text> &lt; 0.0001</Text>
             </Stack>
           </Stack>
         </Tabs.Panel>

@@ -6,7 +6,7 @@ export default function PearsonCorrelationTabs() {
         // Intro
         <Stack gap={4}>
             <Text>
-                The Pearson correlation coefficient (Pearson's r) is used to quantify
+                The Pearson correlation coefficient (Pearson's <Text span fs="italic">r</Text>) is used to quantify
                 the linear relationship or association between two continuous variables.
                 It measures both the direction and the strength of this linear
                 relationship.
@@ -17,7 +17,7 @@ export default function PearsonCorrelationTabs() {
             <Stack gap={0}>
                 <Text fw={500}>Range of Pearson&apos;s r</Text>
                 <Text>
-                    Pearson&apos;s r values range from -1 to +1, with the following
+                    Pearson&apos;s <Text span fs="italic">r</Text> values range from -1 to +1, with the following
                     meanings:
                 </Text>
             </Stack>
@@ -108,12 +108,12 @@ export default function PearsonCorrelationTabs() {
         <Stack gap={0}>
             <Text fw={500}>Important caveats</Text>
             <Text>
-                While a significant Pearson&apos;s r value indicates a linear
+                While a significant Pearson&apos;s <Text span fs="italic">r</Text> value indicates a linear
                 relationship between variables, it does not imply causation.
                 Furthermore, it is essential to check the assumptions of the Pearson
                 correlation (e.g., linearity, no outliers) and to consider the broader
                 context when interpreting its value. Nonlinear relationships might not
-                be well represented by Pearson&apos;s r.
+                be well represented by Pearson&apos;s <Text span fs="italic">r</Text>.
             </Text>
         </Stack>,
     ];

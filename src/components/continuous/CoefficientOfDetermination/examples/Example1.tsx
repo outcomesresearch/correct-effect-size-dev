@@ -82,8 +82,8 @@ function Example1() {
               <Text>95% confidence interval (CI) of 0.40 to 0.50</Text>
             </Stack>
             <Stack gap={0}>
-              <Text fw={500}>Probability Value (p-value):</Text>
-              <Text>P=0.0004</Text>
+              <Text fw={500}>Probability Value (<Text span fs="italic">p</Text>-value):</Text>
+              <Text><Text span fs="italic">P</Text>=0.0004</Text>
             </Stack>
           </Stack>
         </Tabs.Panel>

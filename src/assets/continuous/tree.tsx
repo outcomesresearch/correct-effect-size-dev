@@ -5,12 +5,12 @@ import {
 import { PearsonExamples, PearsonExplanation } from "../../components/continuous/PearsonCorrelationCoefficient/index";
 import { CoefficientOfDeterminationExamples, CoefficientOfDeterminationExplanation } from "../../components/continuous/CoefficientOfDetermination/index";
 import { SpearmanRhoExamples, SpearmanRhoExplanation } from "../../components/continuous/SpearmanRho/index";
-import MeanDifference from "../../components/continuous/MeanDifference";
-import MedianDifference from "../../components/continuous/MedianDifference";
-import CohensD from "../../components/continuous/CohensD";
-import GlassDelta from "../../components/continuous/GlassDelta";
-import HedgesG from "../../components/continuous/HedgesG";
-import RNonParametric from "../../components/continuous/RNonParametric";
+import { MeanDifferenceExamples, MeanDifferenceExplanation } from "../../components/continuous/MeanDifference/index";
+import { MedianDifferenceExamples, MedianDifferenceExplanation } from "../../components/continuous/MedianDifference/index";
+import { CohensDExamples, CohensDExplanation } from "../../components/continuous/CohensD/index";
+import { GlassDeltaExamples, GlassDeltaExplanation } from "../../components/continuous/GlassDelta/index";
+import { HedgesGExamples, HedgesGExplanation } from "../../components/continuous/HedgesG/index";
+import { RNonParametricExamples, RNonParametricExplanation } from "../../components/continuous/RNonParametric/index";
 import EtaSquared from "../../components/continuous/EtaSquared";
 import OmegaSquared from "../../components/continuous/OmegaSquared";
 import BetaCoefficient from "../../components/continuous/BetaCoefficient";
@@ -138,47 +138,53 @@ const tree: Record<string, TreeNode> = {
     type: "statement",
     title: "Mean Difference",
     flowChartTitle: "Mean Difference",
-    component: MeanDifference,
+    component: MeanDifferenceExplanation,
     color: "indigo-darken-2",
     inputs: [ids.COMPARISON_OF_TWO_GROUPS],
+    examples: MeanDifferenceExamples,
   },
   [ids.MEDIAN_DIFFERENCE]: {
     type: "statement",
     title: "Median Difference (non-parametric)",
     flowChartTitle: "Median Difference",
-    component: MedianDifference,
+    component: MedianDifferenceExplanation,
     color: "indigo-darken-2",
     inputs: [ids.COMPARISON_OF_TWO_GROUPS],
+    examples: MedianDifferenceExamples,
   },
   [ids.COHENS_D]: {
     type: "statement",
-    title: "Cohen’s d",
-    flowChartTitle: "Cohen’s d",
-    component: CohensD,
+    title: "Cohen's d",
+    flowChartTitle: "Cohen's d",
+    component: CohensDExplanation,
     color: "indigo-darken-2",
     inputs: [ids.COMPARISON_OF_TWO_GROUPS],
+    examples: CohensDExamples,
   },
   [ids.GLASS_DELTA]: {
     type: "statement",
-    title: "Glass’s Δ",
-    flowChartTitle: "Glass’s Δ",
-    component: GlassDelta,
+    title: "Glass's Δ",
+    flowChartTitle: "Glass's Δ",
+    component: GlassDeltaExplanation,
     color: "indigo-darken-2",
     inputs: [ids.COMPARISON_OF_TWO_GROUPS],
+    examples: GlassDeltaExamples,
   },
   [ids.HEDGES_G]: {
     type: "statement",
-    title: "Hedges’ g",
-    flowChartTitle: "Hedges’ g",
-    component: HedgesG,
+    title: "Hedges' g",
+    flowChartTitle: "Hedges' g",
+    component: HedgesGExplanation,
     color: "indigo-darken-2",
     inputs: [ids.COMPARISON_OF_TWO_GROUPS],
+    examples: HedgesGExamples,
   },
   [ids.R_NONPARAMETRIC]: {
     type: "statement",
     title: "r (non-parametric)",
     flowChartTitle: "r (non-parametric)",
-    component: RNonParametric,
+    component: RNonParametricExplanation,
+    examples: RNonParametricExamples,
     color: "indigo-darken-2",
     inputs: [ids.COMPARISON_OF_TWO_GROUPS],
   },
@@ -223,49 +229,55 @@ const tree: Record<string, TreeNode> = {
     type: "statement",
     title: "Mean Difference",
     flowChartTitle: "Mean Difference",
-    component: MeanDifference,
+    component: MeanDifferenceExplanation,
     color: "indigo-darken-2",
     inputs: [ids.COMPARISON_OF_THREEMORE_GROUPS],
+    examples: MeanDifferenceExamples,
   },
   [ids.MEDIAN_DIFFERENCE_3GROUPS]: {
     type: "statement",
     title: "Median Difference (non-parametric)",
     flowChartTitle: "Median Difference",
-    component: MedianDifference,
+    component: MedianDifferenceExplanation,
     color: "indigo-darken-2",
     inputs: [ids.COMPARISON_OF_THREEMORE_GROUPS],
+    examples: MedianDifferenceExamples,
   },
   [ids.COHENS_D_3GROUPS]: {
     type: "statement",
-    title: "Cohen’s d",
-    flowChartTitle: "Cohen’s d",
-    component: CohensD,
+    title: "Cohen's d",
+    flowChartTitle: "Cohen's d",
+    component: CohensDExplanation,
     color: "indigo-darken-2",
     inputs: [ids.COMPARISON_OF_THREEMORE_GROUPS],
+    examples: CohensDExamples,
   },
   [ids.GLASS_DELTA_3GROUPS]: {
     type: "statement",
-    title: "Glass’s Δ",
-    flowChartTitle: "Glass’s Δ",
-    component: GlassDelta,
+    title: "Glass's Δ",
+    flowChartTitle: "Glass's Δ",
+    component: GlassDeltaExplanation,
     color: "indigo-darken-2",
     inputs: [ids.COMPARISON_OF_THREEMORE_GROUPS],
+    examples: GlassDeltaExamples,
   },
   [ids.HEDGES_G_3GROUPS]: {
     type: "statement",
-    title: "Hedges’ g",
-    flowChartTitle: "Hedges’ g",
-    component: HedgesG,
+    title: "Hedges' g",
+    flowChartTitle: "Hedges' g",
+    component: HedgesGExplanation,
     color: "indigo-darken-2",
     inputs: [ids.COMPARISON_OF_THREEMORE_GROUPS],
+    examples: HedgesGExamples,
   },
   [ids.R_NONPARAMETRIC_3GROUPS]: {
     type: "statement",
     title: "r (non-parametric)",
     flowChartTitle: "r (non-parametric)",
-    component: RNonParametric,
+    component: RNonParametricExplanation,
     color: "indigo-darken-2",
     inputs: [ids.COMPARISON_OF_THREEMORE_GROUPS],
+    examples: RNonParametricExamples,
   },
 
   [ids.REPORTING_OVERALL_EFFECT]: {

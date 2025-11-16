@@ -1,22 +1,20 @@
 import { Text, List, Stack } from "@mantine/core";
-import ExplanationTabsLayout from "../layout/TabsLayout";
+import ExplanationTabsLayout from "../../layout/TabsLayout";
 
-export default function GlassDeltaTabs() {
+export default function CohensDTabs() {
   const explanationSections = [
     <Stack gap={4}>
       <Text>
-        Glass&apos;s delta (∆) is a standardized measure that represents the
-        magnitude of the difference between two groups, similar to Cohen&apos;s d.
-        However, unlike Cohen&apos;s d, Glass&apos;s ∆ is computed by taking the
-        difference between two means and dividing by the standard deviation of just
-        one group, typically the control or baseline group.
+        Cohen&apos;s <Text span fs="italic">d</Text> is a standardized measure that represents the magnitude of
+        the difference between two groups by taking the difference between the
+        means and dividing by the pooled standard deviation.
       </Text>
     </Stack>,
     <Stack gap={6}>
       <Stack gap={0}>
-        <Text fw={500}>Interpreting the magnitude of Glass&apos;s ∆</Text>
+        <Text fw={500}>Interpreting the magnitude of Cohen&apos;s <Text span fs="italic">d</Text></Text>
         <Text>
-          The interpretation of Glass&apos;s ∆ as an absolute value is as follows:
+          The interpretation of Cohen&apos;s <Text span fs="italic">d</Text> as an absolute value is as follows:
         </Text>
       </Stack>
       <List spacing={2}>
@@ -48,11 +46,11 @@ export default function GlassDeltaTabs() {
       </List>
     </Stack>,
     <Stack gap={0}>
-      <Text fw={500}>When to use Glass&apos;s ∆</Text>
+      <Text fw={500}>Standardized measure</Text>
       <Text>
-        Glass&apos;s ∆ is particularly useful when the groups being compared have
-        different standard deviations or when the researcher wants to standardize
-        the mean difference using the variability of a specific reference group.
+        Cohen&apos;s <Text span fs="italic">d</Text> will measure a standardized difference irrespective of sample
+        size, thus making it a valuable tool for understanding the practical
+        significance of results.
       </Text>
     </Stack>,
   ];

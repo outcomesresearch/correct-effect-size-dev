@@ -81,8 +81,8 @@ function Example2() {
               <Text>95% CI = -0.44 to -0.12</Text>
             </Stack>
             <Stack gap={0}>
-              <Text fw={500}>Probability Value (p-value):</Text>
-              <Text>P = 0.895</Text>
+              <Text fw={500}>Probability Value (<Text span fs="italic">p</Text>-value):</Text>
+              <Text><Text span fs="italic">P</Text> = 0.895</Text>
             </Stack>
           </Stack>
         </Tabs.Panel>
@@ -99,7 +99,7 @@ function Example2() {
               The researchers can conclude with 95% confidence that the actual value for the negative correlation coefficient (ρ) between medication adherence levels and disease control in the population could be moderate (ρ = -0.44) to very weak (ρ = -0.12). In this case, the 95% confidence interval (CI) around the correlation coefficient is considered imprecise because the range includes values indicating moderate, weak, and very weak associations. Thus, this study provides limited evidence about the true strength of the relationship.
             </Text>
             <Text>
-              The probability value (p-value) of 0.895 indicates that the likelihood of obtaining a Spearman&apos;s rho (ρ) of -0.28 or greater by chance alone, assuming there is no relationship between these two variables, is exceptionally high. Therefore, the investigators cannot reject the null hypothesis of no relationship. The strength of the association, as indicated by the correlation coefficient, should be considered more closely than the p-value alone to understand the practical significance of the results.
+              The probability value (<Text span fs="italic">p</Text>-value) of 0.895 indicates that the likelihood of obtaining a Spearman&apos;s rho (ρ) of -0.28 or greater by chance alone, assuming there is no relationship between these two variables, is exceptionally high. Therefore, the investigators cannot reject the null hypothesis of no relationship. The strength of the association, as indicated by the correlation coefficient, should be considered more closely than the <Text span fs="italic">p</Text>-value alone to understand the practical significance of the results.
             </Text>
 
             <Stack gap={0}>

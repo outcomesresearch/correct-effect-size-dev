@@ -57,7 +57,7 @@ function Example1() {
             <Stack gap={0}>
               <Text fw={500}>Effect Size Measure used in the Analytical Approach</Text>
               <Text>
-                The Pearson correlation coefficient (r) is calculated to measure the strength
+                The Pearson correlation coefficient (<Text span fs="italic">r</Text>) is calculated to measure the strength
                 and direction of the association between blood glucose level and BMI.
               </Text>
             </Stack>
@@ -82,7 +82,7 @@ function Example1() {
             <Stack gap={0}>
               <Text fw={500}>Point Estimate:</Text>
               <Text>
-                Pearson Correlation Coefficient (r) between Blood Glucose Levels and BMI =
+                Pearson Correlation Coefficient (<Text span fs="italic">r</Text>) between Blood Glucose Levels and BMI =
                 0.70
               </Text>
             </Stack>
@@ -93,8 +93,8 @@ function Example1() {
             </Stack>
 
             <Stack gap={0}>
-              <Text fw={500}>Probability Value (p-value):</Text>
-              <Text>p &lt; 0.0001</Text>
+              <Text fw={500}>Probability Value (<Text span fs="italic">p</Text>-value):</Text>
+              <Text><Text span fs="italic">p</Text> &lt; 0.0001</Text>
             </Stack>
           </Stack>
         </Tabs.Panel>
@@ -104,7 +104,7 @@ function Example1() {
             <Stack gap={0}>
               <Text fw={500}>Discussion</Text>
               <Text>
-                Using the interpretation guide, the Pearson correlation coefficient (r) of 0.70
+                Using the interpretation guide, the Pearson correlation coefficient (<Text span fs="italic">r</Text>) of 0.70
                 indicates a strong positive correlation between blood glucose levels and BMI in
                 the studied adult population – higher blood glucose levels are associated with
                 higher BMI levels.
@@ -112,22 +112,22 @@ function Example1() {
             </Stack>
             <Text>
               The researchers can conclude with 95% confidence that the true value for the
-              correlation coefficient (r) between blood glucose levels and BMI in the
+              correlation coefficient (<Text span fs="italic">r</Text>) between blood glucose levels and BMI in the
               population could be as low as 0.67 and as high as 0.73. In this case, the 95%
               CI around the correlation coefficient is considered precise because all
               plausible values for the true correlation between blood glucose and BMI (i.e.,
               0.67 to 0.73) indicate a strong relationship.
             </Text>
             <Text>
-              The probability value (p-value) of &quot;&lt;0.0001&quot; indicates that the
-              likelihood of obtaining a Pearson correlation coefficient (r) of 0.70 or
+              The probability value (<Text span fs="italic">p</Text>-value) of &quot;&lt;0.0001&quot; indicates that the
+              likelihood of obtaining a Pearson correlation coefficient (<Text span fs="italic">r</Text>) of 0.70 or
               greater by chance alone, assuming there is no relationship between these two
-              variables, is extremely unlikely. However, the p-value must be interpreted with
+              variables, is extremely unlikely. However, the <Text span fs="italic">p</Text>-value must be interpreted with
               caution, especially given the large sample size of 1000 in this study. Larger
-              sample sizes can produce highly significant p-values for the correlation
+              sample sizes can produce highly significant <Text span fs="italic">p</Text>-values for the correlation
               coefficient even for small or modest correlations, which may not be practically
               meaningful. Therefore, the strength of the association, as indicated by the
-              correlation coefficient, should be considered more closely than the p-value alone
+              correlation coefficient, should be considered more closely than the <Text span fs="italic">p</Text>-value alone
               to understand the practical significance of the results.
             </Text>
 

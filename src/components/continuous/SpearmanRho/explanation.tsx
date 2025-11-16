@@ -115,7 +115,7 @@ export default function SpearmanRhoTabs() {
         relationship between variables, it does not imply causation. Spearman&apos;s
         ρ is particularly useful for ordinal data or when the relationship between
         variables is monotonic but not necessarily linear. It is less sensitive to
-        outliers than Pearson&apos;s r, but it is important to consider the broader
+        outliers than Pearson&apos;s <Text span fs="italic">r</Text>, but it is important to consider the broader
         context when interpreting its value.
       </Text>
     </Stack>,

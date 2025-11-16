@@ -149,7 +149,7 @@ const StepperWrapper = () => {
                       setModalOpened(true);
                     }}
                   >
-                    Example #{index + 1}
+                    Example{index > 0 ? ` #${index + 1}` : ''}
                   </Button>
                 ))}
               </Group>
@@ -181,7 +181,7 @@ const StepperWrapper = () => {
         <Modal
           opened={modalOpened}
           styles={{
-            title: { fontSize: 18, fontWeight: 500 },
+            title: { fontSize: 18, fontWeight: 500, lineHeight: 1.3 },
           }}
           onClose={() => {
             setModalOpened(false);
