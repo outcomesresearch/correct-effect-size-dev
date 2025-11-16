@@ -1,6 +1,3 @@
-import {
-  PartPartialCorrelations,
-} from "../../components";
 
 import { PearsonExamples, PearsonExplanation } from "../../components/continuous/PearsonCorrelationCoefficient/index";
 import { CoefficientOfDeterminationExamples, CoefficientOfDeterminationExplanation } from "../../components/continuous/CoefficientOfDetermination/index";
@@ -13,8 +10,9 @@ import { HedgesGExamples, HedgesGExamples3Groups, HedgesGExplanation } from "../
 import { RNonParametricExamples, RNonParametricExamples3Groups, RNonParametricExplanation } from "../../components/continuous/RNonParametric/index";
 import { EtaSquaredExamples, EtaSquaredExplanation } from "../../components/continuous/EtaSquared/index";
 import { OmegaSquaredExamples, OmegaSquaredExplanation } from "../../components/continuous/OmegaSquared/index";
-import BetaCoefficient from "../../components/continuous/BetaCoefficient";
-import LSMeanDifference from "../../components/continuous/LSMeanDifference";
+import { BetaCoefficientExamples, BetaCoefficientExplanation } from "../../components/continuous/BetaCoefficient/index";
+import { PartPartialCorrelationsExamples, PartPartialCorrelationsExplanation } from "../../components/continuous/PartPartialCorrelations/index";
+import { LSMeanDifferenceExamples, LSMeanDifferenceExplanation } from "../../components/continuous/LSMeanDifference/index";
 import RSquared from "../../components/continuous/RSquared";
 import AdjustedRSquared from "../../components/continuous/AdjustedRSquared";
 
@@ -364,25 +362,28 @@ const tree: Record<string, TreeNode> = {
     type: "statement",
     title: "Beta Coefficient (standardized / unstandardized)",
     flowChartTitle: "β Coefficient",
-    component: BetaCoefficient,
+    component: BetaCoefficientExplanation,
     color: "purple-darken-2",
     inputs: [ids.ADJUSTED_ASSOCIATION],
+    examples: BetaCoefficientExamples,
   },
   [ids.PART_PARTIAL_CORRELATIONS]: {
     type: "statement",
     title: "Part and partial correlatinos",
     flowChartTitle: "Part and partial Correlation",
-    component: PartPartialCorrelations,
+    component: PartPartialCorrelationsExplanation,
     color: "purple-darken-2",
     inputs: [ids.ADJUSTED_ASSOCIATION],
+    examples: PartPartialCorrelationsExamples,
   },
   [ids.LS_MEAN_DIFFERENCE]: {
     type: "statement",
     title: "LS Mean Difference",
     flowChartTitle: "LS Mean Difference",
-    component: LSMeanDifference,
+    component: LSMeanDifferenceExplanation,
     color: "purple-darken-2",
     inputs: [ids.ADJUSTED_ASSOCIATION],
+    examples: LSMeanDifferenceExamples,
   },
   [ids.R2_REGRESSION]: {
     type: "statement",
