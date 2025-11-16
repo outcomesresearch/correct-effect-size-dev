@@ -2,7 +2,7 @@ import {
   PartPartialCorrelations,
 } from "../../components";
 
-import PearsonCorrelationCoefficientR from "../../components/continuous/PearsonCorrelationCoefficient";
+import { PearsonExamples, PearsonExplanation } from "../../components/continuous/PearsonCorrelationCoefficient/index";
 import SpearmansRho from "../../components/continuous/SpearmanRho";
 import CoefficientOfDeterminationR2 from "../../components/continuous/CoefficientOfDetermination";
 import MeanDifference from "../../components/continuous/MeanDifference";
@@ -91,9 +91,10 @@ const tree: Record<string, TreeNode> = {
     type: "statement",
     title: "Pearson correlation coefficient (Pearson's r)",
     flowChartTitle: "Pearson r",
-    component: PearsonCorrelationCoefficientR,
+    component: PearsonExplanation,
     color: "teal-darken-2",
     inputs: [ids.CORRELATION_WITH_CONTINUOUS_MEASURE],
+    examples: PearsonExamples,
   },
   [ids.SPEARMAN_RHO]: {
     type: "statement",

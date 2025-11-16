@@ -1,6 +1,15 @@
 // @ts-nocheck
 import { useState, useEffect } from "react";
-import { Stack, Title, Button, Group, Progress, Card } from "@mantine/core";
+import {
+  Stack,
+  Title,
+  Button,
+  Group,
+  Progress,
+  Card,
+  Modal,
+} from "@mantine/core";
+import { useMediaQuery } from "@mantine/hooks";
 import rootTree from "../assets/rootTree";
 import { ROOT } from "../assets/ids.tsx";
 import ChoiceCard from "../components/ChoiceCard";
@@ -23,6 +32,10 @@ const StepperWrapper = () => {
   const [currentConfig, setCurrentConfig] = useState(
     rootTree[currentStep || ROOT]
   );
+  const [examples, setExamples] = useState([]);
+  const [selectedExample, setSelectedExample] = useState(null);
+  const [modalOpened, setModalOpened] = useState(false);
+  const isMobile = useMediaQuery("(max-width: 768px)");
 
   useEffect(() => {
     let effectiveStep = Object.keys(rootTree).includes(currentStep)
@@ -39,6 +52,11 @@ const StepperWrapper = () => {
     setCurrentlySelectedChoice(undefined);
     setCurrentConfig(current);
     setPath(path);
+    setSelectedExample(null);
+    setModalOpened(false);
+
+    // Set examples if available
+    setExamples(current.examples || []);
 
     // Calculate progress
     let longestNextPath = findLongestPath(effectiveStep, rootTree) - 1;
@@ -114,9 +132,29 @@ const StepperWrapper = () => {
       </Card.Section>
       <Group justify="center" w="100%">
         <Stack w="100%">
-          <Title order={4} mr="auto">
-            {currentConfig.title}
-          </Title>
+          <Group justify="space-between" w="100%" align="center">
+            <Title order={4}>{currentConfig.title}</Title>
+            {examples.length > 0 && (
+              <Group gap="xs">
+                {examples.map((ExampleComponent, index) => (
+                  <Button
+                    key={index}
+                    size="xs"
+                    variant="outline"
+                    onClick={() => {
+                      setSelectedExample({
+                        component: ExampleComponent,
+                        index: index + 1,
+                      });
+                      setModalOpened(true);
+                    }}
+                  >
+                    Example #{index + 1}
+                  </Button>
+                ))}
+              </Group>
+            )}
+          </Group>
           <DynamicComponent component={currentConfig.component} />
           {currentConfig?.choices ? (
             <Group justify="center">
@@ -139,6 +177,27 @@ const StepperWrapper = () => {
           </Group>
         </Stack>
       </Group>
+      {selectedExample && (
+        <Modal
+          opened={modalOpened}
+          styles={{
+            title: { fontSize: 18, fontWeight: 500 },
+          }}
+          onClose={() => {
+            setModalOpened(false);
+            setSelectedExample(null);
+          }}
+          title={
+            selectedExample.component.title ||
+            selectedExample.component.displayName ||
+            `Example ${selectedExample.index}`
+          }
+          size={isMobile ? "100%" : "xl"}
+          fullScreen={isMobile}
+        >
+          <DynamicComponent component={selectedExample.component} />
+        </Modal>
+      )}
     </Card>
   );
 };
