@@ -3,8 +3,8 @@ import {
 } from "../../components";
 
 import { PearsonExamples, PearsonExplanation } from "../../components/continuous/PearsonCorrelationCoefficient/index";
+import { CoefficientOfDeterminationExamples, CoefficientOfDeterminationExplanation } from "../../components/continuous/CoefficientOfDetermination/index";
 import SpearmansRho from "../../components/continuous/SpearmanRho";
-import CoefficientOfDeterminationR2 from "../../components/continuous/CoefficientOfDetermination";
 import MeanDifference from "../../components/continuous/MeanDifference";
 import MedianDifference from "../../components/continuous/MedianDifference";
 import CohensD from "../../components/continuous/CohensD";
@@ -108,9 +108,10 @@ const tree: Record<string, TreeNode> = {
     type: "statement",
     title: "Coefficient of Determination R²",
     flowChartTitle: "R2",
-    component: CoefficientOfDeterminationR2,
+    component: CoefficientOfDeterminationExplanation,
     color: "teal-darken-2",
     inputs: [ids.CORRELATION_WITH_CONTINUOUS_MEASURE],
+    examples: CoefficientOfDeterminationExamples,
   },
 
   // ---------------- TWO GROUPS ----------------
