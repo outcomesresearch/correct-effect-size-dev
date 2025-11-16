@@ -1,5 +1,5 @@
 import { Text, List, Stack } from "@mantine/core";
-import ExplanationTabsLayout from "../TabsLayout";
+import ExplanationTabsLayout from "../layout/TabsLayout";
 
 export default function OddsRatioTabs() {
   const explanationSections = [
