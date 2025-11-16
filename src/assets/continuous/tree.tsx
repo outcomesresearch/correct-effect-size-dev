@@ -4,7 +4,7 @@ import {
 
 import { PearsonExamples, PearsonExplanation } from "../../components/continuous/PearsonCorrelationCoefficient/index";
 import { CoefficientOfDeterminationExamples, CoefficientOfDeterminationExplanation } from "../../components/continuous/CoefficientOfDetermination/index";
-import SpearmansRho from "../../components/continuous/SpearmanRho";
+import { SpearmanRhoExamples, SpearmanRhoExplanation } from "../../components/continuous/SpearmanRho/index";
 import MeanDifference from "../../components/continuous/MeanDifference";
 import MedianDifference from "../../components/continuous/MedianDifference";
 import CohensD from "../../components/continuous/CohensD";
@@ -98,11 +98,12 @@ const tree: Record<string, TreeNode> = {
   },
   [ids.SPEARMAN_RHO]: {
     type: "statement",
-    title: "Spearman’s rho (non-parametric)",
-    flowChartTitle: "Spearman’s rho",
-    component: SpearmansRho,
+    title: "Spearman's rho (non-parametric)",
+    flowChartTitle: "Spearman's rho",
+    component: SpearmanRhoExplanation,
     color: "teal-darken-2",
     inputs: [ids.CORRELATION_WITH_CONTINUOUS_MEASURE],
+    examples: SpearmanRhoExamples,
   },
   [ids.R2]: {
     type: "statement",
