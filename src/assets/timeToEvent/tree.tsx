@@ -129,14 +129,42 @@ const tree: Record<string, TreeNode> = {
     choices: [
       {
         answer: "Survival rate difference",
-        next: ids.SURVIVAL_RATE_DIFFERENCE,
+        next: ids.SURVIVAL_RATE_DIFFERENCE_3GROUPS,
       },
-      { answer: "Median survival time", next: ids.MEDIAN_SURVIVAL_TIME },
+      {
+        answer: "Median survival time",
+        next: ids.MEDIAN_SURVIVAL_TIME_3GROUPS,
+      },
       {
         answer: "Restricted mean survival time",
-        next: ids.RESTRICTED_MEAN_SURVIVAL_TIME,
+        next: ids.RESTRICTED_MEAN_SURVIVAL_TIME_3GROUPS,
       },
     ],
+  },
+
+  [ids.SURVIVAL_RATE_DIFFERENCE_3GROUPS]: {
+    type: "statement",
+    title: "Survival rate difference",
+    flowChartTitle: "Survival Rate Difference",
+    component: SurvivalRateDifference,
+    color: "indigo-darken-2",
+    inputs: [ids.COMPARISON_OF_THREEMORE_GROUPS],
+  },
+  [ids.MEDIAN_SURVIVAL_TIME_3GROUPS]: {
+    type: "statement",
+    title: "Median survival time",
+    flowChartTitle: "Median Survival Time",
+    component: MedianSurvivalTime,
+    color: "indigo-darken-2",
+    inputs: [ids.COMPARISON_OF_THREEMORE_GROUPS],
+  },
+  [ids.RESTRICTED_MEAN_SURVIVAL_TIME_3GROUPS]: {
+    type: "statement",
+    title: "Restricted mean survival time",
+    flowChartTitle: "Restricted Mean Survival Time",
+    component: RestrictedMeanSurvivalTime,
+    color: "indigo-darken-2",
+    inputs: [ids.COMPARISON_OF_THREEMORE_GROUPS],
   },
 
   // ---------- Regression model ----------
@@ -148,7 +176,7 @@ const tree: Record<string, TreeNode> = {
     choices: [
       {
         answer: "Adjusted association with predictor",
-        next: ids.ADJUSTED_ASSOCIATION,
+        next: ids.HAZARD_RATIO,
         // No description provided in your source for ADJUSTED_ASSOCIATION
       },
       {
@@ -159,10 +187,10 @@ const tree: Record<string, TreeNode> = {
     ],
   },
   // Adjusted association → HR (single)
-  [ids.ADJUSTED_ASSOCIATION]: {
+  [ids.HAZARD_RATIO_REGRESSION]: {
     type: "statement",
-    title: "Adjusted association with predictor",
-    flowChartTitle: "Adjusted Association",
+    title: "Hazard Ratio",
+    flowChartTitle: "Hazard Ratio (HR)",
     component: HazardRatio,
     color: "purple-darken-2",
     inputs: [ids.REGRESSION_MODEL],

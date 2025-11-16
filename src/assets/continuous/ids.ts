@@ -24,10 +24,16 @@ export const REPORTING_PAIRWISE_DIFFERENCES = "reporting-pairwise-differences";
 export const REPORTING_OVERALL_EFFECT = "reporting-overall-effect";
 export const ETA_SQUARED = "eta-squared";
 export const OMEGA_SQUARED = "omega-squared";
+export const MEAN_DIFFERENCE_3GROUPS = "mean-difference-3groups";
+export const MEDIAN_DIFFERENCE_3GROUPS = "median-difference-3groups";
+export const COHENS_D_3GROUPS = "cohens-d-3groups";
+export const GLASS_DELTA_3GROUPS = "glass-delta-3groups";
+export const HEDGES_G_3GROUPS = "hedges-g-3groups";
+export const R_NONPARAMETRIC_3GROUPS = "r-nonparametric-3groups";
 
 // Regression model
 export const REGRESSION_MODEL = "regression-model";
-export const ADJUSTED_ASSOCIATION = "adjusted-association";
+export const ADJUSTED_ASSOCIATION = "adjusted-association-continuous";
 export const OVERALL_MODEL = "overall-model";
 export const BETA_COEFFICIENT = "beta-coefficient";
 export const PART_PARTIAL_CORRELATIONS = "part-partial-correlations";
