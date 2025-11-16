@@ -1,21 +1,22 @@
 import {
-  PearsonCorrelationCoefficientR,
-  SpearmansRho,
-  CoefficientOfDeterminationR2,
-  MeanDifference,
-  MedianDifference,
-  CohensD,
-  GlassDelta,
-  HedgesG,
-  RNonParametric,
-  EtaSquared,
-  OmegaSquared,
-  BetaCoefficient,
   PartPartialCorrelations,
-  LSMeanDifference,
-  RSquared,
-  AdjustedRSquared,
 } from "../../components";
+
+import PearsonCorrelationCoefficientR from "../../components/new/PearsonCorrelationCoefficient";
+import SpearmansRho from "../../components/new/SpearmanRho";
+import CoefficientOfDeterminationR2 from "../../components/new/CoefficientOfDetermination";
+import MeanDifference from "../../components/new/MeanDifference";
+import MedianDifference from "../../components/new/MedianDifference";
+import CohensD from "../../components/new/CohensD";
+import GlassDelta from "../../components/new/GlassDelta";
+import HedgesG from "../../components/new/HedgesG";
+import RNonParametric from "../../components/new/RNonParametric";
+import EtaSquared from "../../components/new/EtaSquared";
+import OmegaSquared from "../../components/new/OmegaSquared";
+import BetaCoefficient from "../../components/new/BetaCoefficient";
+import LSMeanDifference from "../../components/new/LSMeanDifference";
+import RSquared from "../../components/new/RSquared";
+import AdjustedRSquared from "../../components/new/AdjustedRSquared";
 
 import { TreeNode } from "../types";
 import * as ids from "./ids";
@@ -88,7 +89,7 @@ const tree: Record<string, TreeNode> = {
   },
   [ids.PEARSON_R]: {
     type: "statement",
-    title: "Pearson Correlation Coefficient r",
+    title: "Pearson correlation coefficient (Pearson's r)",
     flowChartTitle: "Pearson r",
     component: PearsonCorrelationCoefficientR,
     color: "teal-darken-2",
@@ -105,7 +106,7 @@ const tree: Record<string, TreeNode> = {
   [ids.R2]: {
     type: "statement",
     title: "Coefficient of Determination R²",
-    flowChartTitle: "R²",
+    flowChartTitle: "R2",
     component: CoefficientOfDeterminationR2,
     color: "teal-darken-2",
     inputs: [ids.CORRELATION_WITH_CONTINUOUS_MEASURE],
