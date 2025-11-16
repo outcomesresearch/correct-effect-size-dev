@@ -1,11 +1,9 @@
 // src/trees/timeToEvent.tsx
-import {
-  HazardRatio,
-  SurvivalRateDifference,
-  MedianSurvivalTime,
-  RestrictedMeanSurvivalTime,
-  HarrellCIndex,
-} from "../../components/index";
+import HazardRatio from "../../components/timeToEvent/HazardRatio";
+import SurvivalRateDifference from "../../components/timeToEvent/SurvivalRateDifference";
+import MedianSurvivalTime from "../../components/timeToEvent/MedianSurvivalTime";
+import RestrictedMeanSurvivalTime from "../../components/timeToEvent/RestrictedMeanSurvivalTime";
+import HarrellCIndex from "../../components/timeToEvent/HarrellCIndex";
 
 import { TreeNode } from "../types";
 import * as ids from "./ids";
@@ -148,7 +146,7 @@ const tree: Record<string, TreeNode> = {
     flowChartTitle: "Survival Rate Difference",
     component: SurvivalRateDifference,
     color: "indigo-darken-2",
-    inputs: [ids.COMPARISON_OF_THREEMORE_GROUPS],
+    inputs: [ids.PAIRWISE_EFFECT_SIZES],
   },
   [ids.MEDIAN_SURVIVAL_TIME_3GROUPS]: {
     type: "statement",
@@ -156,7 +154,7 @@ const tree: Record<string, TreeNode> = {
     flowChartTitle: "Median Survival Time",
     component: MedianSurvivalTime,
     color: "indigo-darken-2",
-    inputs: [ids.COMPARISON_OF_THREEMORE_GROUPS],
+    inputs: [ids.PAIRWISE_EFFECT_SIZES],
   },
   [ids.RESTRICTED_MEAN_SURVIVAL_TIME_3GROUPS]: {
     type: "statement",
@@ -164,7 +162,7 @@ const tree: Record<string, TreeNode> = {
     flowChartTitle: "Restricted Mean Survival Time",
     component: RestrictedMeanSurvivalTime,
     color: "indigo-darken-2",
-    inputs: [ids.COMPARISON_OF_THREEMORE_GROUPS],
+    inputs: [ids.PAIRWISE_EFFECT_SIZES],
   },
 
   // ---------- Regression model ----------
@@ -176,7 +174,7 @@ const tree: Record<string, TreeNode> = {
     choices: [
       {
         answer: "Adjusted association with predictor",
-        next: ids.HAZARD_RATIO,
+        next: ids.HAZARD_RATIO_REGRESSION,
         // No description provided in your source for ADJUSTED_ASSOCIATION
       },
       {
