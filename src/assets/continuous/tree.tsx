@@ -2,21 +2,21 @@ import {
   PartPartialCorrelations,
 } from "../../components";
 
-import PearsonCorrelationCoefficientR from "../../components/new/PearsonCorrelationCoefficient";
-import SpearmansRho from "../../components/new/SpearmanRho";
-import CoefficientOfDeterminationR2 from "../../components/new/CoefficientOfDetermination";
-import MeanDifference from "../../components/new/MeanDifference";
-import MedianDifference from "../../components/new/MedianDifference";
-import CohensD from "../../components/new/CohensD";
-import GlassDelta from "../../components/new/GlassDelta";
-import HedgesG from "../../components/new/HedgesG";
-import RNonParametric from "../../components/new/RNonParametric";
-import EtaSquared from "../../components/new/EtaSquared";
-import OmegaSquared from "../../components/new/OmegaSquared";
-import BetaCoefficient from "../../components/new/BetaCoefficient";
-import LSMeanDifference from "../../components/new/LSMeanDifference";
-import RSquared from "../../components/new/RSquared";
-import AdjustedRSquared from "../../components/new/AdjustedRSquared";
+import PearsonCorrelationCoefficientR from "../../components/continuous/PearsonCorrelationCoefficient";
+import SpearmansRho from "../../components/continuous/SpearmanRho";
+import CoefficientOfDeterminationR2 from "../../components/continuous/CoefficientOfDetermination";
+import MeanDifference from "../../components/continuous/MeanDifference";
+import MedianDifference from "../../components/continuous/MedianDifference";
+import CohensD from "../../components/continuous/CohensD";
+import GlassDelta from "../../components/continuous/GlassDelta";
+import HedgesG from "../../components/continuous/HedgesG";
+import RNonParametric from "../../components/continuous/RNonParametric";
+import EtaSquared from "../../components/continuous/EtaSquared";
+import OmegaSquared from "../../components/continuous/OmegaSquared";
+import BetaCoefficient from "../../components/continuous/BetaCoefficient";
+import LSMeanDifference from "../../components/continuous/LSMeanDifference";
+import RSquared from "../../components/continuous/RSquared";
+import AdjustedRSquared from "../../components/continuous/AdjustedRSquared";
 
 import { TreeNode } from "../types";
 import * as ids from "./ids";

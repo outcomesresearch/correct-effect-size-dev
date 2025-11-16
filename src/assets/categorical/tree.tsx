@@ -1,19 +1,16 @@
 // src/trees/categorical.tsx
-import {
-  // --- effect size components (provide these in ../../components) ---
-  PointBiSerialCorrelation,
-  OddsRatio,
-  RiskRatio,
-  RiskDifference,
-  PhiCoefficient,
-  CramersV,
-  GoodmanKruskalLambda,
-  CliffsDelta,
-  KendallsTau,
-  PseudoRSquared,
-  CStatistic,
-  PercentCorrectlyClassified,
-} from "../../components";
+import PointBiSerialCorrelation from "../../components/categorical/PointBiSerialCorrelation";
+import OddsRatio from "../../components/categorical/OddsRatio";
+import RiskRatio from "../../components/categorical/RiskRatio";
+import RiskDifference from "../../components/categorical/RiskDifference";
+import PhiCoefficient from "../../components/categorical/PhiCoefficient";
+import CramersV from "../../components/categorical/CramersV";
+import GoodmanKruskalLambda from "../../components/categorical/GoodmanKruskalLambda";
+import CliffsDelta from "../../components/categorical/CliffsDelta";
+import KendallsTau from "../../components/categorical/KendallsTau";
+import PseudoRSquared from "../../components/categorical/PseudoRSquared";
+import CStatistic from "../../components/categorical/CStatistic";
+import PercentCorrectlyClassified from "../../components/categorical/PercentCorrectlyClassified";
 
 import { TreeNode } from "../types";
 import * as ids from "./ids";
