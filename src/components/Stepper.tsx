@@ -149,7 +149,7 @@ const StepperWrapper = () => {
                       setModalOpened(true);
                     }}
                   >
-                    Example{index > 0 ? ` #${index + 1}` : ''}
+                    Example{index > 0 || examples.length > 1 ? ` #${index + 1}` : ''}
                   </Button>
                 ))}
               </Group>

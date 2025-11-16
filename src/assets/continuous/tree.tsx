@@ -5,12 +5,12 @@ import {
 import { PearsonExamples, PearsonExplanation } from "../../components/continuous/PearsonCorrelationCoefficient/index";
 import { CoefficientOfDeterminationExamples, CoefficientOfDeterminationExplanation } from "../../components/continuous/CoefficientOfDetermination/index";
 import { SpearmanRhoExamples, SpearmanRhoExplanation } from "../../components/continuous/SpearmanRho/index";
-import { MeanDifferenceExamples, MeanDifferenceExplanation } from "../../components/continuous/MeanDifference/index";
+import { MeanDifferenceExamples, MeanDifferenceExamples3Groups, MeanDifferenceExplanation } from "../../components/continuous/MeanDifference/index";
 import { MedianDifferenceExamples, MedianDifferenceExplanation } from "../../components/continuous/MedianDifference/index";
 import { CohensDExamples, CohensDExplanation } from "../../components/continuous/CohensD/index";
-import { GlassDeltaExamples, GlassDeltaExplanation } from "../../components/continuous/GlassDelta/index";
-import { HedgesGExamples, HedgesGExplanation } from "../../components/continuous/HedgesG/index";
-import { RNonParametricExamples, RNonParametricExplanation } from "../../components/continuous/RNonParametric/index";
+import { GlassDeltaExamples, GlassDeltaExamples3Groups, GlassDeltaExplanation } from "../../components/continuous/GlassDelta/index";
+import { HedgesGExamples, HedgesGExamples3Groups, HedgesGExplanation } from "../../components/continuous/HedgesG/index";
+import { RNonParametricExamples, RNonParametricExamples3Groups, RNonParametricExplanation } from "../../components/continuous/RNonParametric/index";
 import EtaSquared from "../../components/continuous/EtaSquared";
 import OmegaSquared from "../../components/continuous/OmegaSquared";
 import BetaCoefficient from "../../components/continuous/BetaCoefficient";
@@ -118,7 +118,7 @@ const tree: Record<string, TreeNode> = {
   // ---------------- TWO GROUPS ----------------
   [ids.COMPARISON_OF_TWO_GROUPS]: {
     type: "question",
-    title: EFFECT_SIZE_SELECTION_TITLE + "continuous",
+    title: EFFECT_SIZE_SELECTION_TITLE,
     component: EFFECT_SIZE_SELECTION_COMPONENT,
     color: "indigo-darken-2",
     inputs: [CONTINUOUS],
@@ -192,7 +192,7 @@ const tree: Record<string, TreeNode> = {
   // ---------------- THREE+ GROUPS ----------------
   [ids.COMPARISON_OF_THREEMORE_GROUPS]: {
     type: "question",
-    title: FURTHER_ADJUSTMENTS_TITLE + "continuous",
+    title: FURTHER_ADJUSTMENTS_TITLE,
     component: FURTHER_ADJUSTMENTS_COMPONENT,
     color: "orange-darken-2",
     inputs: [CONTINUOUS],
@@ -231,8 +231,8 @@ const tree: Record<string, TreeNode> = {
     flowChartTitle: "Mean Difference",
     component: MeanDifferenceExplanation,
     color: "indigo-darken-2",
-    inputs: [ids.COMPARISON_OF_THREEMORE_GROUPS],
-    examples: MeanDifferenceExamples,
+    inputs: [ids.REPORTING_PAIRWISE_DIFFERENCES],
+    examples: MeanDifferenceExamples3Groups,
   },
   [ids.MEDIAN_DIFFERENCE_3GROUPS]: {
     type: "statement",
@@ -240,8 +240,8 @@ const tree: Record<string, TreeNode> = {
     flowChartTitle: "Median Difference",
     component: MedianDifferenceExplanation,
     color: "indigo-darken-2",
-    inputs: [ids.COMPARISON_OF_THREEMORE_GROUPS],
-    examples: MedianDifferenceExamples,
+    inputs: [ids.REPORTING_PAIRWISE_DIFFERENCES],
+    examples: [],
   },
   [ids.COHENS_D_3GROUPS]: {
     type: "statement",
@@ -249,7 +249,7 @@ const tree: Record<string, TreeNode> = {
     flowChartTitle: "Cohen's d",
     component: CohensDExplanation,
     color: "indigo-darken-2",
-    inputs: [ids.COMPARISON_OF_THREEMORE_GROUPS],
+    inputs: [ids.REPORTING_PAIRWISE_DIFFERENCES],
     examples: CohensDExamples,
   },
   [ids.GLASS_DELTA_3GROUPS]: {
@@ -258,8 +258,8 @@ const tree: Record<string, TreeNode> = {
     flowChartTitle: "Glass's Δ",
     component: GlassDeltaExplanation,
     color: "indigo-darken-2",
-    inputs: [ids.COMPARISON_OF_THREEMORE_GROUPS],
-    examples: GlassDeltaExamples,
+    inputs: [ids.REPORTING_PAIRWISE_DIFFERENCES],
+    examples: GlassDeltaExamples3Groups,
   },
   [ids.HEDGES_G_3GROUPS]: {
     type: "statement",
@@ -267,8 +267,8 @@ const tree: Record<string, TreeNode> = {
     flowChartTitle: "Hedges' g",
     component: HedgesGExplanation,
     color: "indigo-darken-2",
-    inputs: [ids.COMPARISON_OF_THREEMORE_GROUPS],
-    examples: HedgesGExamples,
+    inputs: [ids.REPORTING_PAIRWISE_DIFFERENCES],
+    examples: HedgesGExamples3Groups,
   },
   [ids.R_NONPARAMETRIC_3GROUPS]: {
     type: "statement",
@@ -276,8 +276,8 @@ const tree: Record<string, TreeNode> = {
     flowChartTitle: "r (non-parametric)",
     component: RNonParametricExplanation,
     color: "indigo-darken-2",
-    inputs: [ids.COMPARISON_OF_THREEMORE_GROUPS],
-    examples: RNonParametricExamples,
+    inputs: [ids.REPORTING_PAIRWISE_DIFFERENCES],
+    examples: RNonParametricExamples3Groups,
   },
 
   [ids.REPORTING_OVERALL_EFFECT]: {
@@ -311,7 +311,7 @@ const tree: Record<string, TreeNode> = {
   // ---------------- REGRESSION ----------------
   [ids.REGRESSION_MODEL]: {
     type: "question",
-    title: FURTHER_ADJUSTMENTS_TITLE + "continuous",
+    title: FURTHER_ADJUSTMENTS_TITLE,
     component: FURTHER_ADJUSTMENTS_COMPONENT,
     color: "purple-darken-2",
     inputs: [CONTINUOUS],
