@@ -11,8 +11,8 @@ import { CohensDExamples, CohensDExplanation } from "../../components/continuous
 import { GlassDeltaExamples, GlassDeltaExamples3Groups, GlassDeltaExplanation } from "../../components/continuous/GlassDelta/index";
 import { HedgesGExamples, HedgesGExamples3Groups, HedgesGExplanation } from "../../components/continuous/HedgesG/index";
 import { RNonParametricExamples, RNonParametricExamples3Groups, RNonParametricExplanation } from "../../components/continuous/RNonParametric/index";
-import EtaSquared from "../../components/continuous/EtaSquared";
-import OmegaSquared from "../../components/continuous/OmegaSquared";
+import { EtaSquaredExamples, EtaSquaredExplanation } from "../../components/continuous/EtaSquared/index";
+import { OmegaSquaredExamples, OmegaSquaredExplanation } from "../../components/continuous/OmegaSquared/index";
 import BetaCoefficient from "../../components/continuous/BetaCoefficient";
 import LSMeanDifference from "../../components/continuous/LSMeanDifference";
 import RSquared from "../../components/continuous/RSquared";
@@ -295,17 +295,19 @@ const tree: Record<string, TreeNode> = {
     type: "statement",
     title: "Eta Squared (η²)",
     flowChartTitle: "η²",
-    component: EtaSquared,
+    component: EtaSquaredExplanation,
     color: "orange-darken-2",
     inputs: [ids.REPORTING_OVERALL_EFFECT],
+    examples: EtaSquaredExamples,
   },
   [ids.OMEGA_SQUARED]: {
     type: "statement",
     title: "Omega Squared (ω²)",
     flowChartTitle: "ω²",
-    component: OmegaSquared,
+    component: OmegaSquaredExplanation,
     color: "orange-darken-2",
     inputs: [ids.REPORTING_OVERALL_EFFECT],
+    examples: OmegaSquaredExamples,
   },
 
   // ---------------- REGRESSION ----------------
