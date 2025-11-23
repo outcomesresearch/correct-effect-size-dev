@@ -14,7 +14,7 @@ import { useMediaQuery } from "@mantine/hooks";
 import rootTree from "../assets/rootTree";
 import { ROOT } from "../assets/ids.tsx";
 import ChoiceCard from "../components/ChoiceCard";
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 import { useParams } from "react-router";
 import { findLongestPath, findPreviousSteps } from "../utils";
 
@@ -27,6 +27,7 @@ const buttonProps = {
 const StepperWrapper = () => {
   const [progress, setProgress] = useState(0);
   const { step: currentStep } = useParams();
+  const location = useLocation();
   const [path, setPath] = useState<string[]>([]);
   const [currentlySelectedChoice, setCurrentlySelectedChoice] =
     useState<string>();
@@ -50,6 +51,7 @@ const StepperWrapper = () => {
       ? findPreviousSteps(current.inputs[0])
       : [];
 
+    // Reset selected choice when navigating (including browser back/forward)
     setCurrentlySelectedChoice(undefined);
     setCurrentConfig(current);
     setPath(path);
@@ -64,7 +66,7 @@ const StepperWrapper = () => {
     const totalPathLength = longestNextPath + path.length;
     const pathDoneSoFar = path.length;
     setProgress((pathDoneSoFar / totalPathLength) * 100);
-  }, [currentStep]);
+  }, [currentStep, location.pathname]);
 
   // can be either Back, Back To Intro
   function getBackButton() {
