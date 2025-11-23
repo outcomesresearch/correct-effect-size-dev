@@ -26,6 +26,7 @@ const ChoiceCard = ({
   const multDescriptions = typeof description === "object";
   const displayDescription = multDescriptions ? description.short : description;
   const modalDescription = multDescriptions ? description.long : description;
+  const hasLongDescription = multDescriptions && description.long;
 
   const handleReadMoreClick = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -59,7 +60,7 @@ const ChoiceCard = ({
           style={{ whiteSpace: "pre-wrap" }}
         >
           {displayDescription}
-          {modalDescription && (
+          {hasLongDescription && (
             <Text
               fs="italic"
               size="sm"
