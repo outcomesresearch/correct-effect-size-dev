@@ -1,19 +1,71 @@
-import { PearsonExamples, PearsonExplanation } from "../../components/continuous/PearsonCorrelationCoefficient/index";
-import { CoefficientOfDeterminationExamples, CoefficientOfDeterminationExplanation } from "../../components/continuous/CoefficientOfDetermination/index";
-import { SpearmanRhoExamples, SpearmanRhoExplanation } from "../../components/continuous/SpearmanRho/index";
-import { MeanDifferenceExamples, MeanDifferenceExamples3Groups, MeanDifferenceExplanation } from "../../components/continuous/MeanDifference/index";
-import { MedianDifferenceExamples, MedianDifferenceExplanation } from "../../components/continuous/MedianDifference/index";
-import { CohensDExamples, CohensDExplanation } from "../../components/continuous/CohensD/index";
-import { GlassDeltaExamples, GlassDeltaExamples3Groups, GlassDeltaExplanation } from "../../components/continuous/GlassDelta/index";
-import { HedgesGExamples, HedgesGExamples3Groups, HedgesGExplanation } from "../../components/continuous/HedgesG/index";
-import { RNonParametricExamples, RNonParametricExamples3Groups, RNonParametricExplanation } from "../../components/continuous/RNonParametric/index";
-import { EtaSquaredExamples, EtaSquaredExplanation } from "../../components/continuous/EtaSquared/index";
-import { OmegaSquaredExamples, OmegaSquaredExplanation } from "../../components/continuous/OmegaSquared/index";
-import { BetaCoefficientExamples, BetaCoefficientExplanation } from "../../components/continuous/BetaCoefficient/index";
-import { PartPartialCorrelationsExamples, PartPartialCorrelationsExplanation } from "../../components/continuous/PartPartialCorrelations/index";
-import { LSMeanDifferenceExamples, LSMeanDifferenceExplanation } from "../../components/continuous/LSMeanDifference/index";
-import { RSquaredExamples, RSquaredExplanation } from "../../components/continuous/RSquared/index";
-import { AdjustedRSquaredExamples, AdjustedRSquaredExplanation } from "../../components/continuous/AdjustedRSquared/index";
+import {
+  PearsonExamples,
+  PearsonExplanation,
+} from "../../components/continuous/PearsonCorrelationCoefficient/index";
+import {
+  CoefficientOfDeterminationExamples,
+  CoefficientOfDeterminationExplanation,
+} from "../../components/continuous/CoefficientOfDetermination/index";
+import {
+  SpearmanRhoExamples,
+  SpearmanRhoExplanation,
+} from "../../components/continuous/SpearmanRho/index";
+import {
+  MeanDifferenceExamples,
+  MeanDifferenceExamples3Groups,
+  MeanDifferenceExplanation,
+} from "../../components/continuous/MeanDifference/index";
+import {
+  MedianDifferenceExamples,
+  MedianDifferenceExplanation,
+} from "../../components/continuous/MedianDifference/index";
+import {
+  CohensDExamples,
+  CohensDExplanation,
+} from "../../components/continuous/CohensD/index";
+import {
+  GlassDeltaExamples,
+  GlassDeltaExamples3Groups,
+  GlassDeltaExplanation,
+} from "../../components/continuous/GlassDelta/index";
+import {
+  HedgesGExamples,
+  HedgesGExamples3Groups,
+  HedgesGExplanation,
+} from "../../components/continuous/HedgesG/index";
+import {
+  RNonParametricExamples,
+  RNonParametricExamples3Groups,
+  RNonParametricExplanation,
+} from "../../components/continuous/RNonParametric/index";
+import {
+  EtaSquaredExamples,
+  EtaSquaredExplanation,
+} from "../../components/continuous/EtaSquared/index";
+import {
+  OmegaSquaredExamples,
+  OmegaSquaredExplanation,
+} from "../../components/continuous/OmegaSquared/index";
+import {
+  BetaCoefficientExamples,
+  BetaCoefficientExplanation,
+} from "../../components/continuous/BetaCoefficient/index";
+import {
+  PartPartialCorrelationsExamples,
+  PartPartialCorrelationsExplanation,
+} from "../../components/continuous/PartPartialCorrelations/index";
+import {
+  LSMeanDifferenceExamples,
+  LSMeanDifferenceExplanation,
+} from "../../components/continuous/LSMeanDifference/index";
+import {
+  RSquaredExamples,
+  RSquaredExplanation,
+} from "../../components/continuous/RSquared/index";
+import {
+  AdjustedRSquaredExamples,
+  AdjustedRSquaredExplanation,
+} from "../../components/continuous/AdjustedRSquared/index";
 
 import { TreeNode } from "../types";
 import * as ids from "./ids";
@@ -52,7 +104,7 @@ const tree: Record<string, TreeNode> = {
     inputs: [ROOT],
     choices: [
       {
-        answer: "Correlation with continuous measure (continuous)",
+        answer: "Correlation with continuous measure",
         next: ids.CORRELATION_WITH_CONTINUOUS_MEASURE,
         option_description: CORRELATION_WITH_CONTINUOUS_MEASURE_DESCRIPTION,
       },
@@ -62,7 +114,7 @@ const tree: Record<string, TreeNode> = {
         option_description: COMPARISON_OF_TWO_GROUPS_DESCRIPTION,
       },
       {
-        answer: "Comparison of 3 or more groups (Continuous)",
+        answer: "Comparison of 3 or more groups",
         next: ids.COMPARISON_OF_THREEMORE_GROUPS,
         option_description: COMPARISON_OF_THREE_OR_MORE_GROUPS_DESCRIPTION,
       },
