@@ -192,7 +192,7 @@ const StepperWrapper = () => {
             selectedExample.component.displayName ||
             `Example ${selectedExample.index}`
           }
-          size={isMobile ? "100%" : "xl"}
+          size={isMobile ? "100%" : 1200}
           fullScreen={isMobile}
         >
           <DynamicComponent component={selectedExample.component} />
