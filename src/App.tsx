@@ -12,6 +12,7 @@ import NavbarSubtitle from "./components/NavbarSubtitle";
 import WidthContainer from "./components/WidthContainer";
 import Header from "./components/Header";
 import IntroCard from "./components/IntroCard";
+import HeadMeta from "./components/HeadMeta";
 import { BrowserRouter, Routes, Route } from "react-router";
 
 export default function App() {
@@ -57,6 +58,7 @@ export default function App() {
               <WidthContainer>
                 <Group maw="1185px" mx="auto" mt={0} justify="center">
                   <BrowserRouter basename={import.meta.env.BASE_URL}>
+                    <HeadMeta />
                     <Routes>
                       <Route path="/intro" Component={IntroCard} />
                       <Route path="/decision-tree/:step" Component={Stepper} />
