@@ -8,6 +8,7 @@ import {
   Progress,
   Card,
   Modal,
+  Divider
 } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import rootTree from "../assets/rootTree";
@@ -158,19 +159,72 @@ const StepperWrapper = () => {
           </Group>
           <DynamicComponent component={currentConfig.component} />
           {currentConfig?.choices ? (
-            <Group justify="center">
-              {currentConfig?.choices.map((choice) => (
-                <ChoiceCard
-                  key={choice.answer}
-                  title={choice.answer}
-                  description={choice.option_description}
-                  isSelected={currentlySelectedChoice === choice.next}
-                  onClick={() => {
-                    setCurrentlySelectedChoice(choice.next);
-                  }}
-                />
-              ))}
-            </Group>
+            (() => {
+              // Group choices by group field if present
+              const groupedChoices = currentConfig.choices.reduce(
+                (acc, choice) => {
+                  const group = choice.group || "default";
+                  if (!acc[group]) {
+                    acc[group] = [];
+                  }
+                  acc[group].push(choice);
+                  return acc;
+                },
+                {} as Record<string, typeof currentConfig.choices>
+              );
+
+              const hasGroups =
+                Object.keys(groupedChoices).length > 1 ||
+                (Object.keys(groupedChoices).length === 1 &&
+                  Object.keys(groupedChoices)[0] !== "default");
+
+              if (hasGroups) {
+                return (
+
+                  <Stack gap="lg">
+
+                    {Object.entries(groupedChoices).map(([groupName, choices]) => (
+                      <Stack key={groupName} gap="md">
+                        <Divider mx={-20} />
+                        <Title order={5} c="dimmed" fw={500}>
+                          {groupName}
+                        </Title>
+
+                        <Group justify="center">
+                          {choices.map((choice) => (
+                            <ChoiceCard
+                              key={choice.answer}
+                              title={choice.answer}
+                              description={choice.option_description}
+                              isSelected={currentlySelectedChoice === choice.next}
+                              onClick={() => {
+                                setCurrentlySelectedChoice(choice.next);
+                              }}
+                            />
+                          ))}
+                        </Group>
+                      </Stack>
+                    ))}
+                  </Stack>
+                );
+              } else {
+                return (
+                  <Group justify="center">
+                    {currentConfig.choices.map((choice) => (
+                      <ChoiceCard
+                        key={choice.answer}
+                        title={choice.answer}
+                        description={choice.option_description}
+                        isSelected={currentlySelectedChoice === choice.next}
+                        onClick={() => {
+                          setCurrentlySelectedChoice(choice.next);
+                        }}
+                      />
+                    ))}
+                  </Group>
+                );
+              }
+            })()
           ) : null}
           <Group justify="space-between" w="100%">
             {getBackButton()}

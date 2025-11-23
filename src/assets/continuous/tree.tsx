@@ -195,36 +195,43 @@ const tree: Record<string, TreeNode> = {
         next: ids.MEAN_DIFFERENCE,
         option_description:
           "Measures the absolute difference between the means of two or more groups of interest.",
+        group: "Simple Measures",
       },
+
       {
         answer: "Median Difference (non-parametric)",
         next: ids.MEDIAN_DIFFERENCE,
         option_description:
           "Measures the absolute difference between the medians of two or more groups of interest.",
+        group: "Simple Measures",
       },
       {
         answer: "Cohen's d",
         next: ids.COHENS_D,
         option_description:
           "A standardized measure that represents the magnitude of the difference between two groups by taking the difference between the means and dividing by the pooled standard deviation.",
+        group: "Standardized Measures",
       },
       {
         answer: "Glass's Δ",
         next: ids.GLASS_DELTA,
         option_description:
           "A standardized measure representing the magnitude of the difference between two groups, similar to Cohen's d.",
+        group: "Standardized Measures",
       },
       {
         answer: "Hedges' g",
         next: ids.HEDGES_G,
         option_description:
           "Represents the magnitude of the difference between two groups in terms of standard deviations, similar to Cohen's d and Glass's ∆.",
+        group: "Standardized Measures",
       },
       {
         answer: "r (non-parametric)",
         next: ids.R_NONPARAMETRIC,
         option_description:
           "A standardized measure that represents the strength and direction of a linear relationship between two ordinal or ranked variables without making assumptions about the distribution of the variables.",
+        group: "Standardized Measures",
       },
     ],
   },
@@ -321,36 +328,42 @@ const tree: Record<string, TreeNode> = {
         next: ids.MEAN_DIFFERENCE_3GROUPS,
         option_description:
           "Measures the absolute difference between the means of two or more groups of interest.",
+        group: "Simple Measures",
       },
       {
         answer: "Median Difference (non-parametric)",
         next: ids.MEDIAN_DIFFERENCE_3GROUPS,
         option_description:
           "Measures the absolute difference between the medians of two or more groups of interest.",
+        group: "Simple Measures",
       },
       {
         answer: "Cohen's d",
         next: ids.COHENS_D_3GROUPS,
         option_description:
           "Represents the magnitude of the difference between two groups by taking the difference between the means and dividing by the pooled standard deviation.",
+        group: "Standardized Measures",
       },
       {
         answer: "Glass's Δ",
         next: ids.GLASS_DELTA_3GROUPS,
         option_description:
           "Represents the magnitude of the difference between two groups, similar to Cohen's d.",
+        group: "Standardized Measures",
       },
       {
         answer: "Hedges' g",
         next: ids.HEDGES_G_3GROUPS,
         option_description:
           "Represents the magnitude of the difference between two groups in terms of standard deviations, similar to Cohen's d and Glass's ∆.",
+        group: "Standardized Measures",
       },
       {
         answer: "r (non-parametric)",
         next: ids.R_NONPARAMETRIC_3GROUPS,
         option_description:
           "Represents the strength and direction of a linear relationship between two ordinal or ranked variables without making assumptions about the distribution of the variables.",
+        group: "Standardized Measures",
       },
     ],
   },

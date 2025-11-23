@@ -295,24 +295,28 @@ const tree: Record<string, TreeNode> = {
         next: ids.CRAMERS_V,
         option_description:
           "Used as an effect size for categorical data, particularly in the context of analyzing the strength and association between two categorical variables.",
+        group: "Nominal",
       },
       {
         answer: "Goodman–Kruskal λ",
         next: ids.GOODMAN_KRUSKAL_LAMBDA,
         option_description:
           "Measures the strength of association between two nominal or categorical variables in a contingency table.",
+        group: "Nominal",
       },
       {
         answer: "Cliff's Δ",
         next: ids.CLIFFS_DELTA,
         option_description:
           "A nonparametric effect size measure used to describe the degree of overlap between two distributions.",
+        group: "Ordinal",
       },
       {
         answer: "Kendall's τ",
         next: ids.KENDALLS_TAU,
         option_description:
           "A nonparametric correlation coefficient used to quantify the strength and direction of the relationship between two ordinal or ranked variables.",
+        group: "Ordinal",
       },
     ],
   },
