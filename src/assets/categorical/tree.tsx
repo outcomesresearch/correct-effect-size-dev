@@ -1,17 +1,17 @@
 // src/trees/categorical.tsx
 import PointBiSerialCorrelation from "../../components/categorical/PointBiSerialCorrelation";
-import OddsRatio from "../../components/categorical/OddsRatio";
-import { RiskRatioExamples, RiskRatioExplanation } from "../../components/categorical/RiskRatio/index";
-import { RiskDifferenceExamples, RiskDifferenceExplanation } from "../../components/categorical/RiskDifference/index";
-import { PhiCoefficientExamples, PhiCoefficientExplanation } from "../../components/categorical/PhiCoefficient/index";
-import CramersV from "../../components/categorical/CramersV";
-import GoodmanKruskalLambda from "../../components/categorical/GoodmanKruskalLambda";
-import CliffsDelta from "../../components/categorical/CliffsDelta";
-import KendallsTau from "../../components/categorical/KendallsTau";
+
+import { RiskRatioExamples, RiskRatioExamples3Groups, RiskRatioExplanation } from "../../components/categorical/RiskRatio/index";
+import { RiskDifferenceExamples, RiskDifferenceExamples3Groups, RiskDifferenceExplanation } from "../../components/categorical/RiskDifference/index";
+import { PhiCoefficientExamples, PhiCoefficientExamples3Groups, PhiCoefficientExplanation } from "../../components/categorical/PhiCoefficient/index";
 import PseudoRSquared from "../../components/categorical/PseudoRSquared";
 import CStatistic from "../../components/categorical/CStatistic";
 import PercentCorrectlyClassified from "../../components/categorical/PercentCorrectlyClassified";
-
+import { OddsRatioExplanation, OddsRatioExamples3Groups } from "../../components/categorical/OddsRatio/index";
+import { CramersVExplanation, CramersVExamples } from "../../components/categorical/CramersV/index";
+import { GoodmanKruskalLambdaExplanation, GoodmanKruskalLambdaExamples } from "../../components/categorical/GoodmanKruskalLambda/index";
+import { CliffsDeltaExplanation, CliffsDeltaExamples } from "../../components/categorical/CliffsDelta/index";
+import { KendallsTauExplanation, KendallsTauExamples } from "../../components/categorical/KendallsTau/index";
 import { TreeNode } from "../types";
 import * as ids from "./ids";
 import * as descriptions from "./descriptions";
@@ -108,7 +108,7 @@ const tree: Record<string, TreeNode> = {
     type: "statement",
     title: "Odds Ratio (OR)",
     flowChartTitle: "Odds Ratio",
-    component: OddsRatio,
+    component: OddsRatioExplanation,
     color: "indigo-darken-2",
     inputs: [ids.TWO_GROUPS_EFFECT_SIZES],
   },
@@ -158,7 +158,6 @@ const tree: Record<string, TreeNode> = {
     ],
   },
 
-  // Pairwise: reuse the 2-group set (multiple measures → selection)
   [ids.PAIRWISE_EFFECT_SIZES]: {
     type: "question",
     title: EFFECT_SIZE_SELECTION_TITLE,
@@ -191,9 +190,10 @@ const tree: Record<string, TreeNode> = {
     type: "statement",
     title: "Odds Ratio (OR)",
     flowChartTitle: "Odds Ratio",
-    component: OddsRatio,
+    component: OddsRatioExplanation,
     color: "indigo-darken-2",
-    inputs: [ids.COMPARISON_OF_THREEMORE_GROUPS],
+    inputs: [ids.PAIRWISE_EFFECT_SIZES],
+    examples: OddsRatioExamples3Groups,
   },
   [ids.RISK_RATIO_3GROUPS]: {
     type: "statement",
@@ -201,8 +201,8 @@ const tree: Record<string, TreeNode> = {
     flowChartTitle: "Risk Ratio",
     component: RiskRatioExplanation,
     color: "indigo-darken-2",
-    inputs: [ids.COMPARISON_OF_THREEMORE_GROUPS],
-    examples: RiskRatioExamples,
+    inputs: [ids.PAIRWISE_EFFECT_SIZES],
+    examples: RiskRatioExamples3Groups,
   },
   [ids.RISK_DIFFERENCE_3GROUPS]: {
     type: "statement",
@@ -210,8 +210,8 @@ const tree: Record<string, TreeNode> = {
     flowChartTitle: "Risk Difference",
     component: RiskDifferenceExplanation,
     color: "indigo-darken-2",
-    inputs: [ids.COMPARISON_OF_THREEMORE_GROUPS],
-    examples: RiskDifferenceExamples,
+    inputs: [ids.PAIRWISE_EFFECT_SIZES],
+    examples: RiskDifferenceExamples3Groups,
   },
   [ids.PHI_COEFFICIENT_3GROUPS]: {
     type: "statement",
@@ -219,8 +219,8 @@ const tree: Record<string, TreeNode> = {
     flowChartTitle: "Phi (ɸ)",
     component: PhiCoefficientExplanation,
     color: "indigo-darken-2",
-    inputs: [ids.COMPARISON_OF_THREEMORE_GROUPS],
-    examples: PhiCoefficientExamples,
+    inputs: [ids.PAIRWISE_EFFECT_SIZES],
+    examples: PhiCoefficientExamples3Groups,
   },
 
   // Overall effect for 3+ groups: nominal & ordinal measures (multiple → selection)
@@ -231,7 +231,7 @@ const tree: Record<string, TreeNode> = {
     inputs: [ids.COMPARISON_OF_THREEMORE_GROUPS],
     choices: [
       {
-        answer: "Cramer's V",
+        answer: "Cramer's 𝑉",
         next: ids.CRAMERS_V,
         option_description: descriptions.CRAMERS_V_DESCRIPTION,
       },
@@ -254,35 +254,39 @@ const tree: Record<string, TreeNode> = {
   },
   [ids.CRAMERS_V]: {
     type: "statement",
-    title: "Cramer's V",
-    flowChartTitle: "Cramer's V",
-    component: CramersV,
+    title: "Cramer's 𝑉",
+    flowChartTitle: "Cramer's 𝑉",
+    component: CramersVExplanation,
     color: "orange-darken-2",
     inputs: [ids.OVERALL_EFFECT_SIZES],
+    examples: CramersVExamples,
   },
   [ids.GOODMAN_KRUSKAL_LAMBDA]: {
     type: "statement",
     title: "Goodman–Kruskal λ",
     flowChartTitle: "GK λ",
-    component: GoodmanKruskalLambda,
+    component: GoodmanKruskalLambdaExplanation,
     color: "orange-darken-2",
     inputs: [ids.OVERALL_EFFECT_SIZES],
+    examples: GoodmanKruskalLambdaExamples,
   },
   [ids.CLIFFS_DELTA]: {
     type: "statement",
     title: "Cliff's Δ",
     flowChartTitle: "Cliff's Δ",
-    component: CliffsDelta,
+    component: CliffsDeltaExplanation,
     color: "orange-darken-2",
     inputs: [ids.OVERALL_EFFECT_SIZES],
+    examples: CliffsDeltaExamples,
   },
   [ids.KENDALLS_TAU]: {
     type: "statement",
     title: "Kendall's τ",
     flowChartTitle: "Kendall's τ",
-    component: KendallsTau,
+    component: KendallsTauExplanation,
     color: "orange-darken-2",
     inputs: [ids.OVERALL_EFFECT_SIZES],
+    examples: KendallsTauExamples,
   },
 
   // ---------------- REGRESSION MODEL ----------------
@@ -306,7 +310,7 @@ const tree: Record<string, TreeNode> = {
     type: "statement",
     title: "Odds Ratio (OR)",
     flowChartTitle: "Odds Ratio",
-    component: OddsRatio,
+    component: OddsRatioExplanation,
     color: "indigo-darken-2",
     inputs: [ids.REGRESSION_MODEL],
   },

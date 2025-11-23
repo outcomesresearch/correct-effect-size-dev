@@ -1,24 +1,24 @@
 import { Text, List, Stack } from "@mantine/core";
-import ExplanationTabsLayout from "../layout/TabsLayout";
+import ExplanationTabsLayout from "../../layout/TabsLayout";
 
 export default function CramersVTabs() {
   const explanationSections = [
     <Stack gap={4}>
       <Text>
-        Cramér&apos;s V is a statistical measure used as an effect size for
+        Cramer&apos;s 𝑉 is a statistical measure used as an effect size for
         categorical data, particularly in the context of analyzing the strength
         and association between two categorical variables. Derived from the
-        chi-square statistical test, Cramér&apos;s V provides a standardized
+        chi-square statistical test, Cramer&apos;s 𝑉 provides a standardized
         measure of the degree of association between the categorical variables.
-        Cramér&apos;s V values range from 0 to 1. A larger value of Cramér&apos;s
+        Cramer&apos;s 𝑉 values range from 0 to 1. A larger value of Cramer&apos;s
         V indicates a stronger association between the categorical variables.
       </Text>
     </Stack>,
     <Stack gap={6}>
       <Stack gap={0}>
-        <Text fw={500}>Range of Cramér&apos;s V</Text>
+        <Text fw={500}>Range of Cramer&apos;s 𝑉</Text>
         <Text>
-          Cramér&apos;s V values can range from 0 to 1:
+          Cramer&apos;s 𝑉 values can range from 0 to 1:
         </Text>
       </Stack>
       <List spacing={2}>
@@ -41,9 +41,9 @@ export default function CramersVTabs() {
     </Stack>,
     <Stack gap={6}>
       <Stack gap={0}>
-        <Text fw={500}>Interpretation of Cramér&apos;s V values</Text>
+        <Text fw={500}>Interpretation of Cramer&apos;s 𝑉 values</Text>
         <Text>
-          The interpretation of Cramér&apos;s V values is as follows:
+          The interpretation of Cramer&apos;s 𝑉 values is as follows:
         </Text>
       </Stack>
       <List spacing={2}>
@@ -74,10 +74,10 @@ export default function CramersVTabs() {
         </List.Item>
       </List>
       <Text mt={4}>
-        The maximum possible value for Cramér&apos;s V (approaching 1) is
+        The maximum possible value for Cramer&apos;s 𝑉 (approaching 1) is
         influenced by the number of rows and columns in the contingency table;
         hence, it is essential to consider this factor when interpreting the
-        Cramér&apos;s V value.
+        Cramer&apos;s 𝑉 value.
       </Text>
     </Stack>,
   ];

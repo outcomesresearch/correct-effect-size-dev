@@ -40,7 +40,7 @@ export default function LineGraphTabs() {
                 variables over time (e.g., patient vital signs).
               </Text>
               <Text>
-                <strong>Continuous Variables:</strong> Illustrating
+                <strong>Continuous 𝑉ariables:</strong> Illustrating
                 relationships between continuous variables (e.g., response to
                 treatment regimens).
               </Text>

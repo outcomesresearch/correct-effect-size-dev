@@ -110,7 +110,7 @@ export default function ScatterPlotMatrixTabs() {
                 points.
               </Text>
               <Text>
-                <strong>Requires Visualization Tools:</strong> Often requires
+                <strong>Requires 𝑉isualization Tools:</strong> Often requires
                 specialized software or tools for creating and interacting with
                 3D visualizations.
               </Text>
