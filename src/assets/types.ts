@@ -15,7 +15,7 @@ interface QuestionNode extends BaseNode {
   choices: {
     answer: string;
     next: string;
-    option_description?: string;
+    option_description?: string | { short: string; long: string };
   }[];
 }
 

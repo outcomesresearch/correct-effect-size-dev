@@ -1,7 +1,12 @@
 import { useState } from "react";
-import { Text, Card, Title, useMantineTheme, Modal, Stack } from "@mantine/core";
-
-const TRUNCATE_DELIMITER = "|||";
+import {
+  Text,
+  Card,
+  Title,
+  useMantineTheme,
+  Modal,
+  Stack,
+} from "@mantine/core";
 
 const ChoiceCard = ({
   onClick,
@@ -11,26 +16,17 @@ const ChoiceCard = ({
 }: {
   onClick: () => void;
   title: string;
-  description: string;
+  description: string | { short: string; long: string };
   isSelected: boolean;
 }) => {
   const theme = useMantineTheme();
   const [descriptionModalOpened, setDescriptionModalOpened] = useState(false);
 
-  // Check if description contains the truncate delimiter
-  const truncateIndex = description.indexOf(TRUNCATE_DELIMITER);
-  const shouldTruncate = truncateIndex !== -1;
-
-  const truncatedDescription = shouldTruncate
-    ? description.substring(0, truncateIndex).trim()
-    : description;
-
-  const fullDescription = shouldTruncate
-    ? description.replace(TRUNCATE_DELIMITER, "").trim()
-    : description;
-
-  // Split by \n to create hard line breaks
-  const descriptionLines = fullDescription.split("\n");
+  // If object: show short version, if string: show full description
+  const multDescriptions = typeof description === "object";
+  const displayDescription = multDescriptions ? description.short : description;
+  const modalDescription = multDescriptions ? description.long : description;
+  const descriptionLines = modalDescription.split("\n");
 
   const handleReadMoreClick = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -63,14 +59,14 @@ const ChoiceCard = ({
           c={isSelected ? "green.9" : "gray.9"}
           style={{ whiteSpace: "pre-wrap" }}
         >
-          {truncatedDescription}
-          {shouldTruncate && (
+          {displayDescription}
+          {modalDescription && (
             <Text
               fs="italic"
               size="sm"
               component="span"
               c={isSelected ? "green.7" : "blue.6"}
-              style={{ cursor: "pointer", textDecoration: "underline" }}
+              style={{ cursor: "pointer" }}
               onClick={handleReadMoreClick}
               ml={4}
             >
@@ -81,19 +77,24 @@ const ChoiceCard = ({
       </Card>
       <Modal
         opened={descriptionModalOpened}
-        styles={{ title: { fontSize: 18, fontWeight: 500, lineHeight: 1.3, marginRight: 5 }, }}
+        styles={{
+          title: {
+            fontSize: 18,
+            fontWeight: 500,
+            lineHeight: 1.3,
+            marginRight: 5,
+          },
+        }}
         onClose={() => setDescriptionModalOpened(false)}
         title={title}
         size="md"
       >
         <Stack gap="xs">
           {descriptionLines.map((line, index) => (
-            <Text key={index}>
-              {line}
-            </Text>
+            <Text key={index}>{line}</Text>
           ))}
         </Stack>
-      </Modal >
+      </Modal>
     </>
   );
 };

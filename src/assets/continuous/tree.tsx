@@ -1,4 +1,3 @@
-
 import { PearsonExamples, PearsonExplanation } from "../../components/continuous/PearsonCorrelationCoefficient/index";
 import { CoefficientOfDeterminationExamples, CoefficientOfDeterminationExplanation } from "../../components/continuous/CoefficientOfDetermination/index";
 import { SpearmanRhoExamples, SpearmanRhoExplanation } from "../../components/continuous/SpearmanRho/index";
@@ -28,13 +27,17 @@ import {
   FURTHER_ADJUSTMENTS_TITLE,
   ROOT,
   ADJUSTED_ASSOCIATION_WITH_PREDICTOR_ANSWER,
-  ADJUSTED_ASSOCIATION_WITH_PREDICTOR_DESCRIPTION,
+  ADJUSTED_ASSOCIATION_WITH_PREDICTOR_SHORT_VERSION,
+  ADJUSTED_ASSOCIATION_WITH_PREDICTOR_LONG_VERSION,
   OVERALL_MODEL_ANSWER,
-  OVERALL_MODEL_DESCRIPTION,
+  OVERALL_MODEL_SHORT_VERSION,
+  OVERALL_MODEL_LONG_VERSION,
   REPORTING_PAIRWISE_DIFFERENCES_ANSWER,
-  REPORTING_PAIRWISE_DIFFERENCES_DESCRIPTION,
+  REPORTING_PAIRWISE_DIFFERENCES_SHORT_VERSION,
+  REPORTING_PAIRWISE_DIFFERENCES_LONG_VERSION,
   REPORTING_OVERALL_EFFECT_ANSWER,
-  REPORTING_OVERALL_EFFECT_DESCRIPTION,
+  REPORTING_OVERALL_EFFECT_SHORT_VERSION,
+  REPORTING_OVERALL_EFFECT_LONG_VERSION,
   CORRELATION_WITH_CONTINUOUS_MEASURE_DESCRIPTION,
   COMPARISON_OF_TWO_GROUPS_DESCRIPTION,
   COMPARISON_OF_THREE_OR_MORE_GROUPS_DESCRIPTION,
@@ -84,7 +87,7 @@ const tree: Record<string, TreeNode> = {
         next: ids.PEARSON_R,
       },
       {
-        answer: "Spearman’s rho (non-parametric)",
+        answer: "Spearman's rho (non-parametric)",
         next: ids.SPEARMAN_RHO,
       },
       {
@@ -134,9 +137,9 @@ const tree: Record<string, TreeNode> = {
         answer: "Median Difference (non-parametric)",
         next: ids.MEDIAN_DIFFERENCE,
       },
-      { answer: "Cohen’s d", next: ids.COHENS_D },
-      { answer: "Glass’s Δ", next: ids.GLASS_DELTA },
-      { answer: "Hedges’ g", next: ids.HEDGES_G },
+      { answer: "Cohen's d", next: ids.COHENS_D },
+      { answer: "Glass's Δ", next: ids.GLASS_DELTA },
+      { answer: "Hedges' g", next: ids.HEDGES_G },
       { answer: "r (non-parametric)", next: ids.R_NONPARAMETRIC },
     ],
   },
@@ -190,9 +193,9 @@ const tree: Record<string, TreeNode> = {
     title: "r (non-parametric)",
     flowChartTitle: "r (non-parametric)",
     component: RNonParametricExplanation,
-    examples: RNonParametricExamples,
     color: "indigo-darken-2",
     inputs: [ids.COMPARISON_OF_TWO_GROUPS],
+    examples: RNonParametricExamples,
   },
 
   // ---------------- THREE+ GROUPS ----------------
@@ -206,12 +209,18 @@ const tree: Record<string, TreeNode> = {
       {
         answer: REPORTING_PAIRWISE_DIFFERENCES_ANSWER,
         next: ids.REPORTING_PAIRWISE_DIFFERENCES,
-        option_description: REPORTING_PAIRWISE_DIFFERENCES_DESCRIPTION,
+        option_description: {
+          short: REPORTING_PAIRWISE_DIFFERENCES_SHORT_VERSION,
+          long: REPORTING_PAIRWISE_DIFFERENCES_LONG_VERSION,
+        },
       },
       {
         answer: REPORTING_OVERALL_EFFECT_ANSWER,
         next: ids.REPORTING_OVERALL_EFFECT,
-        option_description: REPORTING_OVERALL_EFFECT_DESCRIPTION,
+        option_description: {
+          short: REPORTING_OVERALL_EFFECT_SHORT_VERSION,
+          long: REPORTING_OVERALL_EFFECT_LONG_VERSION,
+        },
       },
     ],
   },
@@ -220,16 +229,16 @@ const tree: Record<string, TreeNode> = {
     title: EFFECT_SIZE_SELECTION_TITLE,
     component: EFFECT_SIZE_SELECTION_COMPONENT,
     color: "orange-darken-2",
-    inputs: [ids.COMPARISON_OF_THREEMORE_GROUPS],
+    inputs: [ids.REPORTING_PAIRWISE_DIFFERENCES],
     choices: [
       { answer: "Mean Difference", next: ids.MEAN_DIFFERENCE_3GROUPS },
       {
         answer: "Median Difference (non-parametric)",
         next: ids.MEDIAN_DIFFERENCE_3GROUPS,
       },
-      { answer: "Cohen’s d", next: ids.COHENS_D_3GROUPS },
-      { answer: "Glass’s Δ", next: ids.GLASS_DELTA_3GROUPS },
-      { answer: "Hedges’ g", next: ids.HEDGES_G_3GROUPS },
+      { answer: "Cohen's d", next: ids.COHENS_D_3GROUPS },
+      { answer: "Glass's Δ", next: ids.GLASS_DELTA_3GROUPS },
+      { answer: "Hedges' g", next: ids.HEDGES_G_3GROUPS },
       { answer: "r (non-parametric)", next: ids.R_NONPARAMETRIC_3GROUPS },
     ],
   },
@@ -249,7 +258,7 @@ const tree: Record<string, TreeNode> = {
     component: MedianDifferenceExplanation,
     color: "indigo-darken-2",
     inputs: [ids.REPORTING_PAIRWISE_DIFFERENCES],
-    examples: [],
+    examples: MedianDifferenceExamples,
   },
   [ids.COHENS_D_3GROUPS]: {
     type: "statement",
@@ -329,12 +338,18 @@ const tree: Record<string, TreeNode> = {
       {
         answer: ADJUSTED_ASSOCIATION_WITH_PREDICTOR_ANSWER,
         next: ids.ADJUSTED_ASSOCIATION,
-        option_description: ADJUSTED_ASSOCIATION_WITH_PREDICTOR_DESCRIPTION,
+        option_description: {
+          short: ADJUSTED_ASSOCIATION_WITH_PREDICTOR_SHORT_VERSION,
+          long: ADJUSTED_ASSOCIATION_WITH_PREDICTOR_LONG_VERSION,
+        },
       },
       {
         answer: OVERALL_MODEL_ANSWER,
         next: ids.OVERALL_MODEL,
-        option_description: OVERALL_MODEL_DESCRIPTION,
+        option_description: {
+          short: OVERALL_MODEL_SHORT_VERSION,
+          long: OVERALL_MODEL_LONG_VERSION,
+        },
       },
     ],
   },
@@ -381,7 +396,7 @@ const tree: Record<string, TreeNode> = {
   },
   [ids.PART_PARTIAL_CORRELATIONS]: {
     type: "statement",
-    title: "Part and partial correlatinos",
+    title: "Part and partial correlations",
     flowChartTitle: "Part and partial Correlation",
     component: PartPartialCorrelationsExplanation,
     color: "purple-darken-2",
@@ -416,7 +431,5 @@ const tree: Record<string, TreeNode> = {
     examples: AdjustedRSquaredExamples,
   },
 };
-
-console.log({ tree });
 
 export default tree;

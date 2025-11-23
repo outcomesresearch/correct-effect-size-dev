@@ -1,5 +1,13 @@
 // @ts-nocheck
 import * as ids from "./ids";
+import {
+  CONTINUOUS_OUTCOME_MEASURE_SHORT_VERSION,
+  CONTINUOUS_OUTCOME_MEASURE_LONG_VERSION,
+  CATEGORICAL_OUTCOME_MEASURE_SHORT_VERSION,
+  CATEGORICAL_OUTCOME_MEASURE_LONG_VERSION,
+  TIME_TO_EVENT_OUTCOME_MEASURE_SHORT_VERSION,
+  TIME_TO_EVENT_OUTCOME_MEASURE_LONG_VERSION,
+} from "./ids";
 
 import continuousStudyTree from "./continuous/tree";
 import categoricalStudyTree from "./categorical/tree";
@@ -23,20 +31,26 @@ let rootTree = {
       {
         answer: "Continous",
         next: ids.CONTINUOUS,
-        option_description:
-          "A continuous outcome measure is used in clinical studies to quantify changes in a continuous variable such as blood pressure, weight, or height. It is typically analyzed using statistical methods such a mean, median, or regression analysis.",
+        option_description: {
+          short: CONTINUOUS_OUTCOME_MEASURE_SHORT_VERSION,
+          long: CONTINUOUS_OUTCOME_MEASURE_LONG_VERSION,
+        },
       },
       {
         answer: "Categorical",
         next: ids.CATEGORICAL,
-        option_description:
-          "A categorical variable takes on a limited number of discrete values or categories. Categorical variables are often used to represent qualitative or nominal data such as sex, race, disease severity, and treatment group.",
+        option_description: {
+          short: CATEGORICAL_OUTCOME_MEASURE_SHORT_VERSION,
+          long: CATEGORICAL_OUTCOME_MEASURE_LONG_VERSION,
+        },
       },
       {
         answer: "Time to Event",
         next: ids.TIME_TO_EVENT,
-        option_description:
-          "A time-to-event outcome measure is a type of clinical trial outcome that captures the time it takes for an event to occur, such as disease progression or death. It is a powerful measure that allows for the analysis of the duration of the event and provides insights into the treatment effect over time.",
+        option_description: {
+          short: TIME_TO_EVENT_OUTCOME_MEASURE_SHORT_VERSION,
+          long: TIME_TO_EVENT_OUTCOME_MEASURE_LONG_VERSION,
+        },
       },
     ],
   },
