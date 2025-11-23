@@ -2,8 +2,8 @@
 import PointBiSerialCorrelation from "../../components/categorical/PointBiSerialCorrelation";
 import OddsRatio from "../../components/categorical/OddsRatio";
 import RiskRatio from "../../components/categorical/RiskRatio";
-import RiskDifference from "../../components/categorical/RiskDifference";
-import PhiCoefficient from "../../components/categorical/PhiCoefficient";
+import { RiskDifferenceExamples, RiskDifferenceExplanation } from "../../components/categorical/RiskDifference/index";
+import { PhiCoefficientExamples, PhiCoefficientExplanation } from "../../components/categorical/PhiCoefficient/index";
 import CramersV from "../../components/categorical/CramersV";
 import GoodmanKruskalLambda from "../../components/categorical/GoodmanKruskalLambda";
 import CliffsDelta from "../../components/categorical/CliffsDelta";
@@ -124,17 +124,19 @@ const tree: Record<string, TreeNode> = {
     type: "statement",
     title: "Risk Difference",
     flowChartTitle: "Risk Difference",
-    component: RiskDifference,
+    component: RiskDifferenceExplanation,
     color: "indigo-darken-2",
     inputs: [ids.TWO_GROUPS_EFFECT_SIZES],
+    examples: RiskDifferenceExamples,
   },
   [ids.PHI_COEFFICIENT]: {
     type: "statement",
     title: "Phi coefficient (ɸ)",
     flowChartTitle: "Phi (ɸ)",
-    component: PhiCoefficient,
+    component: PhiCoefficientExplanation,
     color: "indigo-darken-2",
     inputs: [ids.TWO_GROUPS_EFFECT_SIZES],
+    examples: PhiCoefficientExamples,
   },
 
   // ---------------- COMPARISON OF THREE OR MORE GROUPS ----------------
@@ -204,17 +206,19 @@ const tree: Record<string, TreeNode> = {
     type: "statement",
     title: "Risk Difference",
     flowChartTitle: "Risk Difference",
-    component: RiskDifference,
+    component: RiskDifferenceExplanation,
     color: "indigo-darken-2",
     inputs: [ids.COMPARISON_OF_THREEMORE_GROUPS],
+    examples: RiskDifferenceExamples,
   },
   [ids.PHI_COEFFICIENT_3GROUPS]: {
     type: "statement",
     title: "Phi coefficient (ɸ)",
     flowChartTitle: "Phi (ɸ)",
-    component: PhiCoefficient,
+    component: PhiCoefficientExplanation,
     color: "indigo-darken-2",
     inputs: [ids.COMPARISON_OF_THREEMORE_GROUPS],
+    examples: PhiCoefficientExamples,
   },
 
   // Overall effect for 3+ groups: nominal & ordinal measures (multiple → selection)
