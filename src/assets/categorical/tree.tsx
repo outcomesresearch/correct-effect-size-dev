@@ -4,10 +4,10 @@ import PointBiSerialCorrelation from "../../components/categorical/PointBiSerial
 import { RiskRatioExamples, RiskRatioExamples3Groups, RiskRatioExplanation } from "../../components/categorical/RiskRatio/index";
 import { RiskDifferenceExamples, RiskDifferenceExamples3Groups, RiskDifferenceExplanation } from "../../components/categorical/RiskDifference/index";
 import { PhiCoefficientExamples, PhiCoefficientExamples3Groups, PhiCoefficientExplanation } from "../../components/categorical/PhiCoefficient/index";
-import PseudoRSquared from "../../components/categorical/PseudoRSquared";
-import CStatistic from "../../components/categorical/CStatistic";
-import PercentCorrectlyClassified from "../../components/categorical/PercentCorrectlyClassified";
-import { OddsRatioExplanation, OddsRatioExamples3Groups } from "../../components/categorical/OddsRatio/index";
+import { PseudoRSquaredExamples, PseudoRSquaredExplanation } from "../../components/categorical/PseudoRSquared/index";
+import { CStatisticExamples, CStatisticExplanation } from "../../components/categorical/CStatistic/index";
+import { PercentCorrectlyClassifiedExamples, PercentCorrectlyClassifiedExplanation } from "../../components/categorical/PercentCorrectlyClassified/index";
+import { OddsRatioExplanation, OddsRatioExamples3Groups, OddsRatioExamplesRegression } from "../../components/categorical/OddsRatio/index";
 import { CramersVExplanation, CramersVExamples } from "../../components/categorical/CramersV/index";
 import { GoodmanKruskalLambdaExplanation, GoodmanKruskalLambdaExamples } from "../../components/categorical/GoodmanKruskalLambda/index";
 import { CliffsDeltaExplanation, CliffsDeltaExamples } from "../../components/categorical/CliffsDelta/index";
@@ -313,6 +313,7 @@ const tree: Record<string, TreeNode> = {
     component: OddsRatioExplanation,
     color: "indigo-darken-2",
     inputs: [ids.REGRESSION_MODEL],
+    examples: OddsRatioExamplesRegression,
   },
 
   // Adjusted association (multiple → selection)
@@ -365,25 +366,28 @@ const tree: Record<string, TreeNode> = {
     type: "statement",
     title: "Pseudo R²",
     flowChartTitle: "Pseudo R²",
-    component: PseudoRSquared,
+    component: PseudoRSquaredExplanation,
     color: "purple-darken-2",
     inputs: [ids.REGRESSION_OVERALL_EFFECT_SIZES],
+    examples: PseudoRSquaredExamples,
   },
   [ids.C_STATISTIC]: {
     type: "statement",
     title: "C-Statistic",
     flowChartTitle: "C-Statistic",
-    component: CStatistic,
+    component: CStatisticExplanation,
     color: "purple-darken-2",
     inputs: [ids.REGRESSION_OVERALL_EFFECT_SIZES],
+    examples: CStatisticExamples,
   },
   [ids.PERCENT_CORRECTLY_CLASSIFIED]: {
     type: "statement",
     title: "Percent correctly classified",
     flowChartTitle: "% Correctly Classified",
-    component: PercentCorrectlyClassified,
+    component: PercentCorrectlyClassifiedExplanation,
     color: "purple-darken-2",
     inputs: [ids.REGRESSION_OVERALL_EFFECT_SIZES],
+    examples: PercentCorrectlyClassifiedExamples,
   },
 };
 
