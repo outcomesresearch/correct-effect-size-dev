@@ -181,7 +181,8 @@ const StepperWrapper = () => {
         <Modal
           opened={modalOpened}
           styles={{
-            title: { fontSize: 18, fontWeight: 500, lineHeight: 1.3 },
+            close: { marginBottom: 'auto' },
+            title: { fontSize: 18, fontWeight: 500, lineHeight: 1.3, marginRight: 5 },
           }}
           onClose={() => {
             setModalOpened(false);

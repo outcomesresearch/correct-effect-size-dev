@@ -1,9 +1,9 @@
 // src/trees/timeToEvent.tsx
-import HazardRatio from "../../components/timeToEvent/HazardRatio";
-import SurvivalRateDifference from "../../components/timeToEvent/SurvivalRateDifference";
-import MedianSurvivalTime from "../../components/timeToEvent/MedianSurvivalTime";
-import RestrictedMeanSurvivalTime from "../../components/timeToEvent/RestrictedMeanSurvivalTime";
-import HarrellCIndex from "../../components/timeToEvent/HarrellCIndex";
+import { HazardRatioExamples, HazardRatioExamplesRegression, HazardRatioExplanation } from "../../components/timeToEvent/HazardRatio/index";
+import { SurvivalRateDifferenceExamples, SurvivalRateDifferenceExamples3Groups, SurvivalRateDifferenceExplanation } from "../../components/timeToEvent/SurvivalRateDifference/index";
+import { MedianSurvivalTimeExamples, MedianSurvivalTimeExamples3Groups, MedianSurvivalTimeExplanation } from "../../components/timeToEvent/MedianSurvivalTime/index";
+import { RestrictedMeanSurvivalTimeExamples, RestrictedMeanSurvivalTimeExamples3Groups, RestrictedMeanSurvivalTimeExplanation } from "../../components/timeToEvent/RestrictedMeanSurvivalTime/index";
+import { HarrellCIndexExamples, HarrellCIndexExplanation } from "../../components/timeToEvent/HarrellCIndex/index";
 
 import { TreeNode } from "../types";
 import * as ids from "./ids";
@@ -57,9 +57,10 @@ const tree: Record<string, TreeNode> = {
     type: "statement",
     title: "Hazard Ratio",
     flowChartTitle: "Hazard Ratio",
-    component: HazardRatio,
+    component: HazardRatioExplanation,
     color: "teal-darken-2",
     inputs: [TIME_TO_EVENT],
+    examples: HazardRatioExamples,
   },
 
   // ---------- 2 groups (multiple measures → selection) ----------
@@ -84,25 +85,28 @@ const tree: Record<string, TreeNode> = {
     type: "statement",
     title: "Survival rate difference",
     flowChartTitle: "Survival Rate Difference",
-    component: SurvivalRateDifference,
+    component: SurvivalRateDifferenceExplanation,
     color: "indigo-darken-2",
     inputs: [ids.TWO_GROUPS_EFFECT_SIZES],
+    examples: SurvivalRateDifferenceExamples,
   },
   [ids.MEDIAN_SURVIVAL_TIME]: {
     type: "statement",
     title: "Median survival time",
     flowChartTitle: "Median Survival Time",
-    component: MedianSurvivalTime,
+    component: MedianSurvivalTimeExplanation,
     color: "indigo-darken-2",
     inputs: [ids.TWO_GROUPS_EFFECT_SIZES],
+    examples: MedianSurvivalTimeExamples,
   },
   [ids.RESTRICTED_MEAN_SURVIVAL_TIME]: {
     type: "statement",
     title: "Restricted mean survival time",
     flowChartTitle: "Restricted Mean Survival Time",
-    component: RestrictedMeanSurvivalTime,
+    component: RestrictedMeanSurvivalTimeExplanation,
     color: "indigo-darken-2",
     inputs: [ids.TWO_GROUPS_EFFECT_SIZES],
+    examples: RestrictedMeanSurvivalTimeExamples,
   },
 
   // ---------- 3+ groups → pairwise (multiple measures → selection) ----------
@@ -144,25 +148,28 @@ const tree: Record<string, TreeNode> = {
     type: "statement",
     title: "Survival rate difference",
     flowChartTitle: "Survival Rate Difference",
-    component: SurvivalRateDifference,
+    component: SurvivalRateDifferenceExplanation,
     color: "indigo-darken-2",
     inputs: [ids.PAIRWISE_EFFECT_SIZES],
+    examples: SurvivalRateDifferenceExamples3Groups,
   },
   [ids.MEDIAN_SURVIVAL_TIME_3GROUPS]: {
     type: "statement",
     title: "Median survival time",
     flowChartTitle: "Median Survival Time",
-    component: MedianSurvivalTime,
+    component: MedianSurvivalTimeExplanation,
     color: "indigo-darken-2",
     inputs: [ids.PAIRWISE_EFFECT_SIZES],
+    examples: MedianSurvivalTimeExamples3Groups,
   },
   [ids.RESTRICTED_MEAN_SURVIVAL_TIME_3GROUPS]: {
     type: "statement",
     title: "Restricted mean survival time",
     flowChartTitle: "Restricted Mean Survival Time",
-    component: RestrictedMeanSurvivalTime,
+    component: RestrictedMeanSurvivalTimeExplanation,
     color: "indigo-darken-2",
     inputs: [ids.PAIRWISE_EFFECT_SIZES],
+    examples: RestrictedMeanSurvivalTimeExamples3Groups,
   },
 
   // ---------- Regression model ----------
@@ -189,18 +196,20 @@ const tree: Record<string, TreeNode> = {
     type: "statement",
     title: "Hazard Ratio",
     flowChartTitle: "Hazard Ratio (HR)",
-    component: HazardRatio,
+    component: HazardRatioExplanation,
     color: "purple-darken-2",
     inputs: [ids.REGRESSION_MODEL],
+    examples: HazardRatioExamplesRegression,
   },
   // Overall model → Harrell's C-index (single)
   [ids.OVERALL_MODEL]: {
     type: "statement",
-    title: "Overall model",
-    flowChartTitle: "Overall Model",
-    component: HarrellCIndex,
+    title: "Harrel's C-index",
+    flowChartTitle: "Harrel's C-index",
+    component: HarrellCIndexExplanation,
     color: "purple-darken-2",
     inputs: [ids.REGRESSION_MODEL],
+    examples: HarrellCIndexExamples,
   },
 };
 
