@@ -31,6 +31,10 @@ import {
   ADJUSTED_ASSOCIATION_WITH_PREDICTOR_DESCRIPTION,
   OVERALL_MODEL_ANSWER,
   OVERALL_MODEL_DESCRIPTION,
+  REPORTING_PAIRWISE_DIFFERENCES_ANSWER,
+  REPORTING_PAIRWISE_DIFFERENCES_DESCRIPTION,
+  REPORTING_OVERALL_EFFECT_ANSWER,
+  REPORTING_OVERALL_EFFECT_DESCRIPTION,
 } from "../ids";
 
 const tree: Record<string, TreeNode> = {
@@ -200,12 +204,14 @@ const tree: Record<string, TreeNode> = {
     inputs: [CONTINUOUS],
     choices: [
       {
-        answer: "Reporting Pairwise Differences",
+        answer: REPORTING_PAIRWISE_DIFFERENCES_ANSWER,
         next: ids.REPORTING_PAIRWISE_DIFFERENCES,
+        option_description: REPORTING_PAIRWISE_DIFFERENCES_DESCRIPTION,
       },
       {
-        answer: "Reporting Overall Effect",
+        answer: REPORTING_OVERALL_EFFECT_ANSWER,
         next: ids.REPORTING_OVERALL_EFFECT,
+        option_description: REPORTING_OVERALL_EFFECT_DESCRIPTION,
       },
     ],
   },

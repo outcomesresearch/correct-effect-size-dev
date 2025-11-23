@@ -45,3 +45,11 @@ export const ADJUSTED_ASSOCIATION_WITH_PREDICTOR_DESCRIPTION =
 export const OVERALL_MODEL_ANSWER = "Overall model";
 export const OVERALL_MODEL_DESCRIPTION =
   "A characteristic used in regression models to describe the combined influence of all independent (predictor) variables on an outcome variable.|||\nRather than focusing on individual predictors and isolated associations, the overall model captures the collective effect of all predictor variables.\n\nBy evaluating the overall model, researchers can determine how well the entire set of predictors can explain the variability in the outcome.";
+
+export const REPORTING_PAIRWISE_DIFFERENCES_ANSWER = "Reporting pairwise differences";
+export const REPORTING_PAIRWISE_DIFFERENCES_DESCRIPTION =
+  "Reporting pairwise differences is a detailed sub-method of analysis used in the comparison of three or more groups.|||\nBy comparing each group to every other group individually, one can make multiple comparisons to observe and quantify the differences between pairs of groups. This added information allows for the extended interpretation of the comparative and contrasting relationships among the groups.";
+
+export const REPORTING_OVERALL_EFFECT_ANSWER = "Reporting overall effect";
+export const REPORTING_OVERALL_EFFECT_DESCRIPTION =
+  "Reporting the overall effect size is a comprehensive sub-method of analysis used in the comparison of three or more groups.|||\nBy considering all of the groups collectively instead of in pairs, one can compute an overarching metric to observe and quantify the summative differences among the groups. Using this method of analysis, more holistic and aggregate interpretations regarding the relationships among the groups can be deduced.";

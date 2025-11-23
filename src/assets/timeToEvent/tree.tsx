@@ -20,6 +20,8 @@ import {
   ADJUSTED_ASSOCIATION_WITH_PREDICTOR_DESCRIPTION,
   OVERALL_MODEL_ANSWER,
   OVERALL_MODEL_DESCRIPTION,
+  REPORTING_PAIRWISE_DIFFERENCES_ANSWER,
+  REPORTING_PAIRWISE_DIFFERENCES_DESCRIPTION,
 } from "../ids";
 
 const tree: Record<string, TreeNode> = {
@@ -121,9 +123,9 @@ const tree: Record<string, TreeNode> = {
     inputs: [TIME_TO_EVENT],
     choices: [
       {
-        answer: "Reporting pairwise differences",
+        answer: REPORTING_PAIRWISE_DIFFERENCES_ANSWER,
         next: ids.PAIRWISE_EFFECT_SIZES,
-        // No description provided in your source for REPORTING_PAIRWISE_DIFFERENCES
+        option_description: REPORTING_PAIRWISE_DIFFERENCES_DESCRIPTION,
       },
     ],
   },
