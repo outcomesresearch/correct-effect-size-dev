@@ -40,6 +40,11 @@ const StepperWrapper = () => {
   const isMobile = useMediaQuery("(max-width: 768px)");
 
   useEffect(() => {
+    // Scroll to top on route change
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, [location.pathname]);
+
+  useEffect(() => {
     const effectiveStep = Object.keys(rootTree).includes(currentStep)
       ? currentStep
       : ROOT;
