@@ -24,21 +24,27 @@ export default function MedianSurvivalTimeTabs() {
       <List spacing={2}>
         <List.Item>
           <Text>
-            <Text span fw={500}>Higher median survival time for Group A vs. Group B:</Text>{" "}
+            <Text span fw={500}>
+              Higher median survival time for Group A vs. Group B:
+            </Text>{" "}
             This indicates that the time at which 50% of Group A experiences the
             event is later than that of Group B.
           </Text>
         </List.Item>
         <List.Item>
           <Text>
-            <Text span fw={500}>Equivalent median survival time values for both groups:</Text>{" "}
-            This implies that both groups have a similar amount of time until 50%
-            of their subjects experience the event.
+            <Text span fw={500}>
+              Equivalent median survival time values for both groups:
+            </Text>{" "}
+            This implies that both groups have a similar amount of time until
+            50% of their subjects experience the event.
           </Text>
         </List.Item>
         <List.Item>
           <Text>
-            <Text span fw={500}>Lower median survival time for Group A vs. Group B:</Text>{" "}
+            <Text span fw={500}>
+              Lower median survival time for Group A vs. Group B:
+            </Text>{" "}
             This suggests that the time at which 50% of Group A experiences the
             event is earlier than that of Group B.
           </Text>
@@ -48,9 +54,9 @@ export default function MedianSurvivalTimeTabs() {
     <Stack gap={0}>
       <Text fw={500}>Interpretation</Text>
       <Text>
-        Because the median survival time is a time-based measurement and does not
-        fall within a standardized numeric range (e.g., -1 to +1, 0 to 1), there
-        are no fixed value categories like &quot;weak&quot; or
+        Because the median survival time is a time-based measurement and does
+        not fall within a standardized numeric range (e.g., -1 to +1, 0 to 1),
+        there are no fixed value categories like &quot;weak&quot; or
         &quot;strong.&quot; However, the significance or importance of
         differences in median survival time can be assessed based on clinical or
         practical significance, background knowledge, or other contextual
@@ -64,11 +70,10 @@ export default function MedianSurvivalTimeTabs() {
       explanationSections={explanationSections}
       example1={
         <Text>
-          Example 1 content will go here (e.g., a scatterplot, numerical example,
-          or walkthrough).
+          Example 1 content will go here (e.g., a scatterplot, numerical
+          example, or walkthrough).
         </Text>
       }
     />
   );
 }
-

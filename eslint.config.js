@@ -27,7 +27,7 @@ export default tseslint.config(
         "error",
         {
           "ts-ignore": "allow-with-description",
-          "ts-nocheck": "off"  // Temporarily disable this restriction
+          "ts-nocheck": false  // Temporarily disable this restriction
         }
       ]
     },

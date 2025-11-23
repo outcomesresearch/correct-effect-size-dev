@@ -7,4 +7,3 @@ import Example4 from "./examples/Example4";
 
 export const MeanDifferenceExamples = [Example1, Example2, Example3];
 export const MeanDifferenceExamples3Groups = [Example4];
-

@@ -5,4 +5,3 @@ import Example2 from "./examples/Example2";
 
 export const SurvivalRateDifferenceExamples = [Example1];
 export const SurvivalRateDifferenceExamples3Groups = [Example2];
-

@@ -6,4 +6,3 @@ import Example3 from "./examples/Example3";
 
 export const MedianSurvivalTimeExamples = [Example1, Example2];
 export const MedianSurvivalTimeExamples3Groups = [Example3];
-

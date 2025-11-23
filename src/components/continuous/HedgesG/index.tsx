@@ -5,4 +5,3 @@ import Example2 from "./examples/Example2";
 
 export const HedgesGExamples = [Example1];
 export const HedgesGExamples3Groups = [Example2];
-

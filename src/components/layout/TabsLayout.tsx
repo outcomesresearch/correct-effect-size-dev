@@ -37,12 +37,14 @@ export default function ExplanationTabsLayout({
         <div key={index}>{section}</div>
       ))}
     </Stack>
-  )
-
-
+  );
 
   return (
-    <Tabs defaultValue={defaultTab} orientation="vertical" styles={{ tab: { padding: 12, paddingLeft: 0 } }} >
+    <Tabs
+      defaultValue={defaultTab}
+      orientation="vertical"
+      styles={{ tab: { padding: 12, paddingLeft: 0 } }}
+    >
       <Tabs.List mr={12}>
         <Tabs.Tab value="explanation">{explanationLabel}</Tabs.Tab>
 
@@ -51,7 +53,7 @@ export default function ExplanationTabsLayout({
         {hasExample2 && <Tabs.Tab value="example2">{example2Label}</Tabs.Tab>}
       </Tabs.List>
 
-      <Tabs.Panel value="explanation" >
+      <Tabs.Panel value="explanation">
         <Stack gap="lg">
           {explanationSections.map((section, index) => (
             <div key={index}>{section}</div>
@@ -70,6 +72,6 @@ export default function ExplanationTabsLayout({
           {example2}
         </Tabs.Panel>
       )}
-    </ Tabs>
+    </Tabs>
   );
 }

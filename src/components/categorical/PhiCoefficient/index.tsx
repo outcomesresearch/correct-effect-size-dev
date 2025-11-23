@@ -5,4 +5,3 @@ import Example2 from "./examples/Example2";
 
 export const PhiCoefficientExamples = [Example1];
 export const PhiCoefficientExamples3Groups = [Example2];
-

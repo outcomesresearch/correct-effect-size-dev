@@ -20,7 +20,7 @@ const addIds = (tree) => {
   }, {});
 };
 
-let rootTree = {
+const rootTree = {
   [ids.ROOT]: {
     title: ids.OUTCOME_MEASURE_TITLE,
     flowChartTitle:

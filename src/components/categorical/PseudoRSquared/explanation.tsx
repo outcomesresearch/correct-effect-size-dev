@@ -5,12 +5,13 @@ export default function PseudoRSquaredTabs() {
   const explanationSections = [
     <Stack gap={4}>
       <Text>
-        The pseudo R-squared (R²) measures the goodness-of-fit for models that do
-        not inherently provide a traditional pseudo R² value, like logistic
+        The pseudo R-squared (R²) measures the goodness-of-fit for models that
+        do not inherently provide a traditional pseudo R² value, like logistic
         regression. Specifically, it provides an indication of how well the
         chosen model explains the variation in the response variable. While it
-        borrows its name from the pseudo R² of linear regression, it is important
-        to understand that these two values are not directly comparable.
+        borrows its name from the pseudo R² of linear regression, it is
+        important to understand that these two values are not directly
+        comparable.
       </Text>
     </Stack>,
     <Stack gap={6}>
@@ -24,26 +25,33 @@ export default function PseudoRSquaredTabs() {
       <List spacing={2}>
         <List.Item>
           <Text>
-            <Text span fw={500}>Closer to 1:</Text> This means that the model
-            provides a better fit to the data as compared with a null model (i.e.,
-            a model without predictors). The closer the pseudo R² is to 1, the
-            stronger the model&apos;s explanatory power.
+            <Text span fw={500}>
+              Closer to 1:
+            </Text>{" "}
+            This means that the model provides a better fit to the data as
+            compared with a null model (i.e., a model without predictors). The
+            closer the pseudo R² is to 1, the stronger the model&apos;s
+            explanatory power.
           </Text>
         </List.Item>
         <List.Item>
           <Text>
-            <Text span fw={500}>Around 0.5:</Text> The model&apos;s fit is
-            comparable to that of a null model, which suggests that the
-            predictors in the model are not contributing much to explaining the
-            variance in the dependent variable.
+            <Text span fw={500}>
+              Around 0.5:
+            </Text>{" "}
+            The model&apos;s fit is comparable to that of a null model, which
+            suggests that the predictors in the model are not contributing much
+            to explaining the variance in the dependent variable.
           </Text>
         </List.Item>
         <List.Item>
           <Text>
-            <Text span fw={500}>Closer to 0, but not 0:</Text> This implies that
-            the model provides some explanatory power, but it may still be weak.
-            It suggests that the predictors have some influence, but the overall
-            fit is not strong.
+            <Text span fw={500}>
+              Closer to 0, but not 0:
+            </Text>{" "}
+            This implies that the model provides some explanatory power, but it
+            may still be weak. It suggests that the predictors have some
+            influence, but the overall fit is not strong.
           </Text>
         </List.Item>
       </List>
@@ -52,29 +60,37 @@ export default function PseudoRSquaredTabs() {
       <Stack gap={0}>
         <Text fw={500}>Interpretation of pseudo R² values</Text>
         <Text>
-          The interpretation of pseudo R² values between variables is as follows:
+          The interpretation of pseudo R² values between variables is as
+          follows:
         </Text>
       </Stack>
       <List spacing={2}>
         <List.Item>
           <Text>
-            <Text span fw={500}>&lt;0.10:</Text> Low. These values suggest a weak
-            association between the predictors and the outcome. The predictors
-            collectively explain a small proportion of the variance in the outcome.
+            <Text span fw={500}>
+              &lt;0.10:
+            </Text>{" "}
+            Low. These values suggest a weak association between the predictors
+            and the outcome. The predictors collectively explain a small
+            proportion of the variance in the outcome.
           </Text>
         </List.Item>
         <List.Item>
           <Text>
-            <Text span fw={500}>0.10 to 0.30:</Text> Moderate. These values
-            suggest that the predictors contribute a moderate proportion of the
-            variance in the outcome.
+            <Text span fw={500}>
+              0.10 to 0.30:
+            </Text>{" "}
+            Moderate. These values suggest that the predictors contribute a
+            moderate proportion of the variance in the outcome.
           </Text>
         </List.Item>
         <List.Item>
           <Text>
-            <Text span fw={500}>&gt;0.30:</Text> High. These values suggest that
-            the predictors collectively explain a substantial proportion of the
-            variance in the outcome.
+            <Text span fw={500}>
+              &gt;0.30:
+            </Text>{" "}
+            High. These values suggest that the predictors collectively explain
+            a substantial proportion of the variance in the outcome.
           </Text>
         </List.Item>
       </List>
@@ -90,11 +106,10 @@ export default function PseudoRSquaredTabs() {
       explanationSections={explanationSections}
       example1={
         <Text>
-          Example 1 content will go here (e.g., a scatterplot, numerical example,
-          or walkthrough).
+          Example 1 content will go here (e.g., a scatterplot, numerical
+          example, or walkthrough).
         </Text>
       }
     />
   );
 }
-

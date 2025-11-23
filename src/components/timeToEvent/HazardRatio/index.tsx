@@ -5,4 +5,3 @@ import Example2 from "./examples/Example2";
 
 export const HazardRatioExamples = [Example1];
 export const HazardRatioExamplesRegression = [Example2];
-

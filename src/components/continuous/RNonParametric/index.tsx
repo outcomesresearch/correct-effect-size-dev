@@ -5,4 +5,3 @@ import Example2 from "./examples/Example2";
 
 export const RNonParametricExamples = [Example1];
 export const RNonParametricExamples3Groups = [Example2];
-

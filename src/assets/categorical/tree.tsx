@@ -1,17 +1,54 @@
 // src/trees/categorical.tsx
 import PointBiSerialCorrelation from "../../components/categorical/PointBiSerialCorrelation";
 
-import { RiskRatioExamples, RiskRatioExamples3Groups, RiskRatioExplanation } from "../../components/categorical/RiskRatio/index";
-import { RiskDifferenceExamples, RiskDifferenceExamples3Groups, RiskDifferenceExplanation } from "../../components/categorical/RiskDifference/index";
-import { PhiCoefficientExamples, PhiCoefficientExamples3Groups, PhiCoefficientExplanation } from "../../components/categorical/PhiCoefficient/index";
-import { PseudoRSquaredExamples, PseudoRSquaredExplanation } from "../../components/categorical/PseudoRSquared/index";
-import { CStatisticExamples, CStatisticExplanation } from "../../components/categorical/CStatistic/index";
-import { PercentCorrectlyClassifiedExamples, PercentCorrectlyClassifiedExplanation } from "../../components/categorical/PercentCorrectlyClassified/index";
-import { OddsRatioExplanation, OddsRatioExamples3Groups, OddsRatioExamplesRegression } from "../../components/categorical/OddsRatio/index";
-import { CramersVExplanation, CramersVExamples } from "../../components/categorical/CramersV/index";
-import { GoodmanKruskalLambdaExplanation, GoodmanKruskalLambdaExamples } from "../../components/categorical/GoodmanKruskalLambda/index";
-import { CliffsDeltaExplanation, CliffsDeltaExamples } from "../../components/categorical/CliffsDelta/index";
-import { KendallsTauExplanation, KendallsTauExamples } from "../../components/categorical/KendallsTau/index";
+import {
+  RiskRatioExamples,
+  RiskRatioExamples3Groups,
+  RiskRatioExplanation,
+} from "../../components/categorical/RiskRatio/index";
+import {
+  RiskDifferenceExamples,
+  RiskDifferenceExamples3Groups,
+  RiskDifferenceExplanation,
+} from "../../components/categorical/RiskDifference/index";
+import {
+  PhiCoefficientExamples,
+  PhiCoefficientExamples3Groups,
+  PhiCoefficientExplanation,
+} from "../../components/categorical/PhiCoefficient/index";
+import {
+  PseudoRSquaredExamples,
+  PseudoRSquaredExplanation,
+} from "../../components/categorical/PseudoRSquared/index";
+import {
+  CStatisticExamples,
+  CStatisticExplanation,
+} from "../../components/categorical/CStatistic/index";
+import {
+  PercentCorrectlyClassifiedExamples,
+  PercentCorrectlyClassifiedExplanation,
+} from "../../components/categorical/PercentCorrectlyClassified/index";
+import {
+  OddsRatioExplanation,
+  OddsRatioExamples3Groups,
+  OddsRatioExamplesRegression,
+} from "../../components/categorical/OddsRatio/index";
+import {
+  CramersVExplanation,
+  CramersVExamples,
+} from "../../components/categorical/CramersV/index";
+import {
+  GoodmanKruskalLambdaExplanation,
+  GoodmanKruskalLambdaExamples,
+} from "../../components/categorical/GoodmanKruskalLambda/index";
+import {
+  CliffsDeltaExplanation,
+  CliffsDeltaExamples,
+} from "../../components/categorical/CliffsDelta/index";
+import {
+  KendallsTauExplanation,
+  KendallsTauExamples,
+} from "../../components/categorical/KendallsTau/index";
 import { TreeNode } from "../types";
 import * as ids from "./ids";
 import * as descriptions from "./descriptions";

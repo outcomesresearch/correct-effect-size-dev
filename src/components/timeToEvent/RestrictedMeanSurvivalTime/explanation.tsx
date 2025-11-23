@@ -9,8 +9,8 @@ export default function RestrictedMeanSurvivalTimeTabs() {
         to quantify the expected time to an event under a survival curve up to a
         specified time point. Specifically, it measures the average event-free
         time up to a specified time horizon. It is particularly useful when
-        comparing the survival experiences of two or more groups, especially when
-        the proportional hazards assumption is not met.
+        comparing the survival experiences of two or more groups, especially
+        when the proportional hazards assumption is not met.
       </Text>
     </Stack>,
     <Stack gap={6}>
@@ -26,23 +26,29 @@ export default function RestrictedMeanSurvivalTimeTabs() {
       <List spacing={2}>
         <List.Item>
           <Text>
-            <Text span fw={500}>Higher RMST for Group A vs. Group B:</Text> This
-            indicates that Group A, on average, experiences the event later than
-            Group B.
+            <Text span fw={500}>
+              Higher RMST for Group A vs. Group B:
+            </Text>{" "}
+            This indicates that Group A, on average, experiences the event later
+            than Group B.
           </Text>
         </List.Item>
         <List.Item>
           <Text>
-            <Text span fw={500}>Equivalent RMST values for both groups:</Text> This
-            implies that both groups have a similar expected event-free time up to
-            the specified time point.
+            <Text span fw={500}>
+              Equivalent RMST values for both groups:
+            </Text>{" "}
+            This implies that both groups have a similar expected event-free
+            time up to the specified time point.
           </Text>
         </List.Item>
         <List.Item>
           <Text>
-            <Text span fw={500}>Lower RMST for Group A vs. Group B:</Text> This
-            suggests that Group A, on average, experiences the event earlier than
-            Group B.
+            <Text span fw={500}>
+              Lower RMST for Group A vs. Group B:
+            </Text>{" "}
+            This suggests that Group A, on average, experiences the event
+            earlier than Group B.
           </Text>
         </List.Item>
       </List>
@@ -65,11 +71,10 @@ export default function RestrictedMeanSurvivalTimeTabs() {
       explanationSections={explanationSections}
       example1={
         <Text>
-          Example 1 content will go here (e.g., a scatterplot, numerical example,
-          or walkthrough).
+          Example 1 content will go here (e.g., a scatterplot, numerical
+          example, or walkthrough).
         </Text>
       }
     />
   );
 }
-

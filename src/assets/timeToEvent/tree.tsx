@@ -1,9 +1,28 @@
 // src/trees/timeToEvent.tsx
-import { HazardRatioExamples, HazardRatioExamplesRegression, HazardRatioExplanation } from "../../components/timeToEvent/HazardRatio/index";
-import { SurvivalRateDifferenceExamples, SurvivalRateDifferenceExamples3Groups, SurvivalRateDifferenceExplanation } from "../../components/timeToEvent/SurvivalRateDifference/index";
-import { MedianSurvivalTimeExamples, MedianSurvivalTimeExamples3Groups, MedianSurvivalTimeExplanation } from "../../components/timeToEvent/MedianSurvivalTime/index";
-import { RestrictedMeanSurvivalTimeExamples, RestrictedMeanSurvivalTimeExamples3Groups, RestrictedMeanSurvivalTimeExplanation } from "../../components/timeToEvent/RestrictedMeanSurvivalTime/index";
-import { HarrellCIndexExamples, HarrellCIndexExplanation } from "../../components/timeToEvent/HarrellCIndex/index";
+import {
+  HazardRatioExamples,
+  HazardRatioExamplesRegression,
+  HazardRatioExplanation,
+} from "../../components/timeToEvent/HazardRatio/index";
+import {
+  SurvivalRateDifferenceExamples,
+  SurvivalRateDifferenceExamples3Groups,
+  SurvivalRateDifferenceExplanation,
+} from "../../components/timeToEvent/SurvivalRateDifference/index";
+import {
+  MedianSurvivalTimeExamples,
+  MedianSurvivalTimeExamples3Groups,
+  MedianSurvivalTimeExplanation,
+} from "../../components/timeToEvent/MedianSurvivalTime/index";
+import {
+  RestrictedMeanSurvivalTimeExamples,
+  RestrictedMeanSurvivalTimeExamples3Groups,
+  RestrictedMeanSurvivalTimeExplanation,
+} from "../../components/timeToEvent/RestrictedMeanSurvivalTime/index";
+import {
+  HarrellCIndexExamples,
+  HarrellCIndexExplanation,
+} from "../../components/timeToEvent/HarrellCIndex/index";
 
 import { TreeNode } from "../types";
 import * as ids from "./ids";

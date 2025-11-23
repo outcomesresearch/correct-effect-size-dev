@@ -23,23 +23,34 @@ export default function MeanDifferenceTabs() {
       <List spacing={2}>
         <List.Item>
           <Text>
-            A <Text span fw={500}>positive value</Text> indicates that the mean
-            of the first group (often referred to as the &quot;treatment&quot; or
-            &quot;experimental&quot; group) is higher than the mean of the second
-            group (often the &quot;control&quot; or &quot;comparison&quot;
-            group).
+            A{" "}
+            <Text span fw={500}>
+              positive value
+            </Text>{" "}
+            indicates that the mean of the first group (often referred to as the
+            &quot;treatment&quot; or &quot;experimental&quot; group) is higher
+            than the mean of the second group (often the &quot;control&quot; or
+            &quot;comparison&quot; group).
           </Text>
         </List.Item>
         <List.Item>
           <Text>
-            A <Text span fw={500}>negative value</Text> indicates that the mean
-            of the first group is lower than that of the second group.
+            A{" "}
+            <Text span fw={500}>
+              negative value
+            </Text>{" "}
+            indicates that the mean of the first group is lower than that of the
+            second group.
           </Text>
         </List.Item>
         <List.Item>
           <Text>
-            A <Text span fw={500}>value close to 0</Text> suggests that there is
-            little to no difference between the means of the two groups.
+            A{" "}
+            <Text span fw={500}>
+              value close to 0
+            </Text>{" "}
+            suggests that there is little to no difference between the means of
+            the two groups.
           </Text>
         </List.Item>
       </List>
@@ -60,8 +71,8 @@ export default function MeanDifferenceTabs() {
       explanationSections={explanationSections}
       example1={
         <Text>
-          Example 1 content will go here (e.g., a scatterplot, numerical example,
-          or walkthrough).
+          Example 1 content will go here (e.g., a scatterplot, numerical
+          example, or walkthrough).
         </Text>
       }
       // example2 can be added later:
@@ -69,4 +80,3 @@ export default function MeanDifferenceTabs() {
     />
   );
 }
-

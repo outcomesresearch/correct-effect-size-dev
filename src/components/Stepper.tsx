@@ -38,7 +38,7 @@ const StepperWrapper = () => {
   const isMobile = useMediaQuery("(max-width: 768px)");
 
   useEffect(() => {
-    let effectiveStep = Object.keys(rootTree).includes(currentStep)
+    const effectiveStep = Object.keys(rootTree).includes(currentStep)
       ? currentStep
       : ROOT;
 
@@ -59,9 +59,9 @@ const StepperWrapper = () => {
     setExamples(current.examples || []);
 
     // Calculate progress
-    let longestNextPath = findLongestPath(effectiveStep, rootTree) - 1;
-    let totalPathLength = longestNextPath + path.length;
-    let pathDoneSoFar = path.length;
+    const longestNextPath = findLongestPath(effectiveStep, rootTree) - 1;
+    const totalPathLength = longestNextPath + path.length;
+    const pathDoneSoFar = path.length;
     setProgress((pathDoneSoFar / totalPathLength) * 100);
   }, [currentStep]);
 
@@ -149,7 +149,8 @@ const StepperWrapper = () => {
                       setModalOpened(true);
                     }}
                   >
-                    Example{index > 0 || examples.length > 1 ? ` #${index + 1}` : ''}
+                    Example
+                    {index > 0 || examples.length > 1 ? ` #${index + 1}` : ""}
                   </Button>
                 ))}
               </Group>
@@ -181,8 +182,13 @@ const StepperWrapper = () => {
         <Modal
           opened={modalOpened}
           styles={{
-            close: { marginBottom: 'auto' },
-            title: { fontSize: 18, fontWeight: 500, lineHeight: 1.3, marginRight: 5 },
+            close: { marginBottom: "auto" },
+            title: {
+              fontSize: 18,
+              fontWeight: 500,
+              lineHeight: 1.3,
+              marginRight: 5,
+            },
           }}
           onClose={() => {
             setModalOpened(false);

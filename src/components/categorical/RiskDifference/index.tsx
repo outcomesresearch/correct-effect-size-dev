@@ -5,4 +5,3 @@ import Example2 from "./examples/Example2";
 
 export const RiskDifferenceExamples = [Example1];
 export const RiskDifferenceExamples3Groups = [Example2];
-

@@ -5,4 +5,3 @@ import Example2 from "./examples/Example2";
 
 export const GlassDeltaExamples = [Example1];
 export const GlassDeltaExamples3Groups = [Example2];
-

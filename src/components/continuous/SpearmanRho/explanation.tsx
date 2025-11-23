@@ -6,11 +6,12 @@ export default function SpearmanRhoTabs() {
     // Intro
     <Stack gap={4}>
       <Text>
-        Spearman&apos;s rho (ρ) can be used to measure the strength and direction
-        of monotonic associations between two ordinal or ranked variables.
-        Spearman&apos;s ρ is especially suitable for data that does not meet the
-        assumptions required for the Pearson correlation coefficient, such as data
-        with nonlinear relationships or data that is ordinal in nature.
+        Spearman&apos;s rho (ρ) can be used to measure the strength and
+        direction of monotonic associations between two ordinal or ranked
+        variables. Spearman&apos;s ρ is especially suitable for data that does
+        not meet the assumptions required for the Pearson correlation
+        coefficient, such as data with nonlinear relationships or data that is
+        ordinal in nature.
       </Text>
     </Stack>,
     // Range section
@@ -29,8 +30,8 @@ export default function SpearmanRhoTabs() {
             <Text span fw={500}>
               +1:
             </Text>{" "}
-            There is a perfect positive monotonic relationship. As the rank of one
-            variable increases, the rank of the other variable increases
+            There is a perfect positive monotonic relationship. As the rank of
+            one variable increases, the rank of the other variable increases
             proportionally.
           </Text>
         </List.Item>
@@ -47,8 +48,8 @@ export default function SpearmanRhoTabs() {
             <Text span fw={500}>
               -1:
             </Text>{" "}
-            There is a perfect negative monotonic relationship. As the rank of one
-            variable increases, the rank of the other variable decreases
+            There is a perfect negative monotonic relationship. As the rank of
+            one variable increases, the rank of the other variable decreases
             proportionally.
           </Text>
         </List.Item>
@@ -112,11 +113,15 @@ export default function SpearmanRhoTabs() {
       <Text fw={500}>Important caveats</Text>
       <Text>
         While a significant Spearman&apos;s ρ value indicates a monotonic
-        relationship between variables, it does not imply causation. Spearman&apos;s
-        ρ is particularly useful for ordinal data or when the relationship between
-        variables is monotonic but not necessarily linear. It is less sensitive to
-        outliers than Pearson&apos;s <Text span fs="italic">r</Text>, but it is important to consider the broader
-        context when interpreting its value.
+        relationship between variables, it does not imply causation.
+        Spearman&apos;s ρ is particularly useful for ordinal data or when the
+        relationship between variables is monotonic but not necessarily linear.
+        It is less sensitive to outliers than Pearson&apos;s{" "}
+        <Text span fs="italic">
+          r
+        </Text>
+        , but it is important to consider the broader context when interpreting
+        its value.
       </Text>
     </Stack>,
   ];
@@ -126,8 +131,8 @@ export default function SpearmanRhoTabs() {
       explanationSections={explanationSections}
       example1={
         <Text>
-          Example 1 content will go here (e.g., a scatterplot, numerical example,
-          or walkthrough).
+          Example 1 content will go here (e.g., a scatterplot, numerical
+          example, or walkthrough).
         </Text>
       }
       // example2 can be added later:
@@ -135,4 +140,3 @@ export default function SpearmanRhoTabs() {
     />
   );
 }
-

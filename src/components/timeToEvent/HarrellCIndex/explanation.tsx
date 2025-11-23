@@ -24,22 +24,29 @@ export default function HarrellCIndexTabs() {
       <List spacing={2}>
         <List.Item>
           <Text>
-            <Text span fw={500}>Value closer to 1:</Text> This indicates a
-            positive predictive accuracy. The model has a high probability of
-            correctly ranking pairs of subjects in order of their event times.
+            <Text span fw={500}>
+              Value closer to 1:
+            </Text>{" "}
+            This indicates a positive predictive accuracy. The model has a high
+            probability of correctly ranking pairs of subjects in order of their
+            event times.
           </Text>
         </List.Item>
         <List.Item>
           <Text>
-            <Text span fw={500}>Value closer to 0.5:</Text> This implies no
-            better accuracy than random chance.
+            <Text span fw={500}>
+              Value closer to 0.5:
+            </Text>{" "}
+            This implies no better accuracy than random chance.
           </Text>
         </List.Item>
         <List.Item>
           <Text>
-            <Text span fw={500}>Value closer to 0:</Text> This suggests a negative
-            predictive accuracy. The model consistently predicts in the opposite
-            direction.
+            <Text span fw={500}>
+              Value closer to 0:
+            </Text>{" "}
+            This suggests a negative predictive accuracy. The model consistently
+            predicts in the opposite direction.
           </Text>
         </List.Item>
       </List>
@@ -55,24 +62,34 @@ export default function HarrellCIndexTabs() {
       <List spacing={2}>
         <List.Item>
           <Text>
-            <Text span fw={500}>&lt;0.5:</Text> No discriminative ability and no
-            better than chance
+            <Text span fw={500}>
+              &lt;0.5:
+            </Text>{" "}
+            No discriminative ability and no better than chance
           </Text>
         </List.Item>
         <List.Item>
           <Text>
-            <Text span fw={500}>0.5 to 0.7:</Text> Poor to moderate discriminative
-            ability
+            <Text span fw={500}>
+              0.5 to 0.7:
+            </Text>{" "}
+            Poor to moderate discriminative ability
           </Text>
         </List.Item>
         <List.Item>
           <Text>
-            <Text span fw={500}>0.7 to 0.8:</Text> Good discriminative ability
+            <Text span fw={500}>
+              0.7 to 0.8:
+            </Text>{" "}
+            Good discriminative ability
           </Text>
         </List.Item>
         <List.Item>
           <Text>
-            <Text span fw={500}>&gt;0.8:</Text> Excellent discriminative ability
+            <Text span fw={500}>
+              &gt;0.8:
+            </Text>{" "}
+            Excellent discriminative ability
           </Text>
         </List.Item>
       </List>
@@ -84,11 +101,10 @@ export default function HarrellCIndexTabs() {
       explanationSections={explanationSections}
       example1={
         <Text>
-          Example 1 content will go here (e.g., a scatterplot, numerical example,
-          or walkthrough).
+          Example 1 content will go here (e.g., a scatterplot, numerical
+          example, or walkthrough).
         </Text>
       }
     />
   );
 }
-

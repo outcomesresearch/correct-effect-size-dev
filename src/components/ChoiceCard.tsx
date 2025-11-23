@@ -26,7 +26,6 @@ const ChoiceCard = ({
   const multDescriptions = typeof description === "object";
   const displayDescription = multDescriptions ? description.short : description;
   const modalDescription = multDescriptions ? description.long : description;
-  const descriptionLines = modalDescription.split("\n");
 
   const handleReadMoreClick = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -66,7 +65,7 @@ const ChoiceCard = ({
               size="sm"
               component="span"
               c={isSelected ? "green.7" : "blue.6"}
-              style={{ cursor: "pointer" }}
+              style={{ cursor: "pointer", textDecoration: "underline" }}
               onClick={handleReadMoreClick}
               ml={4}
             >
@@ -90,7 +89,7 @@ const ChoiceCard = ({
         size="md"
       >
         <Stack gap="xs">
-          {descriptionLines.map((line, index) => (
+          {modalDescription?.split("\n").map((line, index) => (
             <Text key={index}>{line}</Text>
           ))}
         </Stack>

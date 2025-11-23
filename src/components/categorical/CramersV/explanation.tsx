@@ -10,31 +10,35 @@ export default function CramersVTabs() {
         and association between two categorical variables. Derived from the
         chi-square statistical test, Cramer&apos;s 𝑉 provides a standardized
         measure of the degree of association between the categorical variables.
-        Cramer&apos;s 𝑉 values range from 0 to 1. A larger value of Cramer&apos;s
-        V indicates a stronger association between the categorical variables.
+        Cramer&apos;s 𝑉 values range from 0 to 1. A larger value of
+        Cramer&apos;s V indicates a stronger association between the categorical
+        variables.
       </Text>
     </Stack>,
     <Stack gap={6}>
       <Stack gap={0}>
         <Text fw={500}>Range of Cramer&apos;s 𝑉</Text>
-        <Text>
-          Cramer&apos;s 𝑉 values can range from 0 to 1:
-        </Text>
+        <Text>Cramer&apos;s 𝑉 values can range from 0 to 1:</Text>
       </Stack>
       <List spacing={2}>
         <List.Item>
           <Text>
-            <Text span fw={500}>Closer to 1:</Text> This indicates a strong
-            association between the two variables, which implies that knowing the
-            category of one variable can predict the category of the other
-            variable with high accuracy.
+            <Text span fw={500}>
+              Closer to 1:
+            </Text>{" "}
+            This indicates a strong association between the two variables, which
+            implies that knowing the category of one variable can predict the
+            category of the other variable with high accuracy.
           </Text>
         </List.Item>
         <List.Item>
           <Text>
-            <Text span fw={500}>Close to 0:</Text> This suggests that there is
-            little to no association between the two variables, which implies
-            that the variables are independent of each other.
+            <Text span fw={500}>
+              Close to 0:
+            </Text>{" "}
+            This suggests that there is little to no association between the two
+            variables, which implies that the variables are independent of each
+            other.
           </Text>
         </List.Item>
       </List>
@@ -42,34 +46,47 @@ export default function CramersVTabs() {
     <Stack gap={6}>
       <Stack gap={0}>
         <Text fw={500}>Interpretation of Cramer&apos;s 𝑉 values</Text>
-        <Text>
-          The interpretation of Cramer&apos;s 𝑉 values is as follows:
-        </Text>
+        <Text>The interpretation of Cramer&apos;s 𝑉 values is as follows:</Text>
       </Stack>
       <List spacing={2}>
         <List.Item>
           <Text>
-            <Text span fw={500}>0.00 to 0.19:</Text> Very weak association
+            <Text span fw={500}>
+              0.00 to 0.19:
+            </Text>{" "}
+            Very weak association
           </Text>
         </List.Item>
         <List.Item>
           <Text>
-            <Text span fw={500}>0.20 to 0.39:</Text> Weak association
+            <Text span fw={500}>
+              0.20 to 0.39:
+            </Text>{" "}
+            Weak association
           </Text>
         </List.Item>
         <List.Item>
           <Text>
-            <Text span fw={500}>0.40 to 0.59:</Text> Moderate association
+            <Text span fw={500}>
+              0.40 to 0.59:
+            </Text>{" "}
+            Moderate association
           </Text>
         </List.Item>
         <List.Item>
           <Text>
-            <Text span fw={500}>0.60 to 0.79:</Text> Strong association
+            <Text span fw={500}>
+              0.60 to 0.79:
+            </Text>{" "}
+            Strong association
           </Text>
         </List.Item>
         <List.Item>
           <Text>
-            <Text span fw={500}>0.80 to 1.00:</Text> Very strong association
+            <Text span fw={500}>
+              0.80 to 1.00:
+            </Text>{" "}
+            Very strong association
           </Text>
         </List.Item>
       </List>
@@ -87,11 +104,10 @@ export default function CramersVTabs() {
       explanationSections={explanationSections}
       example1={
         <Text>
-          Example 1 content will go here (e.g., a scatterplot, numerical example,
-          or walkthrough).
+          Example 1 content will go here (e.g., a scatterplot, numerical
+          example, or walkthrough).
         </Text>
       }
     />
   );
 }
-

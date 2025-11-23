@@ -3,8 +3,9 @@ import { Text, Stack, Tabs, List } from "@mantine/core";
 function Example2() {
   return (
     <Stack gap="md">
-      <Text fs={'italic'} mt={0}>
-        What is the difference in systolic blood pressure reduction between patients treated with HypoTensix and those treated with PressureEase?
+      <Text fs={"italic"} mt={0}>
+        What is the difference in systolic blood pressure reduction between
+        patients treated with HypoTensix and those treated with PressureEase?
       </Text>
       <Tabs defaultValue="studyDesign">
         <Tabs.List>
@@ -23,18 +24,26 @@ function Example2() {
             <Stack gap={0}>
               <Text fw={500}>Study Population:</Text>
               <Text>
-                The study includes 200 hypertensive patients aged 40 to 70 recruited from a cardiology clinic.
+                The study includes 200 hypertensive patients aged 40 to 70
+                recruited from a cardiology clinic.
               </Text>
             </Stack>
             <Stack gap={0}>
               <Text fw={500}>Variables under Study:</Text>
               <Stack gap={0}>
                 <Text fw={500}>Independent/Predictor/Exposure:</Text>
-                <Text>Patients are randomly assigned to receive either HypoTensix or PressureEase for hypertension management.</Text>
+                <Text>
+                  Patients are randomly assigned to receive either HypoTensix or
+                  PressureEase for hypertension management.
+                </Text>
               </Stack>
               <Stack gap={0}>
                 <Text fw={500}>Dependent/Outcome:</Text>
-                <Text>The primary outcome is the difference in systolic blood pressure reduction (mm Hg) between the two groups after 12 weeks of treatment.</Text>
+                <Text>
+                  The primary outcome is the difference in systolic blood
+                  pressure reduction (mm Hg) between the two groups after 12
+                  weeks of treatment.
+                </Text>
               </Stack>
             </Stack>
           </Stack>
@@ -43,15 +52,32 @@ function Example2() {
         <Tabs.Panel value="effectSize" pt="md">
           <Stack gap="md">
             <Stack gap={0}>
-              <Text fw={500}>Effect Size Measure used in the Analytical Approach</Text>
-              <Text>Median Difference in systolic Blood Pressure Reduction (mm Hg)</Text>
+              <Text fw={500}>
+                Effect Size Measure used in the Analytical Approach
+              </Text>
+              <Text>
+                Median Difference in systolic Blood Pressure Reduction (mm Hg)
+              </Text>
             </Stack>
             <Stack gap={0}>
-              <Text fw={500}>Minimal Clinically Important Difference (MCID)</Text>
-              <Text>
-                A &quot;clinically meaningful difference&quot; in systolic blood pressure reduction can vary depending on individual patient characteristics, the severity of hypertension, and the overall treatment goals. However, in general, many doctors might consider a systolic blood pressure reduction of 10 mm Hg or more as a clinically meaningful difference in the context of antihypertensive treatment. This level of reduction is often associated with a decreased risk of cardiovascular events and improved health outcomes for hypertensive patients.
+              <Text fw={500}>
+                Minimal Clinically Important Difference (MCID)
               </Text>
-              <Text>10 mm Hg is determined to be the minimal clinically important difference.</Text>
+              <Text>
+                A &quot;clinically meaningful difference&quot; in systolic blood
+                pressure reduction can vary depending on individual patient
+                characteristics, the severity of hypertension, and the overall
+                treatment goals. However, in general, many doctors might
+                consider a systolic blood pressure reduction of 10 mm Hg or more
+                as a clinically meaningful difference in the context of
+                antihypertensive treatment. This level of reduction is often
+                associated with a decreased risk of cardiovascular events and
+                improved health outcomes for hypertensive patients.
+              </Text>
+              <Text>
+                10 mm Hg is determined to be the minimal clinically important
+                difference.
+              </Text>
             </Stack>
           </Stack>
         </Tabs.Panel>
@@ -61,16 +87,29 @@ function Example2() {
             <Stack gap={0}>
               <Text fw={500}>Point Estimate:</Text>
               <Text>
-                The study finds that patients treated with HypoTensix experienced a median reduction in systolic blood pressure of 18 mm Hg (95% CI: 10-26 mm Hg), while patients treated with PressureEase had a median reduction of 5 mm Hg (95% CI: -4 to 14 mm Hg).
+                The study finds that patients treated with HypoTensix
+                experienced a median reduction in systolic blood pressure of 18
+                mm Hg (95% CI: 10-26 mm Hg), while patients treated with
+                PressureEase had a median reduction of 5 mm Hg (95% CI: -4 to 14
+                mm Hg).
               </Text>
-              <Text>The median difference in systolic blood pressure reduction between the two groups is 13 mm Hg.</Text>
+              <Text>
+                The median difference in systolic blood pressure reduction
+                between the two groups is 13 mm Hg.
+              </Text>
             </Stack>
             <Stack gap={0}>
               <Text fw={500}>Confidence Interval:</Text>
               <Text>95% confidence interval = 5 to 21 mm Hg</Text>
             </Stack>
             <Stack gap={0}>
-              <Text fw={500}>Probability Value (<Text span fs="italic">p</Text>-value):</Text>
+              <Text fw={500}>
+                Probability Value (
+                <Text span fs="italic">
+                  p
+                </Text>
+                -value):
+              </Text>
               <Text>&lt; 0.05</Text>
             </Stack>
           </Stack>
@@ -81,30 +120,58 @@ function Example2() {
             <Stack gap={0}>
               <Text fw={500}>Interpretation of Results</Text>
               <Text>
-                The study defines a 13 mm difference in median systolic blood pressure reduction between participants treated with HypoTensix and PressureEase. Considering the MCID in blood pressure reduction is 10, this difference of 13 is considered a clinically meaningful difference.
+                The study defines a 13 mm difference in median systolic blood
+                pressure reduction between participants treated with HypoTensix
+                and PressureEase. Considering the MCID in blood pressure
+                reduction is 10, this difference of 13 is considered a
+                clinically meaningful difference.
               </Text>
             </Stack>
             <Text>
-              The width of the confidence interval is quite wide, and considered imprecise as the plausible values for the difference (i.e., 5 to 21) include values smaller and larger than the MCID (10), and thus the investigator cannot conclude with confidence from this study whether the true value for the difference in blood pressure will be clinically meaningful.
+              The width of the confidence interval is quite wide, and considered
+              imprecise as the plausible values for the difference (i.e., 5 to
+              21) include values smaller and larger than the MCID (10), and thus
+              the investigator cannot conclude with confidence from this study
+              whether the true value for the difference in blood pressure will
+              be clinically meaningful.
             </Text>
             <Text>
-              Since the probability value (<Text span fs="italic">p</Text>-value) is &lt;0.05, the results from this study are determined to be &quot;statistically significant&quot;.
+              Since the probability value (
+              <Text span fs="italic">
+                p
+              </Text>
+              -value) is &lt;0.05, the results from this study are determined to
+              be &quot;statistically significant&quot;.
             </Text>
             <Text>
-              This study is considered an indeterminate positive study since clinically meaningful and meaningless values are compatible with the results as defined by the range of values contained within the confidence interval.
+              This study is considered an indeterminate positive study since
+              clinically meaningful and meaningless values are compatible with
+              the results as defined by the range of values contained within the
+              confidence interval.
             </Text>
 
             <Stack gap={0}>
               <Text fw={500}>Implications of Results</Text>
               <Text>
-                Despite the large difference in median systolic blood pressure reduction with HypoTensix as compared to PressureEase, the imprecision around the point estimate prevents making a definitive conclusion about whether HypoTensix is associated with a clinically meaningful reduction in blood pressure.
+                Despite the large difference in median systolic blood pressure
+                reduction with HypoTensix as compared to PressureEase, the
+                imprecision around the point estimate prevents making a
+                definitive conclusion about whether HypoTensix is associated
+                with a clinically meaningful reduction in blood pressure.
               </Text>
             </Stack>
             <Text>
-              Despite the statistical significance of the difference, the imprecision of the results and the possibility that clinically meaningless differences in systolic blood pressure reduction are plausible, the results of this study are referred to as &quot;indeterminate&quot;.
+              Despite the statistical significance of the difference, the
+              imprecision of the results and the possibility that clinically
+              meaningless differences in systolic blood pressure reduction are
+              plausible, the results of this study are referred to as
+              &quot;indeterminate&quot;.
             </Text>
             <Text>
-              Because the preponderance of the confidence interval is within the clinically meaningful effect size range, this study provides some evidence that HypoTensix is better at blood pressure reduction than PressureEase, but no definitive conclusion can be made.
+              Because the preponderance of the confidence interval is within the
+              clinically meaningful effect size range, this study provides some
+              evidence that HypoTensix is better at blood pressure reduction
+              than PressureEase, but no definitive conclusion can be made.
             </Text>
 
             <Stack gap={0}>
@@ -112,17 +179,25 @@ function Example2() {
               <List spacing="xs">
                 <List.Item>
                   <Text>
-                    Conduct a follow-up study with a larger sample size to both confirm the clinically meaningful reduction and increase the precision of the estimate (i.e., decrease the width of the confidence interval).
+                    Conduct a follow-up study with a larger sample size to both
+                    confirm the clinically meaningful reduction and increase the
+                    precision of the estimate (i.e., decrease the width of the
+                    confidence interval).
                   </Text>
                 </List.Item>
                 <List.Item>
                   <Text>
-                    The investigator can implement strategies to reduce systematic error, such as standardizing the measurement of blood pressure and validating the accuracy of blood pressure recordings, to increase the precision of the estimate.
+                    The investigator can implement strategies to reduce
+                    systematic error, such as standardizing the measurement of
+                    blood pressure and validating the accuracy of blood pressure
+                    recordings, to increase the precision of the estimate.
                   </Text>
                 </List.Item>
                 <List.Item>
                   <Text>
-                    Conduct a meta-analysis, which is a quantitative approach to combine data from multiple studies, yielding summary effect estimates with increased statistical power.
+                    Conduct a meta-analysis, which is a quantitative approach to
+                    combine data from multiple studies, yielding summary effect
+                    estimates with increased statistical power.
                   </Text>
                 </List.Item>
               </List>
@@ -134,7 +209,7 @@ function Example2() {
   );
 }
 
-Example2.title = "Comparing Systolic Blood Pressure Reduction: HypoTensix vs. PressureEase";
+Example2.title =
+  "Comparing Systolic Blood Pressure Reduction: HypoTensix vs. PressureEase";
 
 export default Example2;
-
