@@ -281,7 +281,7 @@ const tree: Record<string, TreeNode> = {
     title: EFFECT_SIZE_SELECTION_TITLE,
     component: EFFECT_SIZE_SELECTION_COMPONENT,
     color: "orange-darken-2",
-    inputs: [ids.REPORTING_PAIRWISE_DIFFERENCES],
+    inputs: [ids.COMPARISON_OF_THREEMORE_GROUPS],
     choices: [
       { answer: "Mean Difference", next: ids.MEAN_DIFFERENCE_3GROUPS },
       {
