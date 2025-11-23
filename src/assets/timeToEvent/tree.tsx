@@ -101,11 +101,20 @@ const tree: Record<string, TreeNode> = {
       {
         answer: "Survival rate difference",
         next: ids.SURVIVAL_RATE_DIFFERENCE,
+        option_description:
+          "A nonparametric statistic used to quantify the difference in survival probabilities between two groups at a specific time point.",
       },
-      { answer: "Median survival time", next: ids.MEDIAN_SURVIVAL_TIME },
+      {
+        answer: "Median survival time",
+        next: ids.MEDIAN_SURVIVAL_TIME,
+        option_description:
+          "A nonparametric statistic used to quantify the time at which half of the study population is still event-free.",
+      },
       {
         answer: "Restricted mean survival time",
         next: ids.RESTRICTED_MEAN_SURVIVAL_TIME,
+        option_description:
+          "A nonparametric statistic used to quantify the expected time to an event under a survival curve up to a specified time point.",
       },
     ],
   },
@@ -163,14 +172,20 @@ const tree: Record<string, TreeNode> = {
       {
         answer: "Survival rate difference",
         next: ids.SURVIVAL_RATE_DIFFERENCE_3GROUPS,
+        option_description:
+          "A nonparametric statistic used to quantify the difference in survival probabilities between two groups at a specific time point.",
       },
       {
         answer: "Median survival time",
         next: ids.MEDIAN_SURVIVAL_TIME_3GROUPS,
+        option_description:
+          "A nonparametric statistic used to quantify the time at which half of the study population is still event-free.",
       },
       {
         answer: "Restricted mean survival time",
         next: ids.RESTRICTED_MEAN_SURVIVAL_TIME_3GROUPS,
+        option_description:
+          "A nonparametric statistic used to quantify the expected time to an event under a survival curve up to a specified time point.",
       },
     ],
   },

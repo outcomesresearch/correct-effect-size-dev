@@ -91,7 +91,10 @@ const tree: Record<string, TreeNode> = {
         answer: "Correlation with continuous measure (categorical)",
         // Only one measure applies (Point biserial) → go directly to its statement
         next: ids.POINT_BISERIAL,
-        option_description: CORRELATION_WITH_CONTINUOUS_MEASURE_DESCRIPTION,
+        option_description: {
+          short: CORRELATION_WITH_CONTINUOUS_MEASURE_DESCRIPTION,
+          long: CORRELATION_WITH_CONTINUOUS_MEASURE_DESCRIPTION,
+        },
       },
       {
         answer: "Comparison of 2 groups",
@@ -290,22 +293,26 @@ const tree: Record<string, TreeNode> = {
       {
         answer: "Cramer's 𝑉",
         next: ids.CRAMERS_V,
-        option_description: descriptions.CRAMERS_V_DESCRIPTION,
+        option_description:
+          "Used as an effect size for categorical data, particularly in the context of analyzing the strength and association between two categorical variables.",
       },
       {
         answer: "Goodman–Kruskal λ",
         next: ids.GOODMAN_KRUSKAL_LAMBDA,
-        option_description: descriptions.GOODMAN_KRUSKAL_LAMBDA_DESCRIPTION,
+        option_description:
+          "Measures the strength of association between two nominal or categorical variables in a contingency table.",
       },
       {
         answer: "Cliff's Δ",
         next: ids.CLIFFS_DELTA,
-        option_description: descriptions.CLIFFS_DELTA_DESCRIPTION,
+        option_description:
+          "A nonparametric effect size measure used to describe the degree of overlap between two distributions.",
       },
       {
         answer: "Kendall's τ",
         next: ids.KENDALLS_TAU,
-        option_description: descriptions.KENDALLS_TAU_DESCRIPTION,
+        option_description:
+          "A nonparametric correlation coefficient used to quantify the strength and direction of the relationship between two ordinal or ranked variables.",
       },
     ],
   },
@@ -412,18 +419,20 @@ const tree: Record<string, TreeNode> = {
       {
         answer: "Pseudo R²",
         next: ids.PSEUDO_R2,
-        option_description: descriptions.PSEUDO_R2_DESCRIPTION,
+        option_description:
+          "Measures the goodness-of-fit for models that do not inherently provide a traditional pseudo R² value, like logistic regression.",
       },
       {
         answer: "C-Statistic",
         next: ids.C_STATISTIC,
-        option_description: descriptions.C_STATISTIC_DESCRIPTION,
+        option_description:
+          "A performance measure used to evaluate the discriminatory power and predictive accuracy of a regression model, particularly in binary classification tasks.",
       },
       {
         answer: "Percent correctly classified",
         next: ids.PERCENT_CORRECTLY_CLASSIFIED,
         option_description:
-          descriptions.PERCENT_CORRECTLY_CLASSIFIED_DESCRIPTION,
+          "A statistic used to quantify the accuracy of classification models.",
       },
     ],
   },

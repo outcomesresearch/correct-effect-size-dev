@@ -137,14 +137,20 @@ const tree: Record<string, TreeNode> = {
       {
         answer: "Pearson Correlation Coefficient r",
         next: ids.PEARSON_R,
+        option_description:
+          "Used to quantify the linear relationship or association between two continuous variables.",
       },
       {
         answer: "Spearman's rho (non-parametric)",
         next: ids.SPEARMAN_RHO,
+        option_description:
+          "Can be used to measure the strength and direction of monotonic associations between two ordinal or ranked variables.",
       },
       {
         answer: "Coefficient of Determination R²",
         next: ids.R2,
+        option_description:
+          "Quantifies the proportion of the total variance in the dependent variable that is explained by the independent variables included in the regression model.",
       },
     ],
   },
@@ -184,15 +190,42 @@ const tree: Record<string, TreeNode> = {
     color: "indigo-darken-2",
     inputs: [CONTINUOUS],
     choices: [
-      { answer: "Mean Difference", next: ids.MEAN_DIFFERENCE },
+      {
+        answer: "Mean Difference",
+        next: ids.MEAN_DIFFERENCE,
+        option_description:
+          "Measures the absolute difference between the means of two or more groups of interest.",
+      },
       {
         answer: "Median Difference (non-parametric)",
         next: ids.MEDIAN_DIFFERENCE,
+        option_description:
+          "Measures the absolute difference between the medians of two or more groups of interest.",
       },
-      { answer: "Cohen's d", next: ids.COHENS_D },
-      { answer: "Glass's Δ", next: ids.GLASS_DELTA },
-      { answer: "Hedges' g", next: ids.HEDGES_G },
-      { answer: "r (non-parametric)", next: ids.R_NONPARAMETRIC },
+      {
+        answer: "Cohen's d",
+        next: ids.COHENS_D,
+        option_description:
+          "A standardized measure that represents the magnitude of the difference between two groups by taking the difference between the means and dividing by the pooled standard deviation.",
+      },
+      {
+        answer: "Glass's Δ",
+        next: ids.GLASS_DELTA,
+        option_description:
+          "A standardized measure representing the magnitude of the difference between two groups, similar to Cohen's d.",
+      },
+      {
+        answer: "Hedges' g",
+        next: ids.HEDGES_G,
+        option_description:
+          "Represents the magnitude of the difference between two groups in terms of standard deviations, similar to Cohen's d and Glass's ∆.",
+      },
+      {
+        answer: "r (non-parametric)",
+        next: ids.R_NONPARAMETRIC,
+        option_description:
+          "A standardized measure that represents the strength and direction of a linear relationship between two ordinal or ranked variables without making assumptions about the distribution of the variables.",
+      },
     ],
   },
   [ids.MEAN_DIFFERENCE]: {
@@ -283,15 +316,42 @@ const tree: Record<string, TreeNode> = {
     color: "orange-darken-2",
     inputs: [ids.COMPARISON_OF_THREEMORE_GROUPS],
     choices: [
-      { answer: "Mean Difference", next: ids.MEAN_DIFFERENCE_3GROUPS },
+      {
+        answer: "Mean Difference",
+        next: ids.MEAN_DIFFERENCE_3GROUPS,
+        option_description:
+          "Measures the absolute difference between the means of two or more groups of interest.",
+      },
       {
         answer: "Median Difference (non-parametric)",
         next: ids.MEDIAN_DIFFERENCE_3GROUPS,
+        option_description:
+          "Measures the absolute difference between the medians of two or more groups of interest.",
       },
-      { answer: "Cohen's d", next: ids.COHENS_D_3GROUPS },
-      { answer: "Glass's Δ", next: ids.GLASS_DELTA_3GROUPS },
-      { answer: "Hedges' g", next: ids.HEDGES_G_3GROUPS },
-      { answer: "r (non-parametric)", next: ids.R_NONPARAMETRIC_3GROUPS },
+      {
+        answer: "Cohen's d",
+        next: ids.COHENS_D_3GROUPS,
+        option_description:
+          "Represents the magnitude of the difference between two groups by taking the difference between the means and dividing by the pooled standard deviation.",
+      },
+      {
+        answer: "Glass's Δ",
+        next: ids.GLASS_DELTA_3GROUPS,
+        option_description:
+          "Represents the magnitude of the difference between two groups, similar to Cohen's d.",
+      },
+      {
+        answer: "Hedges' g",
+        next: ids.HEDGES_G_3GROUPS,
+        option_description:
+          "Represents the magnitude of the difference between two groups in terms of standard deviations, similar to Cohen's d and Glass's ∆.",
+      },
+      {
+        answer: "r (non-parametric)",
+        next: ids.R_NONPARAMETRIC_3GROUPS,
+        option_description:
+          "Represents the strength and direction of a linear relationship between two ordinal or ranked variables without making assumptions about the distribution of the variables.",
+      },
     ],
   },
   [ids.MEAN_DIFFERENCE_3GROUPS]: {
@@ -356,8 +416,18 @@ const tree: Record<string, TreeNode> = {
     color: "orange-darken-2",
     inputs: [ids.COMPARISON_OF_THREEMORE_GROUPS],
     choices: [
-      { answer: "Eta Squared (η²)", next: ids.ETA_SQUARED },
-      { answer: "Omega Squared (ω²)", next: ids.OMEGA_SQUARED },
+      {
+        answer: "Eta Squared (η²)",
+        next: ids.ETA_SQUARED,
+        option_description:
+          "Used to assess the strength of association between multiple groups and a dependent variable; it is commonly used in analysis of variance.",
+      },
+      {
+        answer: "Omega Squared (ω²)",
+        next: ids.OMEGA_SQUARED,
+        option_description:
+          "Used to assess the strength of association between multiple groups and a dependent variable; it is commonly used in analysis of variance.",
+      },
     ],
   },
   [ids.ETA_SQUARED]: {
@@ -415,14 +485,20 @@ const tree: Record<string, TreeNode> = {
       {
         answer: "Beta coefficient (standardized or unstandardized)",
         next: ids.BETA_COEFFICIENT,
+        option_description:
+          "Represents the change in the dependent variable in standard deviation units for a one-standard-deviation change in the predictor variable, while holding all other predictor variables constant.",
       },
       {
         answer: "Part and partial correlations",
         next: ids.PART_PARTIAL_CORRELATIONS,
+        option_description:
+          "Measures the unique contribution of one predictor variable to the variance in the dependent variable, while controlling for the effects of other predictor variables.",
       },
       {
-        answer: "LS Mean Difference",
+        answer: "Least Squared Mean Difference",
         next: ids.LS_MEAN_DIFFERENCE,
+        option_description:
+          "Used to estimate and compare group means in a regression model, particularly in the context of analysis of variance or linear regression.",
       },
     ],
   },
@@ -433,8 +509,18 @@ const tree: Record<string, TreeNode> = {
     color: "purple-darken-2",
     inputs: [ids.REGRESSION_MODEL],
     choices: [
-      { answer: "R²", next: ids.R2_REGRESSION },
-      { answer: "Adjusted R²", next: ids.ADJUSTED_R2 },
+      {
+        answer: "R²",
+        next: ids.R2_REGRESSION,
+        option_description:
+          "Quantifies the proportion of the total variance in the dependent variable that is explained by the independent variables included in the regression model.",
+      },
+      {
+        answer: "Adjusted R²",
+        next: ids.ADJUSTED_R2,
+        option_description:
+          "A statistical metric used to measure the proportion of variance in the dependent variable that is explained by the independent variables in a regression model.",
+      },
     ],
   },
   [ids.BETA_COEFFICIENT]: {
