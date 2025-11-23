@@ -16,6 +16,8 @@ import {
   FURTHER_ADJUSTMENTS_TITLE,
   FURTHER_ADJUSTMENTS_COMPONENT,
   EFFECT_SIZE_SELECTION_COMPONENT,
+  ADJUSTED_ASSOCIATION_WITH_PREDICTOR_ANSWER,
+  ADJUSTED_ASSOCIATION_WITH_PREDICTOR_DESCRIPTION,
 } from "../ids";
 
 const tree: Record<string, TreeNode> = {
@@ -180,9 +182,9 @@ const tree: Record<string, TreeNode> = {
     inputs: [TIME_TO_EVENT],
     choices: [
       {
-        answer: "Adjusted association with predictor",
+        answer: ADJUSTED_ASSOCIATION_WITH_PREDICTOR_ANSWER,
         next: ids.HAZARD_RATIO_REGRESSION,
-        // No description provided in your source for ADJUSTED_ASSOCIATION
+        option_description: ADJUSTED_ASSOCIATION_WITH_PREDICTOR_DESCRIPTION,
       },
       {
         answer: "Overall model",

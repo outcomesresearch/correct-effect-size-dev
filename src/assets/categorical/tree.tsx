@@ -24,6 +24,8 @@ import {
   ROOT,
   FURTHER_ADJUSTMENTS_TITLE,
   FURTHER_ADJUSTMENTS_COMPONENT,
+  ADJUSTED_ASSOCIATION_WITH_PREDICTOR_ANSWER,
+  ADJUSTED_ASSOCIATION_WITH_PREDICTOR_DESCRIPTION,
 } from "../ids";
 
 const tree: Record<string, TreeNode> = {
@@ -297,8 +299,9 @@ const tree: Record<string, TreeNode> = {
     inputs: [CATEGORICAL],
     choices: [
       {
-        answer: "Adjusted association with predictor",
+        answer: ADJUSTED_ASSOCIATION_WITH_PREDICTOR_ANSWER,
         next: ids.ODDS_RATIO_REGRESSION,
+        option_description: ADJUSTED_ASSOCIATION_WITH_PREDICTOR_DESCRIPTION,
       },
       {
         answer: "Overall model",

@@ -37,3 +37,7 @@ export const FOCUS_OF_ANALYSIS_SELECTION_COMPONENT = () => (
     question being asked and the type of data being collected.
   </Text>
 );
+
+export const ADJUSTED_ASSOCIATION_WITH_PREDICTOR_ANSWER = "Adjusted association with predictor";
+export const ADJUSTED_ASSOCIATION_WITH_PREDICTOR_DESCRIPTION =
+  "The adjusted association with predictor is a characteristic used in regression models to describe the relationship between an independent (predictor) variable and an outcome variable after accounting for other covariates or predictor variables within the model. By controlling for the potential effects of other covariates, the identified association purely reflects the unique influence of the selected predictor. By incorporating this concept, we can isolate associations and remove potential confounders.";

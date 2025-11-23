@@ -27,6 +27,8 @@ import {
   FURTHER_ADJUSTMENTS_COMPONENT,
   FURTHER_ADJUSTMENTS_TITLE,
   ROOT,
+  ADJUSTED_ASSOCIATION_WITH_PREDICTOR_ANSWER,
+  ADJUSTED_ASSOCIATION_WITH_PREDICTOR_DESCRIPTION,
 } from "../ids";
 
 const tree: Record<string, TreeNode> = {
@@ -317,8 +319,9 @@ const tree: Record<string, TreeNode> = {
     inputs: [CONTINUOUS],
     choices: [
       {
-        answer: "Adjusted Association with Predictor",
+        answer: ADJUSTED_ASSOCIATION_WITH_PREDICTOR_ANSWER,
         next: ids.ADJUSTED_ASSOCIATION,
+        option_description: ADJUSTED_ASSOCIATION_WITH_PREDICTOR_DESCRIPTION,
       },
       {
         answer: "Overall Model",
