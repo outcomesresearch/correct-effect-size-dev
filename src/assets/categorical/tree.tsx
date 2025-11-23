@@ -88,7 +88,7 @@ const tree: Record<string, TreeNode> = {
     inputs: [ROOT],
     choices: [
       {
-        answer: "Correlation with continuous measure (categorical)",
+        answer: "Correlation with continuous measure",
         // Only one measure applies (Point biserial) → go directly to its statement
         next: ids.POINT_BISERIAL,
         option_description: {
