@@ -1,7 +1,7 @@
 // src/trees/categorical.tsx
 import PointBiSerialCorrelation from "../../components/categorical/PointBiSerialCorrelation";
 import OddsRatio from "../../components/categorical/OddsRatio";
-import RiskRatio from "../../components/categorical/RiskRatio";
+import { RiskRatioExamples, RiskRatioExplanation } from "../../components/categorical/RiskRatio/index";
 import { RiskDifferenceExamples, RiskDifferenceExplanation } from "../../components/categorical/RiskDifference/index";
 import { PhiCoefficientExamples, PhiCoefficientExplanation } from "../../components/categorical/PhiCoefficient/index";
 import CramersV from "../../components/categorical/CramersV";
@@ -116,9 +116,10 @@ const tree: Record<string, TreeNode> = {
     type: "statement",
     title: "Risk Ratio (RR)",
     flowChartTitle: "Risk Ratio",
-    component: RiskRatio,
+    component: RiskRatioExplanation,
     color: "indigo-darken-2",
     inputs: [ids.TWO_GROUPS_EFFECT_SIZES],
+    examples: RiskRatioExamples,
   },
   [ids.RISK_DIFFERENCE]: {
     type: "statement",
@@ -198,9 +199,10 @@ const tree: Record<string, TreeNode> = {
     type: "statement",
     title: "Risk Ratio (RR)",
     flowChartTitle: "Risk Ratio",
-    component: RiskRatio,
+    component: RiskRatioExplanation,
     color: "indigo-darken-2",
     inputs: [ids.COMPARISON_OF_THREEMORE_GROUPS],
+    examples: RiskRatioExamples,
   },
   [ids.RISK_DIFFERENCE_3GROUPS]: {
     type: "statement",
