@@ -1,8 +1,8 @@
 {
-  "name": "inferential-statistics-wizard",
+  "name": "correct-effect-size",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://outcomesresearch.github.io/inferential-statistics/",
+  "homepage": "https://outcomesresearch.github.io/correct-effect-size-dev",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
