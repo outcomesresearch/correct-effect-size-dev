@@ -62,11 +62,10 @@ const ChoiceCard = ({
           {displayDescription}
           {hasLongDescription && (
             <Text
-              fs="italic"
               size="sm"
               component="span"
               c={isSelected ? "green.7" : "blue.6"}
-              style={{ cursor: "pointer", textDecoration: "underline" }}
+              style={{ cursor: "pointer" }}
               onClick={handleReadMoreClick}
               ml={4}
             >
