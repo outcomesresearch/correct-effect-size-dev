@@ -22,6 +22,10 @@ import {
   OVERALL_MODEL_DESCRIPTION,
   REPORTING_PAIRWISE_DIFFERENCES_ANSWER,
   REPORTING_PAIRWISE_DIFFERENCES_DESCRIPTION,
+  CORRELATION_WITH_CONTINUOUS_MEASURE_DESCRIPTION,
+  COMPARISON_OF_TWO_GROUPS_DESCRIPTION,
+  COMPARISON_OF_THREE_OR_MORE_GROUPS_DESCRIPTION,
+  REGRESSION_MODEL_DESCRIPTION,
 } from "../ids";
 
 const tree: Record<string, TreeNode> = {
@@ -34,26 +38,22 @@ const tree: Record<string, TreeNode> = {
       {
         answer: "Correlation with continuous measure",
         next: ids.HAZARD_RATIO, // single-measure path (HR)
-        option_description:
-          "Correlation is a statistical measure of the strength of the association between two variables.",
+        option_description: CORRELATION_WITH_CONTINUOUS_MEASURE_DESCRIPTION,
       },
       {
         answer: "Comparison of 2 groups",
         next: ids.TWO_GROUPS_EFFECT_SIZES,
-        option_description:
-          "A comparison is evaluating the relationship between 2 groups.",
+        option_description: COMPARISON_OF_TWO_GROUPS_DESCRIPTION,
       },
       {
         answer: "Comparison of 3 or more groups",
         next: ids.COMPARISON_OF_THREEMORE_GROUPS,
-        option_description:
-          "A comparison is evaluating the relationship between 3 or more groups.",
+        option_description: COMPARISON_OF_THREE_OR_MORE_GROUPS_DESCRIPTION,
       },
       {
         answer: "Regression model",
         next: ids.REGRESSION_MODEL,
-        option_description:
-          "Regression is used to predict the value of a dependent variable based on one or more independent variables.",
+        option_description: REGRESSION_MODEL_DESCRIPTION,
       },
     ],
   },

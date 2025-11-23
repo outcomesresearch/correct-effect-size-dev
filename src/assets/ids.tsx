@@ -53,3 +53,15 @@ export const REPORTING_PAIRWISE_DIFFERENCES_DESCRIPTION =
 export const REPORTING_OVERALL_EFFECT_ANSWER = "Reporting overall effect";
 export const REPORTING_OVERALL_EFFECT_DESCRIPTION =
   "Reporting the overall effect size is a comprehensive sub-method of analysis used in the comparison of three or more groups.|||\nBy considering all of the groups collectively instead of in pairs, one can compute an overarching metric to observe and quantify the summative differences among the groups. Using this method of analysis, more holistic and aggregate interpretations regarding the relationships among the groups can be deduced.";
+
+export const CORRELATION_WITH_CONTINUOUS_MEASURE_DESCRIPTION =
+  "Quantifies the strength and direction of a relationship between two continuous variables.";
+
+export const COMPARISON_OF_TWO_GROUPS_DESCRIPTION =
+  "Evaluates the presence and magnitude of the difference between two groups.";
+
+export const COMPARISON_OF_THREE_OR_MORE_GROUPS_DESCRIPTION =
+  "Evaluates the presence and magnitude of the difference among three or more groups.";
+
+export const REGRESSION_MODEL_DESCRIPTION =
+  "Quantifies the improvement of the model as compared with a null model (a model with only an intercept) for explaining the variance in the outcome variable.";

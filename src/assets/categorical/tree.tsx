@@ -32,6 +32,10 @@ import {
   REPORTING_PAIRWISE_DIFFERENCES_DESCRIPTION,
   REPORTING_OVERALL_EFFECT_ANSWER,
   REPORTING_OVERALL_EFFECT_DESCRIPTION,
+  CORRELATION_WITH_CONTINUOUS_MEASURE_DESCRIPTION,
+  COMPARISON_OF_TWO_GROUPS_DESCRIPTION,
+  COMPARISON_OF_THREE_OR_MORE_GROUPS_DESCRIPTION,
+  REGRESSION_MODEL_DESCRIPTION,
 } from "../ids";
 
 const tree: Record<string, TreeNode> = {
@@ -46,29 +50,25 @@ const tree: Record<string, TreeNode> = {
         answer: "Correlation with continuous measure (categorical)",
         // Only one measure applies (Point biserial) → go directly to its statement
         next: ids.POINT_BISERIAL,
-        option_description:
-          "Assess the association between a binary categorical variable and a continuous variable.",
+        option_description: CORRELATION_WITH_CONTINUOUS_MEASURE_DESCRIPTION,
       },
       {
         answer: "Comparison of 2 groups",
         // Multiple measures → go to a selection screen
         next: ids.TWO_GROUPS_EFFECT_SIZES,
-        option_description:
-          "Compare outcome between two categorical groups using effect size metrics.",
+        option_description: COMPARISON_OF_TWO_GROUPS_DESCRIPTION,
       },
       {
         answer: "Comparison of 3 or more groups",
         // Needs a split between pairwise vs overall → question node
         next: ids.COMPARISON_OF_THREEMORE_GROUPS,
-        option_description:
-          "Compare outcomes across three or more groups — either pairwise or via overall association.",
+        option_description: COMPARISON_OF_THREE_OR_MORE_GROUPS_DESCRIPTION,
       },
       {
         answer: "Regression model",
         // Leads to another question (adjusted association vs overall model fit)
         next: ids.REGRESSION_MODEL,
-        option_description:
-          "Model a categorical DV or include categorical predictors; report adjusted associations or overall model fit.",
+        option_description: REGRESSION_MODEL_DESCRIPTION,
       },
     ],
   },
