@@ -91,10 +91,7 @@ const tree: Record<string, TreeNode> = {
         answer: "Correlation with continuous measure",
         // Only one measure applies (Point biserial) → go directly to its statement
         next: ids.POINT_BISERIAL,
-        option_description: {
-          short: CORRELATION_WITH_CONTINUOUS_MEASURE_DESCRIPTION,
-          long: CORRELATION_WITH_CONTINUOUS_MEASURE_DESCRIPTION,
-        },
+        option_description: CORRELATION_WITH_CONTINUOUS_MEASURE_DESCRIPTION,
       },
       {
         answer: "Comparison of 2 groups",
