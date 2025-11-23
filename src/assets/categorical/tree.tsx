@@ -26,6 +26,8 @@ import {
   FURTHER_ADJUSTMENTS_COMPONENT,
   ADJUSTED_ASSOCIATION_WITH_PREDICTOR_ANSWER,
   ADJUSTED_ASSOCIATION_WITH_PREDICTOR_DESCRIPTION,
+  OVERALL_MODEL_ANSWER,
+  OVERALL_MODEL_DESCRIPTION,
 } from "../ids";
 
 const tree: Record<string, TreeNode> = {
@@ -304,8 +306,9 @@ const tree: Record<string, TreeNode> = {
         option_description: ADJUSTED_ASSOCIATION_WITH_PREDICTOR_DESCRIPTION,
       },
       {
-        answer: "Overall model",
+        answer: OVERALL_MODEL_ANSWER,
         next: ids.REGRESSION_OVERALL_EFFECT_SIZES,
+        option_description: OVERALL_MODEL_DESCRIPTION,
       },
     ],
   },

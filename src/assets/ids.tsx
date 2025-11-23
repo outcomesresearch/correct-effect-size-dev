@@ -41,3 +41,7 @@ export const FOCUS_OF_ANALYSIS_SELECTION_COMPONENT = () => (
 export const ADJUSTED_ASSOCIATION_WITH_PREDICTOR_ANSWER = "Adjusted association with predictor";
 export const ADJUSTED_ASSOCIATION_WITH_PREDICTOR_DESCRIPTION =
   "The adjusted association with predictor is a characteristic used in regression models to describe the relationship between an independent (predictor) variable and an outcome variable after accounting for other covariates or predictor variables within the model. By controlling for the potential effects of other covariates, the identified association purely reflects the unique influence of the selected predictor. By incorporating this concept, we can isolate associations and remove potential confounders.";
+
+export const OVERALL_MODEL_ANSWER = "Overall model";
+export const OVERALL_MODEL_DESCRIPTION =
+  "The overall model is a characteristic used in regression models to describe the combined influence of all independent (predictor) variables on an outcome variable. Rather than focusing on individual predictors and isolated associations, the overall model captures the collective effect of all predictor variables. By evaluating the overall model, researchers can determine how well the entire set of predictors can explain the variability in the outcome.";
