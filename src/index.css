@@ -14,5 +14,5 @@ html,
 .mantine-List-item .mantine-Text-root {
   overflow-wrap: break-word;
   word-break: break-word;
-  max-width: 100%;
+  max-width: calc(100% - 100px);
 }
