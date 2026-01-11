@@ -3,6 +3,9 @@ import { Text, Stack, Tabs, List } from "@mantine/core";
 function Example2() {
   return (
     <Stack gap="md">
+      <Text tt={"uppercase"} fw={500} mt={"-0px"} z-index={500} size="sm">
+        Indeterminate study
+      </Text>
       <Text fs={"italic"} mt={0}>
         Among patients diagnosed with glioblastoma multiforme (GBM), does the
         use of an experimental immunotherapy approach lead to a significant

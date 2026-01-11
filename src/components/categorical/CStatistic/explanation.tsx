@@ -5,20 +5,20 @@ export default function CStatisticTabs() {
   const explanationSections = [
     <Stack gap={4}>
       <Text>
-        The concordance index (C-index), which is also known as the area under
+        The C-statistic, also known as the area under
         the receiver operating characteristic curve (AUC-ROC), is a performance
         measure used to evaluate the discriminatory power and predictive
         accuracy of a regression model, particularly in binary classification
-        tasks. The C-index measures the ability of a predictive model to
+        tasks. The C-statistic measures the ability of a predictive model to
         correctly rank pairs of observations: one with the event of interest
         (e.g., disease occurrence) and the other without.
       </Text>
     </Stack>,
     <Stack gap={6}>
       <Stack gap={0}>
-        <Text fw={500}>Range of C-index</Text>
+        <Text fw={500}>Range of C-statistic</Text>
         <Text>
-          C-index values range from 0.5 to 1. The interpretation revolves around
+          C-statistic values range from 0.5 to 1. The interpretation revolves around
           the model&apos;s ability to correctly rank subjects based on their
           risk scores:
         </Text>
@@ -56,9 +56,9 @@ export default function CStatisticTabs() {
     </Stack>,
     <Stack gap={6}>
       <Stack gap={0}>
-        <Text fw={500}>Interpretation of C-index values</Text>
+        <Text fw={500}>Interpretation of C-statistic values</Text>
         <Text>
-          The interpretation of C-index values between variables is as follows:
+          The interpretation of C-statistic values between variables is as follows:
         </Text>
       </Stack>
       <List spacing={2}>

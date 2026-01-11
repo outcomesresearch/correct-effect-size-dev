@@ -3,6 +3,9 @@ import { Text, Stack, Tabs, List } from "@mantine/core";
 function Example2() {
   return (
     <Stack gap="md">
+      <Text tt={"uppercase"} fw={500} mt={"-0px"} z-index={500} size="sm">
+        Indeterminate Result
+      </Text>
       <Text fs={"italic"} mt={0}>
         What is the difference in systolic blood pressure reduction between
         patients treated with HypoTensix and those treated with PressureEase?

@@ -8,7 +8,10 @@ import {
   Progress,
   Card,
   Modal,
-  Divider
+  Divider,
+  Tooltip,
+  ActionIcon,
+  Text
 } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import rootTree from "../assets/rootTree";
@@ -161,6 +164,42 @@ const StepperWrapper = () => {
                     {index > 0 || examples.length > 1 ? ` #${index + 1}` : ""}
                   </Button>
                 ))}
+                {currentConfig.examplesNote && (
+                  <Tooltip
+                    label={
+                      <Text size="sm" style={{ whiteSpace: "pre-line" }}>
+                        {currentConfig.examplesNote}
+                      </Text>
+                    }
+                    withArrow
+                    multiline
+                    w={220}
+                  >
+                    <ActionIcon
+                      size="sm"
+                      h={'100%'}
+                      variant="light"
+                      color="washu.9"
+                      style={{
+                        cursor: "help",
+                        outline: '1px solid',
+                        color: 'var(--mantine-color-washu-9)',
+                        outlineColor: 'var(--mantine-color-washu-9)',
+                      }}
+                    >
+                      <Text
+                        size="10px"
+                        fw={900}
+                        style={{
+                          lineHeight: 1,
+                          userSelect: "none",
+                        }}
+                      >
+                        i
+                      </Text>
+                    </ActionIcon>
+                  </Tooltip>
+                )}
               </Group>
             )}
           </Group>
@@ -242,6 +281,7 @@ const StepperWrapper = () => {
       {selectedExample && (
         <Modal
           opened={modalOpened}
+          m="md"
           styles={{
             close: { marginBottom: "auto" },
             title: {

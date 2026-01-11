@@ -7,6 +7,7 @@ interface BaseNode {
   color?: string;
   inputs: string[];
   examples?: React.ComponentType[];
+  examplesNote?: string;
 }
 
 interface QuestionNode extends BaseNode {

@@ -13,6 +13,14 @@ export default function MedianDifferenceTabs() {
         are less influenced by these factors as compared with means.
       </Text>
     </Stack>,
+    // Multiple groups section
+    <Stack gap={4}>
+      <Text>
+        For comparisons involving 3 or more groups, the median difference is
+        calculated through pairwise comparisons and is done similar to when comparing two groups, with the only
+        difference being adjustment of alpha error for multiple comparisons.
+      </Text>
+    </Stack>,
     // Range section
     <Stack gap={6}>
       <Stack gap={0}>

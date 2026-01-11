@@ -3,10 +3,14 @@ import { Text, Stack, Tabs, List } from "@mantine/core";
 function Example1() {
   return (
     <Stack gap="md">
+      <Text tt={"uppercase"} fw={500} mt={"-0px"} z-index={500} size="sm">
+        Statistically Significant
+      </Text>
       <Text fs={"italic"} mt={0}>
         What is the difference in systolic blood pressure reduction between
         patients treated with HypoTensix and those treated with PressureEase?
       </Text>
+
       <Tabs defaultValue="studyDesign">
         <Tabs.List>
           <Tabs.Tab value="studyDesign">Study Design and Methods</Tabs.Tab>
