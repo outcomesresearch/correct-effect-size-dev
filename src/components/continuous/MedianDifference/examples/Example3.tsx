@@ -4,7 +4,7 @@ function Example3() {
   return (
     <Stack gap="md">
       <Text tt={"uppercase"} fw={500} mt={"-0px"} z-index={500} size="sm">
-        Negative study, clinically meaningless
+        Negative study, Not clinically meaningful
       </Text>
       <Text fs={"italic"} mt={0}>
         What is the difference in systolic blood pressure reduction between

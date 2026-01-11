@@ -251,6 +251,7 @@ const tree: Record<string, TreeNode> = {
     color: "indigo-darken-2",
     inputs: [ids.PAIRWISE_EFFECT_SIZES],
     examples: OddsRatioExamples3Groups,
+    examplesNote: "The examples shown are the same as those for comparing 2 groups.\n\nThe odds ratio is calculated through pairwise comparisons and is done similar to when comparing two groups.",
   },
   [ids.RISK_RATIO_3GROUPS]: {
     type: "statement",

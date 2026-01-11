@@ -3,6 +3,9 @@ import { Text, Stack, Tabs, List } from "@mantine/core";
 function Example2() {
   return (
     <Stack gap="md">
+      <Text tt={"uppercase"} fw={500} mt={"-0px"} z-index={500} size="sm">
+        Indeterminate
+      </Text>
       <Text fs={"italic"} mt={0}>
         Among adults with generalized anxiety disorder, does participation in a
         mindfulness-based stress reduction therapy program result in a greater
