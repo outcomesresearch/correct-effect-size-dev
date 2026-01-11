@@ -135,7 +135,6 @@ const tree: Record<string, TreeNode> = {
     color: "indigo-darken-2",
     inputs: [ids.TWO_GROUPS_EFFECT_SIZES],
     examples: MedianSurvivalTimeExamples,
-    examplesNote: "Duplicate examples in TTE → Comparing 2 groups → Median survival time.\n\nLet me know if we need 2 unique examples here, else will remove one.",
   },
   [ids.RESTRICTED_MEAN_SURVIVAL_TIME]: {
     type: "statement",

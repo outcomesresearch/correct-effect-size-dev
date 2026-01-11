@@ -384,7 +384,7 @@ const tree: Record<string, TreeNode> = {
     color: "indigo-darken-2",
     inputs: [ids.REPORTING_PAIRWISE_DIFFERENCES],
     examples: MedianDifferenceExamples,
-    examplesNote: "The examples shown are the same as those comparing 2 groups.\n\nThe median difference is calculated through pairwise comparisons and is done similar to when comparing two groups.",
+    examplesNote: "The examples shown are the same as those for comparing two groups.\n\nThe odds ratio is calculated through pairwise comparisons, and is performed similarly to when comparing two groups.",
   },
   [ids.COHENS_D_3GROUPS]: {
     type: "statement",
