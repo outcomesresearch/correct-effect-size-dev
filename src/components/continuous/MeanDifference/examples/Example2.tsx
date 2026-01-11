@@ -4,7 +4,7 @@ function Example2() {
   return (
     <Stack gap="md">
       <Text tt={"uppercase"} fw={500} mt={"-0px"} z-index={500} size="sm">
-        Indeterminate
+        Indeterminate Study
       </Text>
       <Text fs={"italic"} mt={0}>
         Among adults with generalized anxiety disorder, does participation in a
