@@ -1,4 +1,4 @@
-import { Text, Stack, Tabs, List } from "@mantine/core";
+import { Text, Stack, Tabs } from "@mantine/core";
 
 function Example4() {
   return (
